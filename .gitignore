@@ -1,0 +1,9 @@
+.*.sw*
+
+*.*#*
+
+
+# Don't commit project file
+eagle.epf
+
+*.lck
