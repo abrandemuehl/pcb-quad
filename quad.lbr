@@ -2547,50 +2547,47 @@ Source: AVX .. aphvc.pdf</description>
 <pad name="50" x="62.23" y="0" drill="1.016" diameter="1.8796" rot="R90"/>
 </package>
 <package name="AFRO_ESC">
-<wire x1="-20" y1="25" x2="20" y2="25" width="0.127" layer="21"/>
-<wire x1="20" y1="25" x2="20" y2="-25" width="0.127" layer="21"/>
-<wire x1="20" y1="-25" x2="-20" y2="-25" width="0.127" layer="21"/>
-<wire x1="-20" y1="-25" x2="-20" y2="25" width="0.127" layer="21"/>
-<text x="-21.59" y="-25.4" size="1.27" layer="21" rot="R90">&gt;NAME</text>
-<pad name="PWM" x="-2.54" y="34.925" drill="1.016" diameter="1.8796"/>
-<pad name="PWM_GND" x="2.54" y="34.925" drill="1.016" diameter="1.8796"/>
-<pad name="P$3" x="0" y="34.925" drill="1.016" diameter="1.8796"/>
-<wire x1="-1.905" y1="36.195" x2="-3.175" y2="36.195" width="0.127" layer="21"/>
-<wire x1="-3.175" y1="36.195" x2="-3.81" y2="35.56" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="35.56" x2="-3.81" y2="34.29" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="34.29" x2="-3.175" y2="33.655" width="0.127" layer="21"/>
-<wire x1="-3.175" y1="33.655" x2="-1.905" y2="33.655" width="0.127" layer="21"/>
-<wire x1="-1.905" y1="33.655" x2="-1.27" y2="34.29" width="0.127" layer="21"/>
-<wire x1="-1.27" y1="34.29" x2="-0.635" y2="33.655" width="0.127" layer="21"/>
-<wire x1="-0.635" y1="33.655" x2="0.635" y2="33.655" width="0.127" layer="21"/>
-<wire x1="0.635" y1="33.655" x2="1.27" y2="34.29" width="0.127" layer="21"/>
-<wire x1="1.27" y1="34.29" x2="1.905" y2="33.655" width="0.127" layer="21"/>
-<wire x1="1.905" y1="33.655" x2="3.175" y2="33.655" width="0.127" layer="21"/>
-<wire x1="3.175" y1="33.655" x2="3.81" y2="34.29" width="0.127" layer="21"/>
-<wire x1="3.81" y1="34.29" x2="3.81" y2="35.56" width="0.127" layer="21"/>
-<wire x1="3.81" y1="35.56" x2="3.175" y2="36.195" width="0.127" layer="21"/>
-<wire x1="3.175" y1="36.195" x2="1.905" y2="36.195" width="0.127" layer="21"/>
-<wire x1="1.905" y1="36.195" x2="1.27" y2="35.56" width="0.127" layer="21"/>
-<wire x1="-1.905" y1="36.195" x2="-1.27" y2="35.56" width="0.127" layer="21"/>
-<wire x1="-1.27" y1="35.56" x2="-0.635" y2="36.195" width="0.127" layer="21"/>
-<wire x1="-0.635" y1="36.195" x2="0.635" y2="36.195" width="0.127" layer="21"/>
-<wire x1="0.635" y1="36.195" x2="1.27" y2="35.56" width="0.127" layer="21"/>
-<pad name="MOT1" x="-12.7" y="-33.655" drill="2" diameter="4"/>
-<pad name="MOT2" x="0" y="-33.655" drill="2" diameter="4"/>
-<pad name="MOT3" x="12.7" y="-33.655" drill="2" diameter="4"/>
-<pad name="GND" x="-10.16" y="30.48" drill="2" diameter="4"/>
-<pad name="VBATT" x="10.16" y="30.48" drill="2" diameter="4"/>
+<wire x1="-10" y1="12.5" x2="10" y2="12.5" width="0.127" layer="21"/>
+<wire x1="10" y1="12.5" x2="10" y2="-12.5" width="0.127" layer="21"/>
+<wire x1="10" y1="-12.5" x2="-10" y2="-12.5" width="0.127" layer="21"/>
+<wire x1="-10" y1="-12.5" x2="-10" y2="12.5" width="0.127" layer="21"/>
+<text x="-10.59" y="-10.4" size="1.27" layer="21" rot="R90">&gt;NAME</text>
+<pad name="PWM" x="-2.54" y="24.925" drill="1.016" diameter="1.8796"/>
+<pad name="PWM_GND" x="2.54" y="24.925" drill="1.016" diameter="1.8796"/>
+<pad name="P$3" x="0" y="24.925" drill="1.016" diameter="1.8796"/>
+<wire x1="-1.905" y1="26.195" x2="-3.175" y2="26.195" width="0.127" layer="21"/>
+<wire x1="-3.175" y1="26.195" x2="-3.81" y2="25.56" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="25.56" x2="-3.81" y2="24.29" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="24.29" x2="-3.175" y2="23.655" width="0.127" layer="21"/>
+<wire x1="-3.175" y1="23.655" x2="-1.905" y2="23.655" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="23.655" x2="-1.27" y2="24.29" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="24.29" x2="-0.635" y2="23.655" width="0.127" layer="21"/>
+<wire x1="-0.635" y1="23.655" x2="0.635" y2="23.655" width="0.127" layer="21"/>
+<wire x1="0.635" y1="23.655" x2="1.27" y2="24.29" width="0.127" layer="21"/>
+<wire x1="1.27" y1="24.29" x2="1.905" y2="23.655" width="0.127" layer="21"/>
+<wire x1="1.905" y1="23.655" x2="3.175" y2="23.655" width="0.127" layer="21"/>
+<wire x1="3.175" y1="23.655" x2="3.81" y2="24.29" width="0.127" layer="21"/>
+<wire x1="3.81" y1="24.29" x2="3.81" y2="25.56" width="0.127" layer="21"/>
+<wire x1="3.81" y1="25.56" x2="3.175" y2="26.195" width="0.127" layer="21"/>
+<wire x1="3.175" y1="26.195" x2="1.905" y2="26.195" width="0.127" layer="21"/>
+<wire x1="1.905" y1="26.195" x2="1.27" y2="25.56" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="26.195" x2="-1.27" y2="25.56" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="25.56" x2="-0.635" y2="26.195" width="0.127" layer="21"/>
+<wire x1="-0.635" y1="26.195" x2="0.635" y2="26.195" width="0.127" layer="21"/>
+<wire x1="0.635" y1="26.195" x2="1.27" y2="25.56" width="0.127" layer="21"/>
+<pad name="MOT1" x="-12.7" y="-18.655" drill="2" diameter="4"/>
+<pad name="MOT2" x="0" y="-18.655" drill="2" diameter="4"/>
+<pad name="MOT3" x="12.7" y="-18.655" drill="2" diameter="4"/>
+<pad name="GND" x="-10.16" y="20.48" drill="2" diameter="4"/>
+<pad name="VBATT" x="10.16" y="20.48" drill="2" diameter="4"/>
 </package>
 <package name="MOTOR">
 <pad name="P$1" x="-7.5" y="0" drill="0.6"/>
 <pad name="P$2" x="7.5" y="0" drill="0.6"/>
 <pad name="P$3" x="0" y="12.9904" drill="0.6"/>
-<dimension x1="-7.5" y1="0" x2="0" y2="12.99" x3="-11.53465" y3="10.989603125" textsize="1.27" layer="21"/>
-<dimension x1="0" y1="12.99" x2="7.5" y2="0" x3="12.591703125" y3="11.599909375" textsize="1.27" layer="21"/>
-<dimension x1="-7.5" y1="0" x2="7.5" y2="0" x3="0" y3="-5" textsize="1.27" layer="21"/>
-<pad name="MOT1" x="-7" y="-7" drill="1.5" diameter="3"/>
+<pad name="MOT1" x="7" y="-7" drill="1.5" diameter="3"/>
 <pad name="MOT2" x="0" y="-7" drill="1.5" diameter="3"/>
-<pad name="MOT3" x="8" y="-7" drill="1.5" diameter="3"/>
+<pad name="MOT3" x="-7" y="-7" drill="1.5" diameter="3"/>
 </package>
 <package name="SOT223">
 <smd name="4" x="0" y="3.1" dx="6.7" dy="1.9" layer="1"/>
@@ -3445,6 +3442,45 @@ package type OT</description>
 <smd name="P$16" x="-1.15" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
 <smd name="P$17" x="0" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
 <smd name="P$18" x="1.15" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
+</package>
+<package name="USB-B-MICRO-SMD">
+<smd name="VBUS" x="-1.3" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="GND" x="1.3" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="ID" x="0.65" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="D+" x="0" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="D-" x="-0.65" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="P$7" x="1" y="0" dx="2.5" dy="1.425" layer="1" rot="R90"/>
+<wire x1="-2.375" y1="-0.27" x2="-3.035" y2="-0.27" width="0" layer="20" curve="-180"/>
+<wire x1="-3.035" y1="-0.27" x2="-3.035" y2="0.27" width="0" layer="20"/>
+<wire x1="-3.035" y1="0.27" x2="-2.375" y2="0.27" width="0" layer="20" curve="-180"/>
+<wire x1="-2.375" y1="0.27" x2="-2.375" y2="-0.27" width="0" layer="20"/>
+<smd name="P$6" x="-1" y="0" dx="2.5" dy="1.425" layer="1" rot="R90"/>
+<wire x1="3.035" y1="-0.27" x2="2.375" y2="-0.27" width="0" layer="20" curve="-180"/>
+<wire x1="2.375" y1="-0.27" x2="2.375" y2="0.27" width="0" layer="20"/>
+<wire x1="2.375" y1="0.27" x2="3.035" y2="0.27" width="0" layer="20" curve="-180"/>
+<wire x1="3.035" y1="0.27" x2="3.035" y2="-0.27" width="0" layer="20"/>
+<wire x1="-2.095" y1="2.835" x2="-2.755" y2="2.835" width="0" layer="20" curve="-180"/>
+<wire x1="-2.755" y1="2.835" x2="-2.755" y2="3.225" width="0" layer="20"/>
+<wire x1="-2.755" y1="3.225" x2="-2.095" y2="3.225" width="0" layer="20" curve="-180"/>
+<wire x1="-2.095" y1="3.225" x2="-2.095" y2="2.835" width="0" layer="20"/>
+<wire x1="2.755" y1="2.835" x2="2.095" y2="2.835" width="0" layer="20" curve="-180"/>
+<wire x1="2.095" y1="2.835" x2="2.095" y2="3.225" width="0" layer="20"/>
+<wire x1="2.095" y1="3.225" x2="2.755" y2="3.225" width="0" layer="20" curve="-180"/>
+<wire x1="2.755" y1="3.225" x2="2.755" y2="2.835" width="0" layer="20"/>
+<smd name="P$8" x="-2.725" y="0.225" dx="2.25" dy="1.3" layer="1" rot="R90" cream="no"/>
+<smd name="SHIELD2" x="-2.9" y="2.97" dx="1.46" dy="2" layer="1" rot="R90" cream="no"/>
+<smd name="P$9" x="-2.9875" y="1.7" dx="1.825" dy="0.7" layer="1" cream="no"/>
+<smd name="P$10" x="-2.725" y="0.225" dx="2.25" dy="1.3" layer="16" rot="R90" cream="no"/>
+<smd name="P$12" x="-2.9875" y="1.7" dx="1.825" dy="0.7" layer="16" rot="R180" cream="no"/>
+<smd name="P$13" x="-2.9" y="2.97" dx="1.46" dy="2" layer="16" rot="R90" cream="no"/>
+<smd name="SHIELD1" x="2.9" y="2.97" dx="1.46" dy="2" layer="1" rot="R90" cream="no"/>
+<smd name="P$15" x="2.9" y="2.97" dx="1.46" dy="2" layer="16" rot="R90" cream="no"/>
+<smd name="P$16" x="2.9875" y="1.7" dx="1.825" dy="0.7" layer="16" rot="R180" cream="no"/>
+<smd name="P$17" x="2.9875" y="1.7" dx="1.825" dy="0.7" layer="1" cream="no"/>
+<wire x1="-3.035" y1="0.27" x2="-2.375" y2="0.27" width="0" layer="20" curve="-180"/>
+<smd name="P$18" x="2.725" y="0.225" dx="2.25" dy="1.3" layer="16" rot="R90" cream="no"/>
+<smd name="P$19" x="2.725" y="0.225" dx="2.25" dy="1.3" layer="1" rot="R90" cream="no"/>
+<wire x1="-4" y1="-2.2" x2="4" y2="-2.2" width="0.127" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -4978,6 +5014,19 @@ package type OT</description>
 </technology>
 </technologies>
 </device>
+<device name="" package="USB-B-MICRO-SMD">
+<connects>
+<connect gate="G$1" pin="D+" pad="D+"/>
+<connect gate="G$1" pin="D-" pad="D-"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="SHIELD" pad="SHIELD1 SHIELD2"/>
+<connect gate="G$1" pin="USBID" pad="ID"/>
+<connect gate="G$1" pin="VBUS" pad="VBUS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="USB-MINIB" prefix="J">
@@ -5291,6 +5340,44 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <connect gate="G$1" pin="D" pad="MB"/>
 <connect gate="G$1" pin="G" pad="4"/>
 <connect gate="G$1" pin="S" pad="1 2 3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SN74AHC1G32DBVR">
+<gates>
+<gate name="G$1" symbol="SN74AHC1G32DBVR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23-5L">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="VCC" pad="5"/>
+<connect gate="G$1" pin="Y" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SN74AHC1G08DBVR">
+<gates>
+<gate name="G$1" symbol="SN74AHC1G08DBVR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23-5L">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="B" pad="2"/>
+<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="VCC" pad="5"/>
+<connect gate="G$1" pin="Y" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>

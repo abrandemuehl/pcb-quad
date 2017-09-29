@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,19 +53,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -1263,50 +1263,47 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <rectangle x1="-0.15" y1="-0.1" x2="0.15" y2="-0.05" layer="51"/>
 </package>
 <package name="AFRO_ESC">
-<wire x1="-20" y1="25" x2="20" y2="25" width="0.127" layer="21"/>
-<wire x1="20" y1="25" x2="20" y2="-25" width="0.127" layer="21"/>
-<wire x1="20" y1="-25" x2="-20" y2="-25" width="0.127" layer="21"/>
-<wire x1="-20" y1="-25" x2="-20" y2="25" width="0.127" layer="21"/>
-<text x="-21.59" y="-25.4" size="1.27" layer="21" rot="R90">&gt;NAME</text>
-<pad name="PWM" x="-2.54" y="34.925" drill="1.016" diameter="1.8796"/>
-<pad name="PWM_GND" x="2.54" y="34.925" drill="1.016" diameter="1.8796"/>
-<pad name="P$3" x="0" y="34.925" drill="1.016" diameter="1.8796"/>
-<wire x1="-1.905" y1="36.195" x2="-3.175" y2="36.195" width="0.127" layer="21"/>
-<wire x1="-3.175" y1="36.195" x2="-3.81" y2="35.56" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="35.56" x2="-3.81" y2="34.29" width="0.127" layer="21"/>
-<wire x1="-3.81" y1="34.29" x2="-3.175" y2="33.655" width="0.127" layer="21"/>
-<wire x1="-3.175" y1="33.655" x2="-1.905" y2="33.655" width="0.127" layer="21"/>
-<wire x1="-1.905" y1="33.655" x2="-1.27" y2="34.29" width="0.127" layer="21"/>
-<wire x1="-1.27" y1="34.29" x2="-0.635" y2="33.655" width="0.127" layer="21"/>
-<wire x1="-0.635" y1="33.655" x2="0.635" y2="33.655" width="0.127" layer="21"/>
-<wire x1="0.635" y1="33.655" x2="1.27" y2="34.29" width="0.127" layer="21"/>
-<wire x1="1.27" y1="34.29" x2="1.905" y2="33.655" width="0.127" layer="21"/>
-<wire x1="1.905" y1="33.655" x2="3.175" y2="33.655" width="0.127" layer="21"/>
-<wire x1="3.175" y1="33.655" x2="3.81" y2="34.29" width="0.127" layer="21"/>
-<wire x1="3.81" y1="34.29" x2="3.81" y2="35.56" width="0.127" layer="21"/>
-<wire x1="3.81" y1="35.56" x2="3.175" y2="36.195" width="0.127" layer="21"/>
-<wire x1="3.175" y1="36.195" x2="1.905" y2="36.195" width="0.127" layer="21"/>
-<wire x1="1.905" y1="36.195" x2="1.27" y2="35.56" width="0.127" layer="21"/>
-<wire x1="-1.905" y1="36.195" x2="-1.27" y2="35.56" width="0.127" layer="21"/>
-<wire x1="-1.27" y1="35.56" x2="-0.635" y2="36.195" width="0.127" layer="21"/>
-<wire x1="-0.635" y1="36.195" x2="0.635" y2="36.195" width="0.127" layer="21"/>
-<wire x1="0.635" y1="36.195" x2="1.27" y2="35.56" width="0.127" layer="21"/>
-<pad name="MOT1" x="-12.7" y="-33.655" drill="2" diameter="4"/>
-<pad name="MOT2" x="0" y="-33.655" drill="2" diameter="4"/>
-<pad name="MOT3" x="12.7" y="-33.655" drill="2" diameter="4"/>
-<pad name="GND" x="-10.16" y="30.48" drill="2" diameter="4"/>
-<pad name="VBATT" x="10.16" y="30.48" drill="2" diameter="4"/>
+<wire x1="-10" y1="12.5" x2="10" y2="12.5" width="0.127" layer="21"/>
+<wire x1="10" y1="12.5" x2="10" y2="-12.5" width="0.127" layer="21"/>
+<wire x1="10" y1="-12.5" x2="-10" y2="-12.5" width="0.127" layer="21"/>
+<wire x1="-10" y1="-12.5" x2="-10" y2="12.5" width="0.127" layer="21"/>
+<text x="-10.59" y="-10.4" size="1.27" layer="21" rot="R90">&gt;NAME</text>
+<pad name="PWM" x="-2.54" y="24.925" drill="1.016" diameter="1.8796"/>
+<pad name="PWM_GND" x="2.54" y="24.925" drill="1.016" diameter="1.8796"/>
+<pad name="P$3" x="0" y="24.925" drill="1.016" diameter="1.8796"/>
+<wire x1="-1.905" y1="26.195" x2="-3.175" y2="26.195" width="0.127" layer="21"/>
+<wire x1="-3.175" y1="26.195" x2="-3.81" y2="25.56" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="25.56" x2="-3.81" y2="24.29" width="0.127" layer="21"/>
+<wire x1="-3.81" y1="24.29" x2="-3.175" y2="23.655" width="0.127" layer="21"/>
+<wire x1="-3.175" y1="23.655" x2="-1.905" y2="23.655" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="23.655" x2="-1.27" y2="24.29" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="24.29" x2="-0.635" y2="23.655" width="0.127" layer="21"/>
+<wire x1="-0.635" y1="23.655" x2="0.635" y2="23.655" width="0.127" layer="21"/>
+<wire x1="0.635" y1="23.655" x2="1.27" y2="24.29" width="0.127" layer="21"/>
+<wire x1="1.27" y1="24.29" x2="1.905" y2="23.655" width="0.127" layer="21"/>
+<wire x1="1.905" y1="23.655" x2="3.175" y2="23.655" width="0.127" layer="21"/>
+<wire x1="3.175" y1="23.655" x2="3.81" y2="24.29" width="0.127" layer="21"/>
+<wire x1="3.81" y1="24.29" x2="3.81" y2="25.56" width="0.127" layer="21"/>
+<wire x1="3.81" y1="25.56" x2="3.175" y2="26.195" width="0.127" layer="21"/>
+<wire x1="3.175" y1="26.195" x2="1.905" y2="26.195" width="0.127" layer="21"/>
+<wire x1="1.905" y1="26.195" x2="1.27" y2="25.56" width="0.127" layer="21"/>
+<wire x1="-1.905" y1="26.195" x2="-1.27" y2="25.56" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="25.56" x2="-0.635" y2="26.195" width="0.127" layer="21"/>
+<wire x1="-0.635" y1="26.195" x2="0.635" y2="26.195" width="0.127" layer="21"/>
+<wire x1="0.635" y1="26.195" x2="1.27" y2="25.56" width="0.127" layer="21"/>
+<pad name="MOT1" x="-12.7" y="-18.655" drill="2" diameter="4"/>
+<pad name="MOT2" x="0" y="-18.655" drill="2" diameter="4"/>
+<pad name="MOT3" x="12.7" y="-18.655" drill="2" diameter="4"/>
+<pad name="GND" x="-10.16" y="20.48" drill="2" diameter="4"/>
+<pad name="VBATT" x="10.16" y="20.48" drill="2" diameter="4"/>
 </package>
 <package name="MOTOR">
 <pad name="P$1" x="-7.5" y="0" drill="0.6"/>
 <pad name="P$2" x="7.5" y="0" drill="0.6"/>
 <pad name="P$3" x="0" y="12.9904" drill="0.6"/>
-<dimension x1="-7.5" y1="0" x2="0" y2="12.99" x3="-11.53465" y3="10.989603125" textsize="1.27" layer="21"/>
-<dimension x1="0" y1="12.99" x2="7.5" y2="0" x3="12.591703125" y3="11.599909375" textsize="1.27" layer="21"/>
-<dimension x1="-7.5" y1="0" x2="7.5" y2="0" x3="0" y3="-5" textsize="1.27" layer="21"/>
-<pad name="MOT1" x="-7" y="-7" drill="1.5" diameter="3"/>
+<pad name="MOT1" x="7" y="-7" drill="1.5" diameter="3"/>
 <pad name="MOT2" x="0" y="-7" drill="1.5" diameter="3"/>
-<pad name="MOT3" x="8" y="-7" drill="1.5" diameter="3"/>
+<pad name="MOT3" x="-7" y="-7" drill="1.5" diameter="3"/>
 </package>
 <package name="SOT223">
 <smd name="4" x="0" y="3.1" dx="6.7" dy="1.9" layer="1"/>
@@ -2104,6 +2101,45 @@ package type OT</description>
 <smd name="P$16" x="-1.15" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
 <smd name="P$17" x="0" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
 <smd name="P$18" x="1.15" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
+</package>
+<package name="USB-B-MICRO-SMD">
+<smd name="VBUS" x="-1.3" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="GND" x="1.3" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="ID" x="0.65" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="D+" x="0" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="D-" x="-0.65" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
+<smd name="P$7" x="1" y="0" dx="2.5" dy="1.425" layer="1" rot="R90"/>
+<wire x1="-2.375" y1="-0.27" x2="-3.035" y2="-0.27" width="0" layer="20" curve="-180"/>
+<wire x1="-3.035" y1="-0.27" x2="-3.035" y2="0.27" width="0" layer="20"/>
+<wire x1="-3.035" y1="0.27" x2="-2.375" y2="0.27" width="0" layer="20" curve="-180"/>
+<wire x1="-2.375" y1="0.27" x2="-2.375" y2="-0.27" width="0" layer="20"/>
+<smd name="P$6" x="-1" y="0" dx="2.5" dy="1.425" layer="1" rot="R90"/>
+<wire x1="3.035" y1="-0.27" x2="2.375" y2="-0.27" width="0" layer="20" curve="-180"/>
+<wire x1="2.375" y1="-0.27" x2="2.375" y2="0.27" width="0" layer="20"/>
+<wire x1="2.375" y1="0.27" x2="3.035" y2="0.27" width="0" layer="20" curve="-180"/>
+<wire x1="3.035" y1="0.27" x2="3.035" y2="-0.27" width="0" layer="20"/>
+<wire x1="-2.095" y1="2.835" x2="-2.755" y2="2.835" width="0" layer="20" curve="-180"/>
+<wire x1="-2.755" y1="2.835" x2="-2.755" y2="3.225" width="0" layer="20"/>
+<wire x1="-2.755" y1="3.225" x2="-2.095" y2="3.225" width="0" layer="20" curve="-180"/>
+<wire x1="-2.095" y1="3.225" x2="-2.095" y2="2.835" width="0" layer="20"/>
+<wire x1="2.755" y1="2.835" x2="2.095" y2="2.835" width="0" layer="20" curve="-180"/>
+<wire x1="2.095" y1="2.835" x2="2.095" y2="3.225" width="0" layer="20"/>
+<wire x1="2.095" y1="3.225" x2="2.755" y2="3.225" width="0" layer="20" curve="-180"/>
+<wire x1="2.755" y1="3.225" x2="2.755" y2="2.835" width="0" layer="20"/>
+<smd name="P$8" x="-2.725" y="0.225" dx="2.25" dy="1.3" layer="1" rot="R90" cream="no"/>
+<smd name="SHIELD2" x="-2.9" y="2.97" dx="1.46" dy="2" layer="1" rot="R90" cream="no"/>
+<smd name="P$9" x="-2.9875" y="1.7" dx="1.825" dy="0.7" layer="1" cream="no"/>
+<smd name="P$10" x="-2.725" y="0.225" dx="2.25" dy="1.3" layer="16" rot="R90" cream="no"/>
+<smd name="P$12" x="-2.9875" y="1.7" dx="1.825" dy="0.7" layer="16" rot="R180" cream="no"/>
+<smd name="P$13" x="-2.9" y="2.97" dx="1.46" dy="2" layer="16" rot="R90" cream="no"/>
+<smd name="SHIELD1" x="2.9" y="2.97" dx="1.46" dy="2" layer="1" rot="R90" cream="no"/>
+<smd name="P$15" x="2.9" y="2.97" dx="1.46" dy="2" layer="16" rot="R90" cream="no"/>
+<smd name="P$16" x="2.9875" y="1.7" dx="1.825" dy="0.7" layer="16" rot="R180" cream="no"/>
+<smd name="P$17" x="2.9875" y="1.7" dx="1.825" dy="0.7" layer="1" cream="no"/>
+<wire x1="-3.035" y1="0.27" x2="-2.375" y2="0.27" width="0" layer="20" curve="-180"/>
+<smd name="P$18" x="2.725" y="0.225" dx="2.25" dy="1.3" layer="16" rot="R90" cream="no"/>
+<smd name="P$19" x="2.725" y="0.225" dx="2.25" dy="1.3" layer="1" rot="R90" cream="no"/>
+<wire x1="-4" y1="-2.2" x2="4" y2="-2.2" width="0.127" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -3247,6 +3283,19 @@ package type OT</description>
 </technology>
 </technologies>
 </device>
+<device name="" package="USB-B-MICRO-SMD">
+<connects>
+<connect gate="G$1" pin="D+" pad="D+"/>
+<connect gate="G$1" pin="D-" pad="D-"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="SHIELD" pad="SHIELD1 SHIELD2"/>
+<connect gate="G$1" pin="USBID" pad="ID"/>
+<connect gate="G$1" pin="VBUS" pad="VBUS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="LED">
@@ -3390,7 +3439,7 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 </deviceset>
 <deviceset name="SN74AHC1G32DBVR">
 <gates>
-<gate name="G$1" symbol="SN74AHC1G32DBVR" x="-2.54" y="0"/>
+<gate name="G$1" symbol="SN74AHC1G32DBVR" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="SOT23-5L">
@@ -3537,11 +3586,11 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <part name="GND6" library="quad" deviceset="GND" device=""/>
 <part name="GND7" library="quad" deviceset="GND" device=""/>
 <part name="GND8" library="quad" deviceset="GND" device=""/>
-<part name="C205" library="quad" deviceset="C-EU" device="C0603" value="100nF"/>
-<part name="C206" library="quad" deviceset="C-EU" device="C0603" value="100nF"/>
-<part name="C207" library="quad" deviceset="C-EU" device="C0603" value="100nF"/>
-<part name="C208" library="quad" deviceset="C-EU" device="C0603" value="100nF"/>
-<part name="C209" library="quad" deviceset="C-EU" device="C0603" value="100nF"/>
+<part name="C205" library="quad" deviceset="C-EU" device="C0603" value="0.1uF"/>
+<part name="C206" library="quad" deviceset="C-EU" device="C0603" value="0.1uF"/>
+<part name="C207" library="quad" deviceset="C-EU" device="C0603" value="0.1uF"/>
+<part name="C208" library="quad" deviceset="C-EU" device="C0603" value="0.1uF"/>
+<part name="C209" library="quad" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="GND9" library="quad" deviceset="GND" device=""/>
 <part name="GND10" library="quad" deviceset="GND" device=""/>
 <part name="GND11" library="quad" deviceset="GND" device=""/>
@@ -3552,7 +3601,7 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <part name="GND15" library="quad" deviceset="GND" device=""/>
 <part name="FRAME3" library="quad" deviceset="FRAME_A_L" device=""/>
 <part name="R202" library="quad" deviceset="R-US_" device="R0603" value="10K"/>
-<part name="C210" library="quad" deviceset="C-EU" device="C0603" value="100nF"/>
+<part name="C210" library="quad" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="GND5" library="quad" deviceset="GND" device=""/>
 <part name="ESC1" library="quad" deviceset="AFRO_ESC" device=""/>
 <part name="ESC3" library="quad" deviceset="AFRO_ESC" device=""/>
@@ -3566,16 +3615,12 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <part name="MOT4" library="quad" deviceset="MOTOR" device=""/>
 <part name="MOT1" library="quad" deviceset="MOTOR" device=""/>
 <part name="MOT2" library="quad" deviceset="MOTOR" device=""/>
-<part name="U201" library="quad" deviceset="LD1117" device=""/>
-<part name="C213" library="quad" deviceset="C-EU" device="C0603" value="10uF"/>
-<part name="C212" library="quad" deviceset="C-EU" device="C0603" value="10uF"/>
-<part name="GND23" library="quad" deviceset="GND" device=""/>
-<part name="C211" library="quad" deviceset="C-EU" device="C0603" value="100nF"/>
+<part name="C211" library="quad" deviceset="C-EU" device="C0603" value="4.7uF"/>
 <part name="GND24" library="quad" deviceset="GND" device=""/>
 <part name="FRAME4" library="quad" deviceset="FRAME_A_L" device=""/>
 <part name="U401" library="quad" deviceset="FT232R" device=""/>
-<part name="U402" library="quad" deviceset="USB-MICROB" device="&quot;"/>
-<part name="C401" library="quad" deviceset="C-EU" device="C0603" value="100nF"/>
+<part name="U402" library="quad" deviceset="USB-MICROB" device="" value="USB-MICROB"/>
+<part name="C401" library="quad" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="GND25" library="quad" deviceset="GND" device=""/>
 <part name="GND26" library="quad" deviceset="GND" device=""/>
 <part name="GND27" library="quad" deviceset="GND" device=""/>
@@ -3587,9 +3632,9 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <part name="TXLED" library="quad" deviceset="LED" device=""/>
 <part name="R402" library="quad" deviceset="R-US_" device="R0603" value="270"/>
 <part name="R403" library="quad" deviceset="R-US_" device="R0603" value="270"/>
-<part name="C402" library="quad" deviceset="C-EU" device="C0603" value="100nF"/>
+<part name="C402" library="quad" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="GND30" library="quad" deviceset="GND" device=""/>
-<part name="C403" library="quad" deviceset="C-EU" device="C0603" value="100nF"/>
+<part name="C403" library="quad" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="C404" library="quad" deviceset="C-EU" device="C0603" value="4.7uF"/>
 <part name="GND31" library="quad" deviceset="GND" device=""/>
 <part name="GND32" library="quad" deviceset="GND" device=""/>
@@ -3637,6 +3682,13 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <part name="U$2" library="quad" deviceset="PSMN9RS-30YLC" device=""/>
 <part name="R701" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="GND48" library="quad" deviceset="GND" device=""/>
+<part name="R4" library="quad" deviceset="R-US_" device="R0603" value="270"/>
+<part name="ASSOC" library="quad" deviceset="LED" device=""/>
+<part name="GND16" library="quad" deviceset="GND" device=""/>
+<part name="PWR" library="quad" deviceset="LED" device=""/>
+<part name="R5" library="quad" deviceset="R-US_" device="R0603"/>
+<part name="GND17" library="quad" deviceset="GND" device=""/>
+<part name="GND18" library="quad" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4291,11 +4343,6 @@ Place as close to VDD pins as possible</text>
 <wire x1="208.28" y1="157.48" x2="187.96" y2="157.48" width="0.1524" layer="94"/>
 <text x="187.96" y="160.02" size="1.778" layer="94">Extra Decoupling Capacitor
 No Placement Requirements</text>
-<wire x1="154.94" y1="203.2" x2="154.94" y2="167.64" width="0.1524" layer="94"/>
-<wire x1="154.94" y1="167.64" x2="241.3" y2="167.64" width="0.1524" layer="94"/>
-<wire x1="241.3" y1="167.64" x2="241.3" y2="203.2" width="0.1524" layer="94"/>
-<wire x1="241.3" y1="203.2" x2="154.94" y2="203.2" width="0.1524" layer="94"/>
-<text x="154.94" y="205.74" size="1.778" layer="94">Power Regulator</text>
 <text x="73.66" y="167.64" size="1.778" layer="94">Pull high for bootloader</text>
 <wire x1="43.18" y1="210.82" x2="149.86" y2="210.82" width="0.1524" layer="94"/>
 <wire x1="149.86" y1="210.82" x2="149.86" y2="142.24" width="0.1524" layer="94"/>
@@ -4333,10 +4380,6 @@ Will be selected by either the XBEE or FT232R</text>
 <instance part="R202" gate="G$1" x="73.66" y="162.56" rot="R270"/>
 <instance part="C210" gate="G$1" x="223.52" y="81.28"/>
 <instance part="GND5" gate="1" x="223.52" y="73.66"/>
-<instance part="U201" gate="G$1" x="195.58" y="190.5"/>
-<instance part="C213" gate="G$1" x="177.8" y="187.96"/>
-<instance part="C212" gate="G$1" x="213.36" y="187.96"/>
-<instance part="GND23" gate="1" x="195.58" y="175.26"/>
 <instance part="C211" gate="G$1" x="198.12" y="137.16"/>
 <instance part="GND24" gate="1" x="198.12" y="129.54"/>
 <instance part="U202" gate="G$1" x="111.76" y="187.96" rot="R180"/>
@@ -4398,17 +4441,6 @@ Will be selected by either the XBEE or FT232R</text>
 <segment>
 <pinref part="C210" gate="G$1" pin="2"/>
 <pinref part="GND5" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U201" gate="G$1" pin="GND"/>
-<pinref part="GND23" gate="1" pin="GND"/>
-<pinref part="C213" gate="G$1" pin="2"/>
-<wire x1="177.8" y1="182.88" x2="177.8" y2="177.8" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="177.8" x2="195.58" y2="177.8" width="0.1524" layer="91"/>
-<junction x="195.58" y="177.8"/>
-<pinref part="C212" gate="G$1" pin="2"/>
-<wire x1="213.36" y1="182.88" x2="213.36" y2="177.8" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="177.8" x2="195.58" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C211" gate="G$1" pin="2"/>
@@ -4501,14 +4533,6 @@ Will be selected by either the XBEE or FT232R</text>
 <wire x1="81.28" y1="124.46" x2="71.12" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U201" gate="G$1" pin="3V3"/>
-<pinref part="C212" gate="G$1" pin="1"/>
-<wire x1="208.28" y1="190.5" x2="213.36" y2="190.5" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="190.5" x2="220.98" y2="190.5" width="0.1524" layer="91"/>
-<junction x="213.36" y="190.5"/>
-<label x="220.98" y="190.5" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="C211" gate="G$1" pin="1"/>
 <wire x1="198.12" y1="139.7" x2="198.12" y2="142.24" width="0.1524" layer="91"/>
 <label x="198.12" y="142.24" size="1.27" layer="95" rot="R90" xref="yes"/>
@@ -4548,16 +4572,6 @@ Will be selected by either the XBEE or FT232R</text>
 <junction x="73.66" y="167.64"/>
 <pinref part="U203" gate="G$1" pin="Y"/>
 <wire x1="86.36" y1="157.48" x2="99.06" y2="157.48" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="VBATT" class="0">
-<segment>
-<pinref part="C213" gate="G$1" pin="1"/>
-<pinref part="U201" gate="G$1" pin="VIN"/>
-<wire x1="177.8" y1="190.5" x2="182.88" y2="190.5" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="190.5" x2="175.26" y2="190.5" width="0.1524" layer="91"/>
-<junction x="177.8" y="190.5"/>
-<label x="175.26" y="190.5" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="XBEE_DIO1" class="0">
@@ -4801,9 +4815,14 @@ Will be selected by either the XBEE or FT232R</text>
 <wire x1="238.76" y1="106.68" x2="238.76" y2="76.2" width="0.1524" layer="94"/>
 <wire x1="238.76" y1="76.2" x2="170.18" y2="76.2" width="0.1524" layer="94"/>
 <wire x1="170.18" y1="76.2" x2="170.18" y2="106.68" width="0.1524" layer="94"/>
-<text x="167.64" y="109.22" size="1.27" layer="94">Regulator from USB Power</text>
+<text x="170.18" y="106.68" size="1.27" layer="94">Regulator from USB Power</text>
 <text x="78.74" y="63.5" size="1.778" layer="94">Kill Switch is only available on Battery Power
 On USB power, motor power is always killed</text>
+<wire x1="246.38" y1="127" x2="266.7" y2="127" width="0.1524" layer="94"/>
+<wire x1="266.7" y1="127" x2="266.7" y2="63.5" width="0.1524" layer="94"/>
+<wire x1="266.7" y1="63.5" x2="246.38" y2="63.5" width="0.1524" layer="94"/>
+<wire x1="246.38" y1="63.5" x2="246.38" y2="127" width="0.1524" layer="94"/>
+<text x="246.38" y="127" size="1.778" layer="94">Power LED</text>
 </plain>
 <instances>
 <instance part="FRAME4" gate="G$1" x="0" y="0"/>
@@ -4831,6 +4850,10 @@ On USB power, motor power is always killed</text>
 <instance part="C405" gate="G$1" x="177.8" y="93.98"/>
 <instance part="C406" gate="G$1" x="215.9" y="93.98"/>
 <instance part="U404" gate="G$1" x="119.38" y="88.9"/>
+<instance part="PWR" gate="G$1" x="256.54" y="93.98"/>
+<instance part="R5" gate="G$1" x="256.54" y="83.82" rot="R90"/>
+<instance part="GND17" gate="1" x="256.54" y="76.2"/>
+<instance part="GND18" gate="1" x="40.64" y="177.8" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -4939,6 +4962,16 @@ On USB power, motor power is always killed</text>
 <wire x1="198.12" y1="83.82" x2="215.9" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="83.82" x2="215.9" y2="88.9" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="GND17" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U402" gate="G$1" pin="SHIELD"/>
+<pinref part="GND18" gate="1" pin="GND"/>
+<wire x1="35.56" y1="170.18" x2="40.64" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="170.18" x2="40.64" y2="175.26" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="N$2" class="0">
 <segment>
@@ -4971,6 +5004,11 @@ On USB power, motor power is always killed</text>
 <wire x1="215.9" y1="96.52" x2="223.52" y2="96.52" width="0.1524" layer="91"/>
 <junction x="215.9" y="96.52"/>
 <label x="223.52" y="96.52" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="PWR" gate="G$1" pin="A"/>
+<wire x1="256.54" y1="96.52" x2="256.54" y2="101.6" width="0.1524" layer="91"/>
+<label x="256.54" y="101.6" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 <net name="USART1_RX" class="0">
@@ -5048,6 +5086,12 @@ On USB power, motor power is always killed</text>
 <pinref part="U404" gate="G$1" pin="5"/>
 <wire x1="134.62" y1="81.28" x2="139.7" y2="81.28" width="0.1524" layer="91"/>
 <label x="139.7" y="81.28" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="PWR" gate="G$1" pin="C"/>
+<pinref part="R5" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
@@ -5300,6 +5344,9 @@ On USB power, motor power is always killed</text>
 <instance part="FRAME6" gate="G$2" x="172.72" y="0"/>
 <instance part="XB1" gate="G$1" x="119.38" y="101.6"/>
 <instance part="GND34" gate="1" x="99.06" y="68.58"/>
+<instance part="R4" gate="G$1" x="68.58" y="86.36" rot="R90"/>
+<instance part="ASSOC" gate="G$1" x="68.58" y="76.2"/>
+<instance part="GND16" gate="1" x="68.58" y="68.58"/>
 </instances>
 <busses>
 </busses>
@@ -5339,6 +5386,10 @@ On USB power, motor power is always killed</text>
 <wire x1="104.14" y1="73.66" x2="99.06" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="73.66" x2="99.06" y2="71.12" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="ASSOC" gate="G$1" pin="C"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="XBEE_DIO0" class="0">
 <segment>
@@ -5352,6 +5403,21 @@ On USB power, motor power is always killed</text>
 <pinref part="XB1" gate="G$1" pin="AD1/DIO1"/>
 <wire x1="104.14" y1="83.82" x2="91.44" y2="83.82" width="0.1524" layer="91"/>
 <label x="91.44" y="83.82" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="ASSOC" gate="G$1" pin="A"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="68.58" y1="78.74" x2="68.58" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="XB1" gate="G$1" pin="ASSOC/AD5/DIO5"/>
+<wire x1="104.14" y1="93.98" x2="68.58" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="93.98" x2="68.58" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="R4" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
