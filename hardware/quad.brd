@@ -1262,6 +1262,36 @@ package type OT</description>
 <text x="6.35" y="3.81" size="1.27" layer="21" rot="R90">+</text>
 <text x="6.35" y="-6.35" size="1.27" layer="21" rot="R90">GND</text>
 </package>
+<package name="MFS201N-16-Z">
+<pad name="4" x="-4" y="1.25" drill="1.4"/>
+<pad name="5" x="0" y="1.25" drill="1.4"/>
+<pad name="6" x="4" y="1.25" drill="1.4"/>
+<pad name="3" x="4" y="-1.25" drill="1.4"/>
+<pad name="2" x="0" y="-1.25" drill="1.4"/>
+<pad name="1" x="-4" y="-1.25" drill="1.4"/>
+<pad name="P$7" x="-8.1" y="0" drill="1.8"/>
+<pad name="P$8" x="8.1" y="0" drill="1.8"/>
+</package>
+<package name="SOT669">
+<smd name="MB" x="0" y="1.2" dx="4.6" dy="4.7" layer="1" rot="R90" cream="no"/>
+<smd name="1" x="-1.905" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
+<smd name="2" x="-0.635" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
+<smd name="3" x="0.635" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
+<smd name="4" x="1.905" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$6" x="-1.905" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$7" x="-0.635" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$8" x="0.635" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$9" x="1.905" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$10" x="0" y="0.3" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$11" x="-1.15" y="0.3" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$12" x="1.15" y="0.3" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$13" x="1.15" y="1.15" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$14" x="0" y="1.15" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$15" x="-1.15" y="1.15" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$16" x="-1.15" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$17" x="0" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$18" x="1.15" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
+</package>
 </packages>
 </library>
 </libraries>
@@ -1552,6 +1582,9 @@ design rules under a new name.</description>
 <element name="R3" library="quad" package="R0603" value="10k" x="-274.828" y="-360.426"/>
 <element name="J501" library="quad" package="1X02" value="I2C_TEST" x="-267.462" y="-370.586"/>
 <element name="U$1" library="quad" package="XT60" value="XT60" x="-306.578" y="-344.424"/>
+<element name="U404" library="quad" package="MFS201N-16-Z" value="MFS201N-16-Z" x="-314.96" y="-391.922"/>
+<element name="U$2" library="quad" package="SOT669" value="PSMN9RS-30YLC" x="-328.676" y="-410.21"/>
+<element name="R701" library="quad" package="R0603" value="10k" x="-335.026" y="-417.322"/>
 </elements>
 <signals>
 <signal name="OSC_IN">
@@ -1638,10 +1671,6 @@ design rules under a new name.</description>
 <via x="58.928" y="13.462" extent="1-16" drill="0.35"/>
 <via x="50.038" y="15.24" extent="1-16" drill="0.35"/>
 <contactref element="ESC3" pad="PWM_GND"/>
-<contactref element="ESC3" pad="GND"/>
-<contactref element="ESC1" pad="GND"/>
-<contactref element="ESC2" pad="GND"/>
-<contactref element="ESC4" pad="GND"/>
 <contactref element="ESC4" pad="PWM_GND"/>
 <contactref element="ESC2" pad="PWM_GND"/>
 <contactref element="ESC1" pad="PWM_GND"/>
@@ -1680,6 +1709,10 @@ design rules under a new name.</description>
 <contactref element="R502" pad="2"/>
 <contactref element="R503" pad="2"/>
 <contactref element="U$1" pad="GND"/>
+<contactref element="U$2" pad="2"/>
+<contactref element="U$2" pad="1"/>
+<contactref element="U$2" pad="3"/>
+<contactref element="R701" pad="1"/>
 <wire x1="-249.21" y1="-255.56" x2="-251.71" y2="-255.56" width="0" layer="19" extent="1-1"/>
 <wire x1="-249.21" y1="-254.75" x2="-249.21" y2="-255.56" width="0" layer="19" extent="1-1"/>
 <wire x1="-249.21" y1="-253.75" x2="-249.21" y2="-254.75" width="0" layer="19" extent="1-1"/>
@@ -1714,14 +1747,14 @@ design rules under a new name.</description>
 <wire x1="-273.978" y1="-334.772" x2="-273.978" y2="-326.898" width="0" layer="19" extent="1-1"/>
 <wire x1="-273.978" y1="-339.852" x2="-273.978" y2="-334.772" width="0" layer="19" extent="1-1"/>
 <wire x1="-306.578" y1="-348.174" x2="-273.978" y2="-339.852" width="0" layer="19" extent="1-1"/>
-<wire x1="-208.026" y1="91.186" x2="-223.68" y2="-167.946" width="0" layer="19" extent="1-1"/>
-<wire x1="-195.326" y1="95.631" x2="-208.026" y2="91.186" width="0" layer="19" extent="1-1"/>
-<wire x1="-142.494" y1="91.186" x2="-195.326" y2="95.631" width="0" layer="19" extent="1-1"/>
-<wire x1="-129.794" y1="95.631" x2="-142.494" y2="91.186" width="0" layer="19" extent="1-1"/>
-<wire x1="-76.962" y1="91.186" x2="-129.794" y2="95.631" width="0" layer="19" extent="1-1"/>
-<wire x1="-64.262" y1="95.631" x2="-76.962" y2="91.186" width="0" layer="19" extent="1-1"/>
-<wire x1="-11.43" y1="91.186" x2="-64.262" y2="95.631" width="0" layer="19" extent="1-1"/>
-<wire x1="1.27" y1="95.631" x2="-11.43" y2="91.186" width="0" layer="19" extent="1-1"/>
+<wire x1="-328.041" y1="-412.935" x2="-306.578" y2="-348.174" width="0" layer="19" extent="1-1"/>
+<wire x1="-329.311" y1="-412.935" x2="-328.041" y2="-412.935" width="0" layer="19" extent="1-1"/>
+<wire x1="-330.581" y1="-412.935" x2="-329.311" y2="-412.935" width="0" layer="19" extent="1-1"/>
+<wire x1="-335.876" y1="-417.322" x2="-330.581" y2="-412.935" width="0" layer="19" extent="1-1"/>
+<wire x1="-195.326" y1="95.631" x2="-223.68" y2="-167.946" width="0" layer="19" extent="1-1"/>
+<wire x1="-129.794" y1="95.631" x2="-195.326" y2="95.631" width="0" layer="19" extent="1-1"/>
+<wire x1="-64.262" y1="95.631" x2="-129.794" y2="95.631" width="0" layer="19" extent="1-1"/>
+<wire x1="1.27" y1="95.631" x2="-64.262" y2="95.631" width="0" layer="19" extent="1-1"/>
 <wire x1="34.036" y1="31.408" x2="1.27" y2="95.631" width="0" layer="19" extent="1-1"/>
 <wire x1="52.23095625" y1="32.605040625" x2="34.036" y2="31.408" width="0" layer="19" extent="1-1"/>
 <wire x1="56.690915625" y1="28.87590625" x2="52.23095625" y2="32.605040625" width="0" layer="19" extent="1-1"/>
@@ -2195,6 +2228,10 @@ design rules under a new name.</description>
 <contactref element="ESC4" pad="VBATT"/>
 <contactref element="C213" pad="1"/>
 <contactref element="U201" pad="3"/>
+<contactref element="U404" pad="3"/>
+<contactref element="U$1" pad="PWR"/>
+<wire x1="-306.578" y1="-340.674" x2="-310.96" y2="-393.172" width="0" layer="19" extent="1-1"/>
+<wire x1="-228.688" y1="-173.736" x2="-306.578" y2="-340.674" width="0" layer="19" extent="1-1"/>
 <wire x1="-218.28" y1="-167.946" x2="-228.688" y2="-173.736" width="0" layer="19" extent="1-1"/>
 <wire x1="-187.706" y1="91.186" x2="-218.28" y2="-167.946" width="0" layer="19" extent="1-1"/>
 <wire x1="-122.174" y1="91.186" x2="-187.706" y2="91.186" width="0" layer="19" extent="1-1"/>
@@ -2281,12 +2318,16 @@ design rules under a new name.</description>
 <contactref element="C403" pad="1"/>
 <contactref element="C405" pad="1"/>
 <contactref element="U403" pad="3"/>
+<contactref element="U404" pad="2"/>
+<contactref element="U404" pad="1"/>
 <wire x1="-234.282" y1="-245.162" x2="-244.69" y2="-250.952" width="0" layer="19" extent="1-1"/>
 <wire x1="-244.69" y1="-232.664" x2="-234.282" y2="-245.162" width="0" layer="19" extent="1-1"/>
 <wire x1="-244.69" y1="-227.584" x2="-244.69" y2="-232.664" width="0" layer="19" extent="1-1"/>
 <wire x1="-242.99" y1="-222.504" x2="-244.69" y2="-227.584" width="0" layer="19" extent="1-1"/>
 <wire x1="-238.164" y1="-203.708" x2="-242.99" y2="-222.504" width="0" layer="19" extent="1-1"/>
 <wire x1="-222.037" y1="-186.875" x2="-238.164" y2="-203.708" width="0" layer="19" extent="1-1"/>
+<wire x1="-314.96" y1="-393.172" x2="-244.69" y2="-250.952" width="0" layer="19" extent="1-1"/>
+<wire x1="-318.96" y1="-393.172" x2="-314.96" y2="-393.172" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="USBDM">
 <contactref element="U402" pad="D-"/>
@@ -2334,11 +2375,10 @@ design rules under a new name.</description>
 </signal>
 <signal name="VDDIO">
 </signal>
-<signal name="N$3">
-<contactref element="U$1" pad="PWR"/>
-</signal>
 <signal name="XBEE_DIO4">
 <contactref element="XB1" pad="11"/>
+<contactref element="U404" pad="6"/>
+<wire x1="-310.96" y1="-390.672" x2="-225.982" y2="-283.32" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="XBEE_DIO0">
 <contactref element="XB1" pad="20"/>
@@ -2411,6 +2451,24 @@ design rules under a new name.</description>
 </signal>
 <signal name="PD8">
 <contactref element="U101" pad="55"/>
+</signal>
+<signal name="POWER_EN">
+<contactref element="U404" pad="5"/>
+<contactref element="U$2" pad="4"/>
+<contactref element="R701" pad="2"/>
+<wire x1="-326.771" y1="-412.935" x2="-334.176" y2="-417.322" width="0" layer="19" extent="1-1"/>
+<wire x1="-314.96" y1="-390.672" x2="-326.771" y2="-412.935" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="KILL_GND">
+<contactref element="U$2" pad="MB"/>
+<contactref element="ESC1" pad="GND"/>
+<contactref element="ESC3" pad="GND"/>
+<contactref element="ESC4" pad="GND"/>
+<contactref element="ESC2" pad="GND"/>
+<wire x1="-208.026" y1="91.186" x2="-328.676" y2="-409.01" width="0" layer="19" extent="1-1"/>
+<wire x1="-142.494" y1="91.186" x2="-208.026" y2="91.186" width="0" layer="19" extent="1-1"/>
+<wire x1="-76.962" y1="91.186" x2="-142.494" y2="91.186" width="0" layer="19" extent="1-1"/>
+<wire x1="-11.43" y1="91.186" x2="-76.962" y2="91.186" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

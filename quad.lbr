@@ -38,7 +38,7 @@
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
@@ -3427,6 +3427,24 @@ package type OT</description>
 <text x="6.35" y="-6.35" size="1.27" layer="21" rot="R90">GND</text>
 </package>
 <package name="SOT669">
+<smd name="MB" x="0" y="1.2" dx="4.6" dy="4.7" layer="1" rot="R90" cream="no"/>
+<smd name="1" x="-1.905" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
+<smd name="2" x="-0.635" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
+<smd name="3" x="0.635" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
+<smd name="4" x="1.905" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
+<smd name="P$6" x="-1.905" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$7" x="-0.635" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$8" x="0.635" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$9" x="1.905" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
+<smd name="P$10" x="0" y="0.3" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$11" x="-1.15" y="0.3" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$12" x="1.15" y="0.3" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$13" x="1.15" y="1.15" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$14" x="0" y="1.15" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$15" x="-1.15" y="1.15" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$16" x="-1.15" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$17" x="0" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
+<smd name="P$18" x="1.15" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
 </package>
 </packages>
 <symbols>
@@ -4148,31 +4166,31 @@ package type OT</description>
 <pin name="AD0/DIO0" x="-15.24" y="-20.32" length="short"/>
 </symbol>
 <symbol name="MFS201N-16-Z">
-<wire x1="-7.62" y1="12.7" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="2.54" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="-5.08" x2="-12.7" y2="-10.16" width="0.254" layer="94"/>
-<pin name="1" x="-12.7" y="-15.24" visible="off" length="middle" rot="R90"/>
-<pin name="3" x="-2.54" y="-15.24" visible="off" length="middle" rot="R90"/>
-<pin name="2" x="-7.62" y="17.78" visible="off" length="middle" rot="R270"/>
-<wire x1="7.62" y1="12.7" x2="7.62" y2="2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="2.54" x2="12.7" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="12.7" y1="-5.08" x2="12.7" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-5.08" x2="2.54" y2="-10.16" width="0.254" layer="94"/>
-<pin name="4" x="2.54" y="-15.24" visible="off" length="middle" rot="R90"/>
-<pin name="6" x="12.7" y="-15.24" visible="off" length="middle" rot="R90"/>
-<pin name="5" x="7.62" y="17.78" visible="off" length="middle" rot="R270"/>
-<wire x1="-15.24" y1="12.7" x2="15.24" y2="12.7" width="0.254" layer="94"/>
-<wire x1="15.24" y1="12.7" x2="15.24" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="15.24" y1="-10.16" x2="-15.24" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-15.24" y1="-10.16" x2="-15.24" y2="12.7" width="0.254" layer="94"/>
-<text x="-12.7" y="-7.62" size="1.27" layer="94" rot="R90">1</text>
-<text x="-2.54" y="-7.62" size="1.27" layer="94" rot="R90">3</text>
-<text x="-7.62" y="10.16" size="1.27" layer="94" rot="R90">2</text>
-<text x="2.54" y="-7.62" size="1.27" layer="94" rot="R90">4</text>
-<text x="12.7" y="-7.62" size="1.27" layer="94" rot="R90">6</text>
-<text x="7.62" y="10.16" size="1.27" layer="94" rot="R90">5</text>
-<text x="-15.24" y="12.7" size="1.27" layer="94">&gt;NAME</text>
+<wire x1="10.16" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="2.54" x2="-12.7" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="12.7" x2="-12.7" y2="12.7" width="0.254" layer="94"/>
+<pin name="1" x="-17.78" y="12.7" visible="off" length="middle"/>
+<pin name="3" x="-17.78" y="2.54" visible="off" length="middle"/>
+<pin name="2" x="15.24" y="7.62" visible="off" length="middle" rot="R180"/>
+<wire x1="10.16" y1="-7.62" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="-7.62" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-12.7" x2="-12.7" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-12.7" y2="-2.54" width="0.254" layer="94"/>
+<pin name="4" x="-17.78" y="-2.54" visible="off" length="middle"/>
+<pin name="6" x="-17.78" y="-12.7" visible="off" length="middle"/>
+<pin name="5" x="15.24" y="-7.62" visible="off" length="middle" rot="R180"/>
+<wire x1="10.16" y1="15.24" x2="10.16" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-15.24" x2="-12.7" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-15.24" x2="-12.7" y2="15.24" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="15.24" x2="10.16" y2="15.24" width="0.254" layer="94"/>
+<text x="-10.16" y="12.7" size="1.27" layer="94">1</text>
+<text x="-10.16" y="2.54" size="1.27" layer="94">3</text>
+<text x="7.62" y="7.62" size="1.27" layer="94">2</text>
+<text x="-10.16" y="-2.54" size="1.27" layer="94">4</text>
+<text x="-10.16" y="-12.7" size="1.27" layer="94">6</text>
+<text x="7.62" y="-7.62" size="1.27" layer="94">5</text>
+<text x="-12.7" y="15.24" size="1.27" layer="94">&gt;NAME</text>
 </symbol>
 <symbol name="SN74AHC1G32DBVR">
 <wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
@@ -4243,6 +4261,16 @@ package type OT</description>
 <wire x1="-5.08" y1="-5.08" x2="-5.08" y2="5.08" width="0.254" layer="94"/>
 <text x="-5.08" y="5.08" size="1.27" layer="94">&gt;NAME</text>
 <text x="-5.08" y="-7.62" size="1.27" layer="94">VALUE</text>
+</symbol>
+<symbol name="PSMN9R5-30YLC">
+<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<pin name="G" x="-12.7" y="0" length="middle"/>
+<pin name="D" x="0" y="10.16" length="middle" rot="R270"/>
+<pin name="S" x="0" y="-10.16" length="middle" rot="R90"/>
+<text x="-7.62" y="-7.62" size="1.27" layer="94">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -5101,6 +5129,14 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 </gates>
 <devices>
 <device name="" package="MFS201N-16-Z">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -5238,6 +5274,23 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <connects>
 <connect gate="G$1" pin="GND" pad="GND"/>
 <connect gate="G$1" pin="PWR" pad="PWR"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PSMN9RS-30YLC">
+<gates>
+<gate name="G$1" symbol="PSMN9R5-30YLC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT669">
+<connects>
+<connect gate="G$1" pin="D" pad="MB"/>
+<connect gate="G$1" pin="G" pad="4"/>
+<connect gate="G$1" pin="S" pad="1 2 3"/>
 </connects>
 <technologies>
 <technology name=""/>
