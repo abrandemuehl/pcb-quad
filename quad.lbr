@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.1">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2575,9 +2575,9 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="-1.27" y1="25.56" x2="-0.635" y2="26.195" width="0.127" layer="21"/>
 <wire x1="-0.635" y1="26.195" x2="0.635" y2="26.195" width="0.127" layer="21"/>
 <wire x1="0.635" y1="26.195" x2="1.27" y2="25.56" width="0.127" layer="21"/>
-<pad name="MOT1" x="-12.7" y="-18.655" drill="2" diameter="4"/>
+<pad name="MOT1" x="-10.16" y="-18.655" drill="2" diameter="4"/>
 <pad name="MOT2" x="0" y="-18.655" drill="2" diameter="4"/>
-<pad name="MOT3" x="12.7" y="-18.655" drill="2" diameter="4"/>
+<pad name="MOT3" x="10.16" y="-18.655" drill="2" diameter="4"/>
 <pad name="GND" x="-10.16" y="20.48" drill="2" diameter="4"/>
 <pad name="VBATT" x="10.16" y="20.48" drill="2" diameter="4"/>
 </package>
@@ -2594,11 +2594,11 @@ Source: AVX .. aphvc.pdf</description>
 <smd name="1" x="-2.7" y="-3.1" dx="1.9" dy="1.9" layer="1" rot="R90"/>
 <smd name="2" x="0" y="-3.1" dx="1.9" dy="1.1" layer="1" rot="R90"/>
 <smd name="3" x="2.7" y="-3.1" dx="1.9" dy="1.9" layer="1" rot="R90"/>
-<wire x1="-4.45" y1="4.35" x2="4.45" y2="4.35" width="0.127" layer="21"/>
-<wire x1="4.45" y1="4.35" x2="4.45" y2="-4.35" width="0.127" layer="21"/>
-<wire x1="4.45" y1="-4.35" x2="-4.45" y2="-4.35" width="0.127" layer="21"/>
-<wire x1="-4.45" y1="-4.35" x2="-4.45" y2="4.35" width="0.127" layer="21"/>
-<text x="-4" y="5" size="1.27" layer="21">&gt;NAME</text>
+<wire x1="-3.25" y1="1.75" x2="3.25" y2="1.75" width="0.127" layer="21"/>
+<wire x1="3.25" y1="1.75" x2="3.25" y2="-1.75" width="0.127" layer="21"/>
+<wire x1="3.25" y1="-1.75" x2="-3.25" y2="-1.75" width="0.127" layer="21"/>
+<wire x1="-3.25" y1="-1.75" x2="-3.25" y2="1.75" width="0.127" layer="21"/>
+<text x="-4" y="-3" size="1.27" layer="21" rot="R90">&gt;NAME</text>
 </package>
 <package name="SSOP28">
 <description>&lt;b&gt;Shrink Small Outline Package&lt;/b&gt;&lt;p&gt;
@@ -2667,26 +2667,20 @@ package type SS</description>
 <rectangle x1="-5.1999" y1="-2.5999" x2="-4.225" y2="2.5999" layer="27"/>
 </package>
 <package name="USB-B-MICRO-SMD_V03">
-<text x="-4.66" y="5.96" size="0.3048" layer="51">PCB Front</text>
-<wire x1="-3" y1="5.6" x2="-2.3" y2="5.3" width="0.08" layer="51"/>
-<wire x1="-2.3" y1="5.3" x2="-2.4" y2="5.5" width="0.08" layer="51"/>
-<wire x1="-2.3" y1="5.3" x2="-2.5" y2="5.2" width="0.08" layer="51"/>
-<text x="-1.27" y="5.969" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-1.27" y="5.461" size="0.4064" layer="27">&gt;VALUE</text>
-<smd name="D+" x="2.725" y="0" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="D-" x="2.725" y="0.65" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="VBUS" x="2.725" y="1.3" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="ID" x="2.725" y="-0.65" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="GND" x="2.725" y="-1.3" dx="0.4" dy="1.45" layer="1" rot="R90"/>
+<smd name="D+" x="6.535" y="0" dx="0.4" dy="1.45" layer="1" rot="R90"/>
+<smd name="D-" x="6.535" y="0.65" dx="0.4" dy="1.45" layer="1" rot="R90"/>
+<smd name="VBUS" x="6.535" y="1.3" dx="0.4" dy="1.45" layer="1" rot="R90"/>
+<smd name="ID" x="6.535" y="-0.65" dx="0.4" dy="1.45" layer="1" rot="R90"/>
+<smd name="GND" x="6.535" y="-1.3" dx="0.4" dy="1.45" layer="1" rot="R90"/>
 <hole x="2.2" y="1.9" drill="0.85"/>
 <hole x="2.2" y="-1.9" drill="0.85"/>
 <rectangle x1="-0.75" y1="2.784" x2="0.75" y2="4.584" layer="31"/>
 <rectangle x1="-0.35" y1="-0.75" x2="0.35" y2="0.75" layer="31"/>
 <rectangle x1="-0.75" y1="-4.584" x2="0.75" y2="-2.784" layer="31"/>
 <wire x1="-2.15" y1="3.9" x2="-2.15" y2="-3.9" width="0.127" layer="49"/>
-<wire x1="2.85" y1="3.9" x2="2.85" y2="-3.9" width="0.127" layer="49"/>
-<wire x1="2.85" y1="3.9" x2="-2.15" y2="3.9" width="0.127" layer="49"/>
-<wire x1="2.85" y1="-3.9" x2="-2.15" y2="-3.9" width="0.127" layer="49"/>
+<wire x1="5.39" y1="3.9" x2="5.39" y2="-3.9" width="0.127" layer="49"/>
+<wire x1="5.39" y1="3.9" x2="-2.15" y2="3.9" width="0.127" layer="49"/>
+<wire x1="5.39" y1="-3.9" x2="-2.15" y2="-3.9" width="0.127" layer="49"/>
 <wire x1="2.981959375" y1="3.99288125" x2="2" y2="3.99288125" width="0.3048" layer="21"/>
 <wire x1="2" y1="3.99288125" x2="2" y2="4" width="0.3048" layer="21"/>
 <wire x1="3" y1="4" x2="3" y2="3" width="0.3048" layer="21"/>
@@ -2745,34 +2739,34 @@ package type SS</description>
 <wire x1="-2.7" y1="2" x2="-2.7" y2="-2" width="0.1" layer="21"/>
 <wire x1="-2.7" y1="-2" x2="2.7" y2="-2" width="0.1" layer="21"/>
 <wire x1="2.7" y1="-2" x2="2.7" y2="2" width="0.1" layer="21"/>
-<smd name="20" x="2.25" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="19" x="2.25" y="0.75" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="18" x="2.25" y="0.25" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="17" x="2.25" y="-0.25" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="16" x="2.25" y="-0.75" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="15" x="2.25" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="14" x="1.75" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="13" x="1.25" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="12" x="0.75" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="11" x="0.25" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="10" x="-0.25" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="9" x="-0.75" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="8" x="-1.25" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="7" x="-1.75" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="6" x="-2.25" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="5" x="-2.25" y="-0.75" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="4" x="-2.25" y="-0.25" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="3" x="-2.25" y="0.25" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="2" x="-2.25" y="0.75" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="1" x="-2.25" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="28" x="-1.75" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="27" x="-1.25" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="26" x="-0.75" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="25" x="-0.25" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="24" x="0.25" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="23" x="0.75" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="22" x="1.25" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="21" x="1.75" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
+<smd name="20" x="2.25" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="19" x="2.25" y="0.75" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="18" x="2.25" y="0.25" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="17" x="2.25" y="-0.25" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="16" x="2.25" y="-0.75" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="15" x="2.25" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="14" x="1.75" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="13" x="1.25" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="12" x="0.75" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="11" x="0.25" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="10" x="-0.25" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="9" x="-0.75" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="8" x="-1.25" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="7" x="-1.75" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="6" x="-2.25" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="5" x="-2.25" y="-0.75" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="4" x="-2.25" y="-0.25" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="3" x="-2.25" y="0.25" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="2" x="-2.25" y="0.75" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="1" x="-2.25" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="28" x="-1.75" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="27" x="-1.25" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="26" x="-0.75" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="25" x="-0.25" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="24" x="0.25" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="23" x="0.75" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="22" x="1.25" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="21" x="1.75" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
 <circle x="-1.55" y="0.9" radius="0.05" width="0.4064" layer="21"/>
 <text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
@@ -3424,24 +3418,11 @@ package type OT</description>
 <text x="6.35" y="-6.35" size="1.27" layer="21" rot="R90">GND</text>
 </package>
 <package name="SOT669">
-<smd name="MB" x="0" y="1.2" dx="4.6" dy="4.7" layer="1" rot="R90" cream="no"/>
+<smd name="MB" x="0" y="1.2" dx="4.6" dy="4.7" layer="1" rot="R90"/>
 <smd name="1" x="-1.905" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
 <smd name="2" x="-0.635" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
 <smd name="3" x="0.635" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
 <smd name="4" x="1.905" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$6" x="-1.905" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
-<smd name="P$7" x="-0.635" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
-<smd name="P$8" x="0.635" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
-<smd name="P$9" x="1.905" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
-<smd name="P$10" x="0" y="0.3" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$11" x="-1.15" y="0.3" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$12" x="1.15" y="0.3" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$13" x="1.15" y="1.15" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$14" x="0" y="1.15" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$15" x="-1.15" y="1.15" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$16" x="-1.15" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$17" x="0" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$18" x="1.15" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
 </package>
 <package name="USB-B-MICRO-SMD">
 <smd name="VBUS" x="-1.3" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
@@ -3449,38 +3430,13 @@ package type OT</description>
 <smd name="ID" x="0.65" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
 <smd name="D+" x="0" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
 <smd name="D-" x="-0.65" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
-<smd name="P$7" x="1" y="0" dx="2.5" dy="1.425" layer="1" rot="R90"/>
-<wire x1="-2.375" y1="-0.27" x2="-3.035" y2="-0.27" width="0" layer="20" curve="-180"/>
-<wire x1="-3.035" y1="-0.27" x2="-3.035" y2="0.27" width="0" layer="20"/>
-<wire x1="-3.035" y1="0.27" x2="-2.375" y2="0.27" width="0" layer="20" curve="-180"/>
-<wire x1="-2.375" y1="0.27" x2="-2.375" y2="-0.27" width="0" layer="20"/>
-<smd name="P$6" x="-1" y="0" dx="2.5" dy="1.425" layer="1" rot="R90"/>
-<wire x1="3.035" y1="-0.27" x2="2.375" y2="-0.27" width="0" layer="20" curve="-180"/>
-<wire x1="2.375" y1="-0.27" x2="2.375" y2="0.27" width="0" layer="20"/>
-<wire x1="2.375" y1="0.27" x2="3.035" y2="0.27" width="0" layer="20" curve="-180"/>
-<wire x1="3.035" y1="0.27" x2="3.035" y2="-0.27" width="0" layer="20"/>
-<wire x1="-2.095" y1="2.835" x2="-2.755" y2="2.835" width="0" layer="20" curve="-180"/>
-<wire x1="-2.755" y1="2.835" x2="-2.755" y2="3.225" width="0" layer="20"/>
-<wire x1="-2.755" y1="3.225" x2="-2.095" y2="3.225" width="0" layer="20" curve="-180"/>
-<wire x1="-2.095" y1="3.225" x2="-2.095" y2="2.835" width="0" layer="20"/>
-<wire x1="2.755" y1="2.835" x2="2.095" y2="2.835" width="0" layer="20" curve="-180"/>
-<wire x1="2.095" y1="2.835" x2="2.095" y2="3.225" width="0" layer="20"/>
-<wire x1="2.095" y1="3.225" x2="2.755" y2="3.225" width="0" layer="20" curve="-180"/>
-<wire x1="2.755" y1="3.225" x2="2.755" y2="2.835" width="0" layer="20"/>
-<smd name="P$8" x="-2.725" y="0.225" dx="2.25" dy="1.3" layer="1" rot="R90" cream="no"/>
-<smd name="SHIELD2" x="-2.9" y="2.97" dx="1.46" dy="2" layer="1" rot="R90" cream="no"/>
-<smd name="P$9" x="-2.9875" y="1.7" dx="1.825" dy="0.7" layer="1" cream="no"/>
-<smd name="P$10" x="-2.725" y="0.225" dx="2.25" dy="1.3" layer="16" rot="R90" cream="no"/>
-<smd name="P$12" x="-2.9875" y="1.7" dx="1.825" dy="0.7" layer="16" rot="R180" cream="no"/>
-<smd name="P$13" x="-2.9" y="2.97" dx="1.46" dy="2" layer="16" rot="R90" cream="no"/>
-<smd name="SHIELD1" x="2.9" y="2.97" dx="1.46" dy="2" layer="1" rot="R90" cream="no"/>
-<smd name="P$15" x="2.9" y="2.97" dx="1.46" dy="2" layer="16" rot="R90" cream="no"/>
-<smd name="P$16" x="2.9875" y="1.7" dx="1.825" dy="0.7" layer="16" rot="R180" cream="no"/>
-<smd name="P$17" x="2.9875" y="1.7" dx="1.825" dy="0.7" layer="1" cream="no"/>
-<wire x1="-3.035" y1="0.27" x2="-2.375" y2="0.27" width="0" layer="20" curve="-180"/>
-<smd name="P$18" x="2.725" y="0.225" dx="2.25" dy="1.3" layer="16" rot="R90" cream="no"/>
-<smd name="P$19" x="2.725" y="0.225" dx="2.25" dy="1.3" layer="1" rot="R90" cream="no"/>
-<wire x1="-4" y1="-2.2" x2="4" y2="-2.2" width="0.127" layer="51"/>
+<smd name="SHIELD5" x="1.45" y="0.35" dx="1.2" dy="1.9" layer="1" rot="R90"/>
+<smd name="SHIELD4" x="-1.45" y="0.35" dx="1.2" dy="1.9" layer="1" rot="R90"/>
+<smd name="SHIELD2" x="-3.1" y="2.55" dx="1.6" dy="2.1" layer="1" rot="R90"/>
+<smd name="SHIELD1" x="3.1" y="2.55" dx="1.6" dy="2.1" layer="1" rot="R90"/>
+<wire x1="-4" y1="-1.45" x2="4" y2="-1.45" width="0.254" layer="21"/>
+<smd name="SHIELD3" x="-3.8" y="0.35" dx="1.2" dy="1.9" layer="1" rot="R90"/>
+<smd name="SHIELD6" x="3.8" y="0.35" dx="1.2" dy="1.9" layer="1" rot="R90"/>
 </package>
 </packages>
 <symbols>
@@ -5019,7 +4975,7 @@ package type OT</description>
 <connect gate="G$1" pin="D+" pad="D+"/>
 <connect gate="G$1" pin="D-" pad="D-"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="SHIELD" pad="SHIELD1 SHIELD2"/>
+<connect gate="G$1" pin="SHIELD" pad="SHIELD1 SHIELD2 SHIELD3 SHIELD4 SHIELD5 SHIELD6"/>
 <connect gate="G$1" pin="USBID" pad="ID"/>
 <connect gate="G$1" pin="VBUS" pad="VBUS"/>
 </connects>

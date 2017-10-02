@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.1">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,19 +53,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -1291,9 +1291,9 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <wire x1="-1.27" y1="25.56" x2="-0.635" y2="26.195" width="0.127" layer="21"/>
 <wire x1="-0.635" y1="26.195" x2="0.635" y2="26.195" width="0.127" layer="21"/>
 <wire x1="0.635" y1="26.195" x2="1.27" y2="25.56" width="0.127" layer="21"/>
-<pad name="MOT1" x="-12.7" y="-18.655" drill="2" diameter="4"/>
+<pad name="MOT1" x="-10.16" y="-18.655" drill="2" diameter="4"/>
 <pad name="MOT2" x="0" y="-18.655" drill="2" diameter="4"/>
-<pad name="MOT3" x="12.7" y="-18.655" drill="2" diameter="4"/>
+<pad name="MOT3" x="10.16" y="-18.655" drill="2" diameter="4"/>
 <pad name="GND" x="-10.16" y="20.48" drill="2" diameter="4"/>
 <pad name="VBATT" x="10.16" y="20.48" drill="2" diameter="4"/>
 </package>
@@ -1310,11 +1310,11 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <smd name="1" x="-2.7" y="-3.1" dx="1.9" dy="1.9" layer="1" rot="R90"/>
 <smd name="2" x="0" y="-3.1" dx="1.9" dy="1.1" layer="1" rot="R90"/>
 <smd name="3" x="2.7" y="-3.1" dx="1.9" dy="1.9" layer="1" rot="R90"/>
-<wire x1="-4.45" y1="4.35" x2="4.45" y2="4.35" width="0.127" layer="21"/>
-<wire x1="4.45" y1="4.35" x2="4.45" y2="-4.35" width="0.127" layer="21"/>
-<wire x1="4.45" y1="-4.35" x2="-4.45" y2="-4.35" width="0.127" layer="21"/>
-<wire x1="-4.45" y1="-4.35" x2="-4.45" y2="4.35" width="0.127" layer="21"/>
-<text x="-4" y="5" size="1.27" layer="21">&gt;NAME</text>
+<wire x1="-3.25" y1="1.75" x2="3.25" y2="1.75" width="0.127" layer="21"/>
+<wire x1="3.25" y1="1.75" x2="3.25" y2="-1.75" width="0.127" layer="21"/>
+<wire x1="3.25" y1="-1.75" x2="-3.25" y2="-1.75" width="0.127" layer="21"/>
+<wire x1="-3.25" y1="-1.75" x2="-3.25" y2="1.75" width="0.127" layer="21"/>
+<text x="-4" y="-3" size="1.27" layer="21" rot="R90">&gt;NAME</text>
 </package>
 <package name="SSOP28">
 <description>&lt;b&gt;Shrink Small Outline Package&lt;/b&gt;&lt;p&gt;
@@ -1383,26 +1383,20 @@ package type SS</description>
 <rectangle x1="-5.1999" y1="-2.5999" x2="-4.225" y2="2.5999" layer="27"/>
 </package>
 <package name="USB-B-MICRO-SMD_V03">
-<text x="-4.66" y="5.96" size="0.3048" layer="51">PCB Front</text>
-<wire x1="-3" y1="5.6" x2="-2.3" y2="5.3" width="0.08" layer="51"/>
-<wire x1="-2.3" y1="5.3" x2="-2.4" y2="5.5" width="0.08" layer="51"/>
-<wire x1="-2.3" y1="5.3" x2="-2.5" y2="5.2" width="0.08" layer="51"/>
-<text x="-1.27" y="5.969" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-1.27" y="5.461" size="0.4064" layer="27">&gt;VALUE</text>
-<smd name="D+" x="2.725" y="0" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="D-" x="2.725" y="0.65" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="VBUS" x="2.725" y="1.3" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="ID" x="2.725" y="-0.65" dx="0.4" dy="1.45" layer="1" rot="R90"/>
-<smd name="GND" x="2.725" y="-1.3" dx="0.4" dy="1.45" layer="1" rot="R90"/>
+<smd name="D+" x="6.535" y="0" dx="0.4" dy="1.45" layer="1" rot="R90"/>
+<smd name="D-" x="6.535" y="0.65" dx="0.4" dy="1.45" layer="1" rot="R90"/>
+<smd name="VBUS" x="6.535" y="1.3" dx="0.4" dy="1.45" layer="1" rot="R90"/>
+<smd name="ID" x="6.535" y="-0.65" dx="0.4" dy="1.45" layer="1" rot="R90"/>
+<smd name="GND" x="6.535" y="-1.3" dx="0.4" dy="1.45" layer="1" rot="R90"/>
 <hole x="2.2" y="1.9" drill="0.85"/>
 <hole x="2.2" y="-1.9" drill="0.85"/>
 <rectangle x1="-0.75" y1="2.784" x2="0.75" y2="4.584" layer="31"/>
 <rectangle x1="-0.35" y1="-0.75" x2="0.35" y2="0.75" layer="31"/>
 <rectangle x1="-0.75" y1="-4.584" x2="0.75" y2="-2.784" layer="31"/>
 <wire x1="-2.15" y1="3.9" x2="-2.15" y2="-3.9" width="0.127" layer="49"/>
-<wire x1="2.85" y1="3.9" x2="2.85" y2="-3.9" width="0.127" layer="49"/>
-<wire x1="2.85" y1="3.9" x2="-2.15" y2="3.9" width="0.127" layer="49"/>
-<wire x1="2.85" y1="-3.9" x2="-2.15" y2="-3.9" width="0.127" layer="49"/>
+<wire x1="5.39" y1="3.9" x2="5.39" y2="-3.9" width="0.127" layer="49"/>
+<wire x1="5.39" y1="3.9" x2="-2.15" y2="3.9" width="0.127" layer="49"/>
+<wire x1="5.39" y1="-3.9" x2="-2.15" y2="-3.9" width="0.127" layer="49"/>
 <wire x1="2.981959375" y1="3.99288125" x2="2" y2="3.99288125" width="0.3048" layer="21"/>
 <wire x1="2" y1="3.99288125" x2="2" y2="4" width="0.3048" layer="21"/>
 <wire x1="3" y1="4" x2="3" y2="3" width="0.3048" layer="21"/>
@@ -1438,34 +1432,34 @@ package type SS</description>
 <wire x1="-2.7" y1="2" x2="-2.7" y2="-2" width="0.1" layer="21"/>
 <wire x1="-2.7" y1="-2" x2="2.7" y2="-2" width="0.1" layer="21"/>
 <wire x1="2.7" y1="-2" x2="2.7" y2="2" width="0.1" layer="21"/>
-<smd name="20" x="2.25" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="19" x="2.25" y="0.75" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="18" x="2.25" y="0.25" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="17" x="2.25" y="-0.25" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="16" x="2.25" y="-0.75" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="15" x="2.25" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="14" x="1.75" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="13" x="1.25" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="12" x="0.75" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="11" x="0.25" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="10" x="-0.25" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="9" x="-0.75" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="8" x="-1.25" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="7" x="-1.75" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="6" x="-2.25" y="-1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="5" x="-2.25" y="-0.75" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="4" x="-2.25" y="-0.25" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="3" x="-2.25" y="0.25" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="2" x="-2.25" y="0.75" dx="0.3" dy="0.5" layer="1" roundness="20" rot="R90"/>
-<smd name="1" x="-2.25" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="28" x="-1.75" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="27" x="-1.25" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="26" x="-0.75" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="25" x="-0.25" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="24" x="0.25" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="23" x="0.75" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="22" x="1.25" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
-<smd name="21" x="1.75" y="1.56" dx="0.3" dy="0.5" layer="1" roundness="20"/>
+<smd name="20" x="2.25" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="19" x="2.25" y="0.75" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="18" x="2.25" y="0.25" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="17" x="2.25" y="-0.25" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="16" x="2.25" y="-0.75" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="15" x="2.25" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="14" x="1.75" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="13" x="1.25" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="12" x="0.75" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="11" x="0.25" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="10" x="-0.25" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="9" x="-0.75" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="8" x="-1.25" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="7" x="-1.75" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="6" x="-2.25" y="-1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="5" x="-2.25" y="-0.75" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="4" x="-2.25" y="-0.25" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="3" x="-2.25" y="0.25" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="2" x="-2.25" y="0.75" dx="0.25" dy="0.5" layer="1" roundness="20" rot="R90"/>
+<smd name="1" x="-2.25" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="28" x="-1.75" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="27" x="-1.25" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="26" x="-0.75" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="25" x="-0.25" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="24" x="0.25" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="23" x="0.75" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="22" x="1.25" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
+<smd name="21" x="1.75" y="1.56" dx="0.25" dy="0.5" layer="1" roundness="20"/>
 <circle x="-1.55" y="0.9" radius="0.05" width="0.4064" layer="21"/>
 <text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
@@ -2083,24 +2077,11 @@ package type OT</description>
 <pad name="P$8" x="8.1" y="0" drill="1.8"/>
 </package>
 <package name="SOT669">
-<smd name="MB" x="0" y="1.2" dx="4.6" dy="4.7" layer="1" rot="R90" cream="no"/>
+<smd name="MB" x="0" y="1.2" dx="4.6" dy="4.7" layer="1" rot="R90"/>
 <smd name="1" x="-1.905" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
 <smd name="2" x="-0.635" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
 <smd name="3" x="0.635" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
 <smd name="4" x="1.905" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
-<smd name="P$6" x="-1.905" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
-<smd name="P$7" x="-0.635" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
-<smd name="P$8" x="0.635" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
-<smd name="P$9" x="1.905" y="3.05" dx="0.9" dy="0.6" layer="1" rot="R90"/>
-<smd name="P$10" x="0" y="0.3" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$11" x="-1.15" y="0.3" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$12" x="1.15" y="0.3" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$13" x="1.15" y="1.15" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$14" x="0" y="1.15" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$15" x="-1.15" y="1.15" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$16" x="-1.15" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$17" x="0" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
-<smd name="P$18" x="1.15" y="-0.55" dx="0.9" dy="0.6" layer="1"/>
 </package>
 <package name="USB-B-MICRO-SMD">
 <smd name="VBUS" x="-1.3" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
@@ -2108,38 +2089,13 @@ package type OT</description>
 <smd name="ID" x="0.65" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
 <smd name="D+" x="0" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
 <smd name="D-" x="-0.65" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
-<smd name="P$7" x="1" y="0" dx="2.5" dy="1.425" layer="1" rot="R90"/>
-<wire x1="-2.375" y1="-0.27" x2="-3.035" y2="-0.27" width="0" layer="20" curve="-180"/>
-<wire x1="-3.035" y1="-0.27" x2="-3.035" y2="0.27" width="0" layer="20"/>
-<wire x1="-3.035" y1="0.27" x2="-2.375" y2="0.27" width="0" layer="20" curve="-180"/>
-<wire x1="-2.375" y1="0.27" x2="-2.375" y2="-0.27" width="0" layer="20"/>
-<smd name="P$6" x="-1" y="0" dx="2.5" dy="1.425" layer="1" rot="R90"/>
-<wire x1="3.035" y1="-0.27" x2="2.375" y2="-0.27" width="0" layer="20" curve="-180"/>
-<wire x1="2.375" y1="-0.27" x2="2.375" y2="0.27" width="0" layer="20"/>
-<wire x1="2.375" y1="0.27" x2="3.035" y2="0.27" width="0" layer="20" curve="-180"/>
-<wire x1="3.035" y1="0.27" x2="3.035" y2="-0.27" width="0" layer="20"/>
-<wire x1="-2.095" y1="2.835" x2="-2.755" y2="2.835" width="0" layer="20" curve="-180"/>
-<wire x1="-2.755" y1="2.835" x2="-2.755" y2="3.225" width="0" layer="20"/>
-<wire x1="-2.755" y1="3.225" x2="-2.095" y2="3.225" width="0" layer="20" curve="-180"/>
-<wire x1="-2.095" y1="3.225" x2="-2.095" y2="2.835" width="0" layer="20"/>
-<wire x1="2.755" y1="2.835" x2="2.095" y2="2.835" width="0" layer="20" curve="-180"/>
-<wire x1="2.095" y1="2.835" x2="2.095" y2="3.225" width="0" layer="20"/>
-<wire x1="2.095" y1="3.225" x2="2.755" y2="3.225" width="0" layer="20" curve="-180"/>
-<wire x1="2.755" y1="3.225" x2="2.755" y2="2.835" width="0" layer="20"/>
-<smd name="P$8" x="-2.725" y="0.225" dx="2.25" dy="1.3" layer="1" rot="R90" cream="no"/>
-<smd name="SHIELD2" x="-2.9" y="2.97" dx="1.46" dy="2" layer="1" rot="R90" cream="no"/>
-<smd name="P$9" x="-2.9875" y="1.7" dx="1.825" dy="0.7" layer="1" cream="no"/>
-<smd name="P$10" x="-2.725" y="0.225" dx="2.25" dy="1.3" layer="16" rot="R90" cream="no"/>
-<smd name="P$12" x="-2.9875" y="1.7" dx="1.825" dy="0.7" layer="16" rot="R180" cream="no"/>
-<smd name="P$13" x="-2.9" y="2.97" dx="1.46" dy="2" layer="16" rot="R90" cream="no"/>
-<smd name="SHIELD1" x="2.9" y="2.97" dx="1.46" dy="2" layer="1" rot="R90" cream="no"/>
-<smd name="P$15" x="2.9" y="2.97" dx="1.46" dy="2" layer="16" rot="R90" cream="no"/>
-<smd name="P$16" x="2.9875" y="1.7" dx="1.825" dy="0.7" layer="16" rot="R180" cream="no"/>
-<smd name="P$17" x="2.9875" y="1.7" dx="1.825" dy="0.7" layer="1" cream="no"/>
-<wire x1="-3.035" y1="0.27" x2="-2.375" y2="0.27" width="0" layer="20" curve="-180"/>
-<smd name="P$18" x="2.725" y="0.225" dx="2.25" dy="1.3" layer="16" rot="R90" cream="no"/>
-<smd name="P$19" x="2.725" y="0.225" dx="2.25" dy="1.3" layer="1" rot="R90" cream="no"/>
-<wire x1="-4" y1="-2.2" x2="4" y2="-2.2" width="0.127" layer="51"/>
+<smd name="SHIELD5" x="1.45" y="0.35" dx="1.2" dy="1.9" layer="1" rot="R90"/>
+<smd name="SHIELD4" x="-1.45" y="0.35" dx="1.2" dy="1.9" layer="1" rot="R90"/>
+<smd name="SHIELD2" x="-3.1" y="2.55" dx="1.6" dy="2.1" layer="1" rot="R90"/>
+<smd name="SHIELD1" x="3.1" y="2.55" dx="1.6" dy="2.1" layer="1" rot="R90"/>
+<wire x1="-4" y1="-1.45" x2="4" y2="-1.45" width="0.254" layer="21"/>
+<smd name="SHIELD3" x="-3.8" y="0.35" dx="1.2" dy="1.9" layer="1" rot="R90"/>
+<smd name="SHIELD6" x="3.8" y="0.35" dx="1.2" dy="1.9" layer="1" rot="R90"/>
 </package>
 </packages>
 <symbols>
@@ -3288,7 +3244,7 @@ package type OT</description>
 <connect gate="G$1" pin="D+" pad="D+"/>
 <connect gate="G$1" pin="D-" pad="D-"/>
 <connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="SHIELD" pad="SHIELD1 SHIELD2"/>
+<connect gate="G$1" pin="SHIELD" pad="SHIELD1 SHIELD2 SHIELD3 SHIELD4 SHIELD5 SHIELD6"/>
 <connect gate="G$1" pin="USBID" pad="ID"/>
 <connect gate="G$1" pin="VBUS" pad="VBUS"/>
 </connects>
@@ -3568,6 +3524,8 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="diff pair" width="0.254" drill="0">
+</class>
 </classes>
 <parts>
 <part name="U101" library="quad" deviceset="STM32F427VGT6" device=""/>
@@ -3665,15 +3623,15 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <part name="GND42" library="quad" deviceset="GND" device=""/>
 <part name="GND43" library="quad" deviceset="GND" device=""/>
 <part name="R501" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
-<part name="BNO055_NRESET" library="quad" deviceset="TESTPAD" device=""/>
+<part name="BNO_NRST" library="quad" deviceset="TESTPAD" device=""/>
 <part name="R502" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R503" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="GND44" library="quad" deviceset="GND" device=""/>
 <part name="GND45" library="quad" deviceset="GND" device=""/>
-<part name="R1" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
-<part name="BNO055_NBOOT_LOAD" library="quad" deviceset="TESTPAD" device=""/>
-<part name="R2" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
-<part name="R3" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
+<part name="R504" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
+<part name="BNO_NBOOTLD" library="quad" deviceset="TESTPAD" device=""/>
+<part name="R505" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
+<part name="R506" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="J501" library="quad" deviceset="PINHD-1X2" device="" value="I2C_TEST"/>
 <part name="U$1" library="quad" deviceset="XT60" device=""/>
 <part name="GND46" library="quad" deviceset="GND" device=""/>
@@ -3682,13 +3640,15 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <part name="U$2" library="quad" deviceset="PSMN9RS-30YLC" device=""/>
 <part name="R701" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="GND48" library="quad" deviceset="GND" device=""/>
-<part name="R4" library="quad" deviceset="R-US_" device="R0603" value="270"/>
+<part name="R601" library="quad" deviceset="R-US_" device="R0603" value="270"/>
 <part name="ASSOC" library="quad" deviceset="LED" device=""/>
 <part name="GND16" library="quad" deviceset="GND" device=""/>
 <part name="PWR" library="quad" deviceset="LED" device=""/>
-<part name="R5" library="quad" deviceset="R-US_" device="R0603"/>
+<part name="R5" library="quad" deviceset="R-US_" device="R0603" value="270"/>
 <part name="GND17" library="quad" deviceset="GND" device=""/>
 <part name="GND18" library="quad" deviceset="GND" device=""/>
+<part name="EN" library="quad" deviceset="LED" device=""/>
+<part name="R702" library="quad" deviceset="R-US_" device="R0603" value="270"/>
 </parts>
 <sheets>
 <sheet>
@@ -4865,6 +4825,7 @@ On USB power, motor power is always killed</text>
 <pinref part="C402" gate="G$1" pin="2"/>
 <wire x1="50.8" y1="167.64" x2="35.56" y2="167.64" width="0.1524" layer="91"/>
 <junction x="50.8" y="167.64"/>
+<pinref part="U402" gate="G$1" pin="VBUS"/>
 </segment>
 <segment>
 <pinref part="R401" gate="G$1" pin="2"/>
@@ -4882,35 +4843,29 @@ On USB power, motor power is always killed</text>
 <label x="33.02" y="104.14" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="C405" gate="G$1" pin="1"/>
-<pinref part="U403" gate="G$1" pin="VIN"/>
-<wire x1="177.8" y1="96.52" x2="185.42" y2="96.52" width="0.1524" layer="91"/>
-<junction x="177.8" y="96.52"/>
-<pinref part="U404" gate="G$1" pin="2"/>
-<wire x1="177.8" y1="96.52" x2="134.62" y2="96.52" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="U404" gate="G$1" pin="1"/>
 <wire x1="101.6" y1="101.6" x2="91.44" y2="101.6" width="0.1524" layer="91"/>
 <label x="91.44" y="101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="USBDM" class="0">
+<net name="USB_D_N" class="1">
 <segment>
 <pinref part="U402" gate="G$1" pin="D-"/>
 <wire x1="35.56" y1="165.1" x2="66.04" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="U401" gate="G$1" pin="USBDM"/>
 <wire x1="66.04" y1="165.1" x2="66.04" y2="160.02" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="160.02" x2="91.44" y2="160.02" width="0.1524" layer="91"/>
+<label x="73.66" y="160.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="USBDP" class="0">
+<net name="USB_D_P" class="1">
 <segment>
 <pinref part="U402" gate="G$1" pin="D+"/>
 <wire x1="35.56" y1="162.56" x2="63.5" y2="162.56" width="0.1524" layer="91"/>
 <pinref part="U401" gate="G$1" pin="USBDP"/>
 <wire x1="63.5" y1="162.56" x2="63.5" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="154.94" x2="91.44" y2="154.94" width="0.1524" layer="91"/>
+<label x="73.66" y="154.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -5094,6 +5049,16 @@ On USB power, motor power is always killed</text>
 <pinref part="R5" gate="G$1" pin="2"/>
 </segment>
 </net>
+<net name="PWR" class="0">
+<segment>
+<pinref part="C405" gate="G$1" pin="1"/>
+<pinref part="U403" gate="G$1" pin="VIN"/>
+<wire x1="177.8" y1="96.52" x2="185.42" y2="96.52" width="0.1524" layer="91"/>
+<junction x="177.8" y="96.52"/>
+<pinref part="U404" gate="G$1" pin="2"/>
+<wire x1="177.8" y1="96.52" x2="134.62" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 <sheet>
@@ -5120,15 +5085,15 @@ On USB power, motor power is always killed</text>
 <instance part="GND42" gate="1" x="147.32" y="116.84"/>
 <instance part="GND43" gate="1" x="139.7" y="109.22"/>
 <instance part="R501" gate="G$1" x="139.7" y="116.84" rot="R270"/>
-<instance part="BNO055_NRESET" gate="G$1" x="129.54" y="111.76" rot="R90"/>
+<instance part="BNO_NRST" gate="G$1" x="129.54" y="111.76" rot="R90"/>
 <instance part="R502" gate="G$1" x="149.86" y="99.06"/>
 <instance part="R503" gate="G$1" x="149.86" y="106.68"/>
 <instance part="GND44" gate="1" x="160.02" y="99.06" rot="R90"/>
 <instance part="GND45" gate="1" x="160.02" y="106.68" rot="R90"/>
-<instance part="R1" gate="G$1" x="132.08" y="83.82" rot="R270"/>
-<instance part="BNO055_NBOOT_LOAD" gate="G$1" x="137.16" y="93.98" rot="R90"/>
-<instance part="R2" gate="G$1" x="134.62" y="137.16" rot="R270"/>
-<instance part="R3" gate="G$1" x="144.78" y="137.16" rot="R270"/>
+<instance part="R504" gate="G$1" x="132.08" y="83.82" rot="R270"/>
+<instance part="BNO_NBOOTLD" gate="G$1" x="137.16" y="93.98" rot="R90"/>
+<instance part="R505" gate="G$1" x="134.62" y="137.16" rot="R270"/>
+<instance part="R506" gate="G$1" x="144.78" y="137.16" rot="R270"/>
 <instance part="J501" gate="G$1" x="160.02" y="127"/>
 </instances>
 <busses>
@@ -5213,17 +5178,17 @@ On USB power, motor power is always killed</text>
 <wire x1="71.12" y1="129.54" x2="73.66" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="R504" gate="G$1" pin="2"/>
 <wire x1="132.08" y1="78.74" x2="132.08" y2="76.2" width="0.1524" layer="91"/>
 <label x="132.08" y="76.2" size="1.27" layer="95" rot="R270" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R506" gate="G$1" pin="1"/>
 <wire x1="144.78" y1="142.24" x2="144.78" y2="144.78" width="0.1524" layer="91"/>
 <label x="144.78" y="144.78" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="R505" gate="G$1" pin="1"/>
 <wire x1="134.62" y1="142.24" x2="134.62" y2="144.78" width="0.1524" layer="91"/>
 <label x="134.62" y="144.78" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
@@ -5263,7 +5228,7 @@ On USB power, motor power is always killed</text>
 <pinref part="IC1" gate="G$1" pin="19"/>
 <wire x1="121.92" y1="127" x2="144.78" y2="127" width="0.1524" layer="91"/>
 <label x="175.26" y="127" size="1.27" layer="95" xref="yes"/>
-<pinref part="R3" gate="G$1" pin="2"/>
+<pinref part="R506" gate="G$1" pin="2"/>
 <wire x1="144.78" y1="127" x2="157.48" y2="127" width="0.1524" layer="91"/>
 <wire x1="157.48" y1="127" x2="175.26" y2="127" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="132.08" x2="144.78" y2="127" width="0.1524" layer="91"/>
@@ -5282,15 +5247,8 @@ On USB power, motor power is always killed</text>
 <net name="N$13" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="11"/>
-<pinref part="BNO055_NRESET" gate="G$1" pin="PIN"/>
+<pinref part="BNO_NRST" gate="G$1" pin="PIN"/>
 <wire x1="124.46" y1="111.76" x2="121.92" y2="111.76" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="PB12" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="14"/>
-<wire x1="121.92" y1="116.84" x2="124.46" y2="116.84" width="0.1524" layer="91"/>
-<label x="124.46" y="116.84" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -5311,10 +5269,10 @@ On USB power, motor power is always killed</text>
 <net name="N$16" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="4"/>
-<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="R504" gate="G$1" pin="1"/>
 <wire x1="121.92" y1="96.52" x2="132.08" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="96.52" x2="132.08" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="BNO055_NBOOT_LOAD" gate="G$1" pin="PIN"/>
+<pinref part="BNO_NBOOTLD" gate="G$1" pin="PIN"/>
 <junction x="132.08" y="88.9"/>
 <wire x1="132.08" y1="88.9" x2="132.08" y2="93.98" width="0.1524" layer="91"/>
 </segment>
@@ -5326,11 +5284,18 @@ On USB power, motor power is always killed</text>
 <pinref part="J501" gate="G$1" pin="1"/>
 <pinref part="IC1" gate="G$1" pin="20"/>
 <wire x1="121.92" y1="129.54" x2="134.62" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="R505" gate="G$1" pin="2"/>
 <wire x1="134.62" y1="132.08" x2="134.62" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="129.54" x2="157.48" y2="129.54" width="0.1524" layer="91"/>
 <junction x="134.62" y="129.54"/>
 <junction x="157.48" y="129.54"/>
+</segment>
+</net>
+<net name="PD2" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="14"/>
+<wire x1="121.92" y1="116.84" x2="124.46" y2="116.84" width="0.1524" layer="91"/>
+<label x="124.46" y="116.84" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -5344,7 +5309,7 @@ On USB power, motor power is always killed</text>
 <instance part="FRAME6" gate="G$2" x="172.72" y="0"/>
 <instance part="XB1" gate="G$1" x="119.38" y="101.6"/>
 <instance part="GND34" gate="1" x="99.06" y="68.58"/>
-<instance part="R4" gate="G$1" x="68.58" y="86.36" rot="R90"/>
+<instance part="R601" gate="G$1" x="68.58" y="86.36" rot="R90"/>
 <instance part="ASSOC" gate="G$1" x="68.58" y="76.2"/>
 <instance part="GND16" gate="1" x="68.58" y="68.58"/>
 </instances>
@@ -5408,7 +5373,7 @@ On USB power, motor power is always killed</text>
 <net name="N$3" class="0">
 <segment>
 <pinref part="ASSOC" gate="G$1" pin="A"/>
-<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R601" gate="G$1" pin="1"/>
 <wire x1="68.58" y1="78.74" x2="68.58" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -5417,7 +5382,7 @@ On USB power, motor power is always killed</text>
 <pinref part="XB1" gate="G$1" pin="ASSOC/AD5/DIO5"/>
 <wire x1="104.14" y1="93.98" x2="68.58" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="93.98" x2="68.58" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="R4" gate="G$1" pin="2"/>
+<pinref part="R601" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
@@ -5435,6 +5400,8 @@ On USB power, motor power is always killed</text>
 <instance part="U$2" gate="G$1" x="190.5" y="83.82"/>
 <instance part="R701" gate="G$1" x="172.72" y="78.74" rot="R90"/>
 <instance part="GND48" gate="1" x="172.72" y="71.12"/>
+<instance part="EN" gate="G$1" x="175.26" y="114.3"/>
+<instance part="R702" gate="G$1" x="175.26" y="101.6" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -5467,9 +5434,9 @@ On USB power, motor power is always killed</text>
 <segment>
 <pinref part="U$2" gate="G$1" pin="G"/>
 <wire x1="177.8" y1="83.82" x2="172.72" y2="83.82" width="0.1524" layer="91"/>
-<label x="167.64" y="83.82" size="1.778" layer="95" rot="R180" xref="yes"/>
+<label x="144.78" y="83.82" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="R701" gate="G$1" pin="2"/>
-<wire x1="172.72" y1="83.82" x2="167.64" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="83.82" x2="144.78" y2="83.82" width="0.1524" layer="91"/>
 <junction x="172.72" y="83.82"/>
 </segment>
 </net>
@@ -5478,6 +5445,24 @@ On USB power, motor power is always killed</text>
 <pinref part="U$2" gate="G$1" pin="D"/>
 <wire x1="190.5" y1="93.98" x2="190.5" y2="101.6" width="0.1524" layer="91"/>
 <label x="190.5" y="101.6" size="1.778" layer="95" rot="R90" xref="yes"/>
+<pinref part="R702" gate="G$1" pin="1"/>
+<wire x1="175.26" y1="96.52" x2="175.26" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="93.98" x2="190.5" y2="93.98" width="0.1524" layer="91"/>
+<junction x="190.5" y="93.98"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="EN" gate="G$1" pin="C"/>
+<pinref part="R702" gate="G$1" pin="2"/>
+<wire x1="175.26" y1="109.22" x2="175.26" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VDD_3V3" class="0">
+<segment>
+<pinref part="EN" gate="G$1" pin="A"/>
+<wire x1="175.26" y1="116.84" x2="175.26" y2="121.92" width="0.1524" layer="91"/>
+<label x="175.26" y="121.92" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
 </nets>
