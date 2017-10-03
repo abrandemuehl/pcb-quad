@@ -3765,14 +3765,14 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <label x="58.42" y="167.64" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="SPI1_MISO" class="0">
+<net name="TIM3_CH1" class="0">
 <segment>
 <pinref part="U101" gate="PORTA_L" pin="PA6"/>
 <wire x1="48.26" y1="165.1" x2="58.42" y2="165.1" width="0.1524" layer="91"/>
 <label x="58.42" y="165.1" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="SPI1_MOSI" class="0">
+<net name="TIM3_CH2" class="0">
 <segment>
 <pinref part="U101" gate="PORTA_L" pin="PA7"/>
 <wire x1="48.26" y1="162.56" x2="58.42" y2="162.56" width="0.1524" layer="91"/>
@@ -3828,7 +3828,7 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <label x="58.42" y="129.54" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="PB0" class="0">
+<net name="TIM3_CH3" class="0">
 <segment>
 <pinref part="U101" gate="PORTB_L" pin="PB0"/>
 <wire x1="48.26" y1="116.84" x2="58.42" y2="116.84" width="0.1524" layer="91"/>
@@ -3892,20 +3892,6 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <pinref part="U101" gate="PORTB_H" pin="PB9"/>
 <wire x1="48.26" y1="76.2" x2="58.42" y2="76.2" width="0.1524" layer="91"/>
 <label x="58.42" y="76.2" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="I2C2_SCL" class="0">
-<segment>
-<pinref part="U101" gate="PORTB_H" pin="PB10"/>
-<wire x1="48.26" y1="73.66" x2="58.42" y2="73.66" width="0.1524" layer="91"/>
-<label x="58.42" y="73.66" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="I2C2_SDA" class="0">
-<segment>
-<pinref part="U101" gate="PORTB_H" pin="PB11"/>
-<wire x1="48.26" y1="71.12" x2="58.42" y2="71.12" width="0.1524" layer="91"/>
-<label x="58.42" y="71.12" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="CAN2_RX" class="0">
@@ -3999,7 +3985,7 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <label x="121.92" y="147.32" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="I2C3_SDA" class="0">
+<net name="TIM3_CH4" class="0">
 <segment>
 <pinref part="U101" gate="PORTC_H" pin="PC9"/>
 <wire x1="111.76" y1="144.78" x2="121.92" y2="144.78" width="0.1524" layer="91"/>
@@ -4085,16 +4071,16 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 </net>
 <net name="USART3_TX" class="0">
 <segment>
-<pinref part="U101" gate="PORTC_H" pin="PC10"/>
-<wire x1="111.76" y1="142.24" x2="121.92" y2="142.24" width="0.1524" layer="91"/>
-<label x="121.92" y="142.24" size="1.27" layer="95" xref="yes"/>
+<pinref part="U101" gate="PORTB_H" pin="PB10"/>
+<wire x1="48.26" y1="73.66" x2="58.42" y2="73.66" width="0.1524" layer="91"/>
+<label x="58.42" y="73.66" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="USART3_RX" class="0">
 <segment>
-<pinref part="U101" gate="PORTC_H" pin="PC11"/>
-<wire x1="111.76" y1="139.7" x2="121.92" y2="139.7" width="0.1524" layer="91"/>
-<label x="121.92" y="139.7" size="1.27" layer="95" xref="yes"/>
+<pinref part="U101" gate="PORTB_H" pin="PB11"/>
+<wire x1="48.26" y1="71.12" x2="58.42" y2="71.12" width="0.1524" layer="91"/>
+<label x="58.42" y="71.12" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="PD10" class="0">
@@ -4284,6 +4270,20 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <pinref part="U101" gate="PORTD_H" pin="PD8"/>
 <wire x1="111.76" y1="78.74" x2="121.92" y2="78.74" width="0.1524" layer="91"/>
 <label x="121.92" y="78.74" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="PC10" class="0">
+<segment>
+<pinref part="U101" gate="PORTC_H" pin="PC10"/>
+<wire x1="111.76" y1="142.24" x2="121.92" y2="142.24" width="0.1524" layer="91"/>
+<label x="121.92" y="142.24" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="PC11" class="0">
+<segment>
+<pinref part="U101" gate="PORTC_H" pin="PC11"/>
+<wire x1="111.76" y1="139.7" x2="121.92" y2="139.7" width="0.1524" layer="91"/>
+<label x="121.92" y="139.7" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -4627,28 +4627,28 @@ Will be selected by either the XBEE or FT232R</text>
 <label x="149.86" y="96.52" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="PWM2" class="0">
+<net name="TIM3_CH1" class="0">
 <segment>
 <pinref part="ESC2" gate="G$1" pin="PWM"/>
 <wire x1="180.34" y1="182.88" x2="180.34" y2="193.04" width="0.1524" layer="91"/>
 <label x="180.34" y="193.04" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
-<net name="PWM4" class="0">
+<net name="TIM3_CH3" class="0">
 <segment>
 <pinref part="ESC4" gate="G$1" pin="PWM"/>
 <wire x1="180.34" y1="106.68" x2="180.34" y2="119.38" width="0.1524" layer="91"/>
 <label x="180.34" y="119.38" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
-<net name="PWM1" class="0">
+<net name="TIM3_CH4" class="0">
 <segment>
 <pinref part="ESC1" gate="G$1" pin="PWM"/>
 <wire x1="66.04" y1="182.88" x2="66.04" y2="190.5" width="0.1524" layer="91"/>
 <label x="66.04" y="190.5" size="1.778" layer="95" rot="R90" xref="yes"/>
 </segment>
 </net>
-<net name="PWM3" class="0">
+<net name="TIM3_CH2" class="0">
 <segment>
 <pinref part="ESC3" gate="G$1" pin="PWM"/>
 <wire x1="66.04" y1="106.68" x2="66.04" y2="114.3" width="0.1524" layer="91"/>
