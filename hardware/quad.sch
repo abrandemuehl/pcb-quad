@@ -159,106 +159,106 @@
 <library name="quad">
 <packages>
 <package name="LQFP-100">
-<smd name="1" x="-7.7216" y="6" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="2" x="-7.7216" y="5.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="3" x="-7.7216" y="5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="4" x="-7.7216" y="4.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="5" x="-7.7216" y="4" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="6" x="-7.7216" y="3.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="7" x="-7.7216" y="3" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="8" x="-7.7216" y="2.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="9" x="-7.7216" y="2" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="10" x="-7.7216" y="1.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="11" x="-7.7216" y="1" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="12" x="-7.7216" y="0.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="13" x="-7.7216" y="0" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="14" x="-7.7216" y="-0.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="15" x="-7.7216" y="-1" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="16" x="-7.7216" y="-1.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="17" x="-7.7216" y="-2" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="18" x="-7.7216" y="-2.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="19" x="-7.7216" y="-3" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="20" x="-7.7216" y="-3.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="21" x="-7.7216" y="-4" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="22" x="-7.7216" y="-4.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="23" x="-7.7216" y="-5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="24" x="-7.7216" y="-5.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="25" x="-7.7216" y="-6" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="26" x="-6" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="27" x="-5.5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="28" x="-5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="29" x="-4.5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="30" x="-4" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="31" x="-3.5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="32" x="-3" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="33" x="-2.5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="34" x="-2" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="35" x="-1.5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="36" x="-1" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="37" x="-0.5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="38" x="0" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="39" x="0.5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="40" x="1" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="41" x="1.5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="42" x="2" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="43" x="2.5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="44" x="3" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="45" x="3.5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="46" x="4" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="47" x="4.5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="48" x="5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="49" x="5.5" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="50" x="6" y="-7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="51" x="7.7216" y="-6" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="52" x="7.7216" y="-5.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="53" x="7.7216" y="-5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="54" x="7.7216" y="-4.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="55" x="7.7216" y="-4" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="56" x="7.7216" y="-3.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="57" x="7.7216" y="-3" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="58" x="7.7216" y="-2.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="59" x="7.7216" y="-2" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="60" x="7.7216" y="-1.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="61" x="7.7216" y="-1" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="62" x="7.7216" y="-0.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="63" x="7.7216" y="0" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="64" x="7.7216" y="0.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="65" x="7.7216" y="1" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="66" x="7.7216" y="1.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="67" x="7.7216" y="2" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="68" x="7.7216" y="2.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="69" x="7.7216" y="3" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="70" x="7.7216" y="3.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="71" x="7.7216" y="4" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="72" x="7.7216" y="4.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="73" x="7.7216" y="5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="74" x="7.7216" y="5.5" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="75" x="7.7216" y="6" dx="0.2794" dy="1.778" layer="1" rot="R270"/>
-<smd name="76" x="6" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="77" x="5.5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="78" x="5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="79" x="4.5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="80" x="4" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="81" x="3.5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="82" x="3" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="83" x="2.5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="84" x="2" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="85" x="1.5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="86" x="1" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="87" x="0.5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="88" x="0" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="89" x="-0.5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="90" x="-1" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="91" x="-1.5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="92" x="-2" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="93" x="-2.5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="94" x="-3" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="95" x="-3.5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="96" x="-4" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="97" x="-4.5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="98" x="-5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="99" x="-5.5" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
-<smd name="100" x="-6" y="7.7216" dx="0.2794" dy="1.778" layer="1" rot="R180"/>
+<smd name="1" x="-7.7216" y="6" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="2" x="-7.7216" y="5.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="3" x="-7.7216" y="5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="4" x="-7.7216" y="4.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="5" x="-7.7216" y="4" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="6" x="-7.7216" y="3.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="7" x="-7.7216" y="3" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="8" x="-7.7216" y="2.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="9" x="-7.7216" y="2" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="10" x="-7.7216" y="1.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="11" x="-7.7216" y="1" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="12" x="-7.7216" y="0.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="13" x="-7.7216" y="0" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="14" x="-7.7216" y="-0.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="15" x="-7.7216" y="-1" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="16" x="-7.7216" y="-1.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="17" x="-7.7216" y="-2" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="18" x="-7.7216" y="-2.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="19" x="-7.7216" y="-3" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="20" x="-7.7216" y="-3.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="21" x="-7.7216" y="-4" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="22" x="-7.7216" y="-4.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="23" x="-7.7216" y="-5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="24" x="-7.7216" y="-5.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="25" x="-7.7216" y="-6" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="26" x="-6" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="27" x="-5.5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="28" x="-5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="29" x="-4.5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="30" x="-4" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="31" x="-3.5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="32" x="-3" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="33" x="-2.5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="34" x="-2" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="35" x="-1.5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="36" x="-1" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="37" x="-0.5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="38" x="0" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="39" x="0.5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="40" x="1" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="41" x="1.5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="42" x="2" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="43" x="2.5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="44" x="3" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="45" x="3.5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="46" x="4" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="47" x="4.5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="48" x="5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="49" x="5.5" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="50" x="6" y="-7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="51" x="7.7216" y="-6" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="52" x="7.7216" y="-5.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="53" x="7.7216" y="-5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="54" x="7.7216" y="-4.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="55" x="7.7216" y="-4" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="56" x="7.7216" y="-3.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="57" x="7.7216" y="-3" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="58" x="7.7216" y="-2.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="59" x="7.7216" y="-2" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="60" x="7.7216" y="-1.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="61" x="7.7216" y="-1" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="62" x="7.7216" y="-0.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="63" x="7.7216" y="0" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="64" x="7.7216" y="0.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="65" x="7.7216" y="1" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="66" x="7.7216" y="1.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="67" x="7.7216" y="2" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="68" x="7.7216" y="2.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="69" x="7.7216" y="3" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="70" x="7.7216" y="3.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="71" x="7.7216" y="4" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="72" x="7.7216" y="4.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="73" x="7.7216" y="5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="74" x="7.7216" y="5.5" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="75" x="7.7216" y="6" dx="0.25" dy="1.2" layer="1" rot="R270"/>
+<smd name="76" x="6" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="77" x="5.5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="78" x="5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="79" x="4.5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="80" x="4" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="81" x="3.5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="82" x="3" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="83" x="2.5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="84" x="2" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="85" x="1.5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="86" x="1" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="87" x="0.5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="88" x="0" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="89" x="-0.5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="90" x="-1" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="91" x="-1.5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="92" x="-2" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="93" x="-2.5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="94" x="-3" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="95" x="-3.5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="96" x="-4" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="97" x="-4.5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="98" x="-5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="99" x="-5.5" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
+<smd name="100" x="-6" y="7.7216" dx="0.25" dy="1.2" layer="1" rot="R180"/>
 <wire x1="-7.2136" y1="-7.2136" x2="-6.477" y2="-7.2136" width="0.1524" layer="21"/>
 <wire x1="7.2136" y1="-7.2136" x2="7.2136" y2="-6.477" width="0.1524" layer="21"/>
 <wire x1="7.2136" y1="7.2136" x2="6.477" y2="7.2136" width="0.1524" layer="21"/>
@@ -1298,12 +1298,12 @@ Source: http://www.vishay.com .. dcrcw.pdf</description>
 <pad name="VBATT" x="10.16" y="20.48" drill="2" diameter="4"/>
 </package>
 <package name="MOTOR">
-<pad name="P$1" x="-7.5" y="0" drill="0.6"/>
-<pad name="P$2" x="7.5" y="0" drill="0.6"/>
-<pad name="P$3" x="0" y="12.9904" drill="0.6"/>
-<pad name="MOT1" x="7" y="-7" drill="1.5" diameter="3"/>
-<pad name="MOT2" x="0" y="-7" drill="1.5" diameter="3"/>
-<pad name="MOT3" x="-7" y="-7" drill="1.5" diameter="3"/>
+<pad name="P$1" x="-7.5" y="0" drill="2"/>
+<pad name="P$2" x="7.5" y="0" drill="2"/>
+<pad name="P$3" x="0" y="12.9904" drill="2"/>
+<pad name="MOT1" x="7" y="-7" drill="1" diameter="3"/>
+<pad name="MOT2" x="0" y="-7" drill="1" diameter="3"/>
+<pad name="MOT3" x="-7" y="-7" drill="1" diameter="3"/>
 </package>
 <package name="SOT223">
 <smd name="4" x="0" y="3.1" dx="6.7" dy="1.9" layer="1"/>
@@ -2026,10 +2026,6 @@ package type OT</description>
 <wire x1="-4.0005" y1="1.905" x2="-4.0005" y2="-1.905" width="0.127" layer="21"/>
 <text x="-4.318" y="-2.54" size="1.27" layer="21" rot="R90">&gt;NAME</text>
 </package>
-<package name="TESTPAD">
-<smd name="P$1" x="0" y="0" dx="2.54" dy="2.54" layer="1"/>
-<text x="-1.27" y="2.54" size="0.8128" layer="21">&gt;NAME</text>
-</package>
 <package name="1X02">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
@@ -2082,6 +2078,7 @@ package type OT</description>
 <smd name="2" x="-0.635" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
 <smd name="3" x="0.635" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
 <smd name="4" x="1.905" y="-2.725" dx="1.15" dy="0.7" layer="1" rot="R90"/>
+<text x="-2.54" y="3.81" size="1.27" layer="21">&gt;NAME</text>
 </package>
 <package name="USB-B-MICRO-SMD">
 <smd name="VBUS" x="-1.3" y="2.825" dx="1.75" dy="0.4" layer="1" rot="R90"/>
@@ -2572,16 +2569,6 @@ package type OT</description>
 <text x="1.524" y="-1.143" size="0.8636" layer="93">2</text>
 <pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
-</symbol>
-<symbol name="TESTPAD">
-<pin name="PIN" x="0" y="5.08" visible="off" length="middle" rot="R270"/>
-<polygon width="0.254" layer="94">
-<vertex x="-1.27" y="0"/>
-<vertex x="1.27" y="0"/>
-<vertex x="1.27" y="-1.27"/>
-<vertex x="-1.27" y="-1.27"/>
-</polygon>
-<text x="-2.54" y="3.81" size="0.8128" layer="94" rot="R270">&gt;NAME</text>
 </symbol>
 <symbol name="PINHD2">
 <wire x1="-6.35" y1="-2.54" x2="1.27" y2="-2.54" width="0.4064" layer="94"/>
@@ -3429,21 +3416,6 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="TESTPAD">
-<gates>
-<gate name="G$1" symbol="TESTPAD" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="TESTPAD">
-<connects>
-<connect gate="G$1" pin="PIN" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="PINHD-1X2" prefix="JP" uservalue="yes">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <gates>
@@ -3623,21 +3595,19 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <part name="GND42" library="quad" deviceset="GND" device=""/>
 <part name="GND43" library="quad" deviceset="GND" device=""/>
 <part name="R501" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
-<part name="BNO_NRST" library="quad" deviceset="TESTPAD" device=""/>
 <part name="R502" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R503" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="GND44" library="quad" deviceset="GND" device=""/>
 <part name="GND45" library="quad" deviceset="GND" device=""/>
 <part name="R504" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
-<part name="BNO_NBOOTLD" library="quad" deviceset="TESTPAD" device=""/>
 <part name="R505" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="R506" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="J501" library="quad" deviceset="PINHD-1X2" device="" value="I2C_TEST"/>
-<part name="U$1" library="quad" deviceset="XT60" device=""/>
+<part name="J701" library="quad" deviceset="XT60" device=""/>
 <part name="GND46" library="quad" deviceset="GND" device=""/>
 <part name="GND47" library="quad" deviceset="GND" device=""/>
 <part name="U404" library="quad" deviceset="MFS201N-16-Z" device=""/>
-<part name="U$2" library="quad" deviceset="PSMN9RS-30YLC" device=""/>
+<part name="U701" library="quad" deviceset="PSMN9RS-30YLC" device=""/>
 <part name="R701" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="GND48" library="quad" deviceset="GND" device=""/>
 <part name="R601" library="quad" deviceset="R-US_" device="R0603" value="270"/>
@@ -3675,8 +3645,8 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <instance part="GND1" gate="1" x="200.66" y="78.74"/>
 <instance part="GND2" gate="1" x="200.66" y="114.3" rot="R180"/>
 <instance part="GND3" gate="1" x="226.06" y="96.52" rot="R90"/>
-<instance part="GND29" gate="1" x="76.2" y="124.46" rot="R180"/>
-<instance part="R101" gate="G$1" x="76.2" y="116.84" rot="R90"/>
+<instance part="GND29" gate="1" x="78.74" y="124.46" rot="R180"/>
+<instance part="R101" gate="G$1" x="78.74" y="116.84" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -3845,11 +3815,11 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <net name="BOOT1" class="0">
 <segment>
 <pinref part="U101" gate="PORTB_L" pin="PB2"/>
-<wire x1="48.26" y1="111.76" x2="76.2" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="111.76" x2="78.74" y2="111.76" width="0.1524" layer="91"/>
 <label x="81.28" y="111.76" size="1.27" layer="95" xref="yes"/>
 <pinref part="R101" gate="G$1" pin="1"/>
-<wire x1="76.2" y1="111.76" x2="81.28" y2="111.76" width="0.1524" layer="91"/>
-<junction x="76.2" y="111.76"/>
+<wire x1="78.74" y1="111.76" x2="81.28" y2="111.76" width="0.1524" layer="91"/>
+<junction x="78.74" y="111.76"/>
 </segment>
 </net>
 <net name="JTDO/TRACESWO" class="0">
@@ -4843,9 +4813,9 @@ On USB power, motor power is always killed</text>
 <label x="33.02" y="104.14" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U404" gate="G$1" pin="1"/>
-<wire x1="101.6" y1="101.6" x2="91.44" y2="101.6" width="0.1524" layer="91"/>
-<label x="91.44" y="101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U404" gate="G$1" pin="3"/>
+<wire x1="101.6" y1="91.44" x2="91.44" y2="91.44" width="0.1524" layer="91"/>
+<label x="91.44" y="91.44" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="USB_D_N" class="1">
@@ -5024,16 +4994,9 @@ On USB power, motor power is always killed</text>
 </net>
 <net name="VBATT" class="0">
 <segment>
-<pinref part="U404" gate="G$1" pin="3"/>
-<wire x1="101.6" y1="91.44" x2="91.44" y2="91.44" width="0.1524" layer="91"/>
-<label x="91.44" y="91.44" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="XBEE_DIO4" class="0">
-<segment>
-<pinref part="U404" gate="G$1" pin="6"/>
-<wire x1="101.6" y1="76.2" x2="91.44" y2="76.2" width="0.1524" layer="91"/>
-<label x="91.44" y="76.2" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="U404" gate="G$1" pin="1"/>
+<wire x1="101.6" y1="101.6" x2="91.44" y2="101.6" width="0.1524" layer="91"/>
+<label x="91.44" y="101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="POWER_EN" class="0">
@@ -5057,6 +5020,13 @@ On USB power, motor power is always killed</text>
 <junction x="177.8" y="96.52"/>
 <pinref part="U404" gate="G$1" pin="2"/>
 <wire x1="177.8" y1="96.52" x2="134.62" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="XBEE_DIO4" class="0">
+<segment>
+<pinref part="U404" gate="G$1" pin="4"/>
+<wire x1="101.6" y1="86.36" x2="91.44" y2="86.36" width="0.1524" layer="91"/>
+<label x="91.44" y="86.36" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -5085,13 +5055,11 @@ On USB power, motor power is always killed</text>
 <instance part="GND42" gate="1" x="147.32" y="116.84"/>
 <instance part="GND43" gate="1" x="139.7" y="109.22"/>
 <instance part="R501" gate="G$1" x="139.7" y="116.84" rot="R270"/>
-<instance part="BNO_NRST" gate="G$1" x="129.54" y="111.76" rot="R90"/>
 <instance part="R502" gate="G$1" x="149.86" y="99.06"/>
 <instance part="R503" gate="G$1" x="149.86" y="106.68"/>
 <instance part="GND44" gate="1" x="160.02" y="99.06" rot="R90"/>
 <instance part="GND45" gate="1" x="160.02" y="106.68" rot="R90"/>
 <instance part="R504" gate="G$1" x="132.08" y="83.82" rot="R270"/>
-<instance part="BNO_NBOOTLD" gate="G$1" x="137.16" y="93.98" rot="R90"/>
 <instance part="R505" gate="G$1" x="134.62" y="137.16" rot="R270"/>
 <instance part="R506" gate="G$1" x="144.78" y="137.16" rot="R270"/>
 <instance part="J501" gate="G$1" x="160.02" y="127"/>
@@ -5244,13 +5212,6 @@ On USB power, motor power is always killed</text>
 <wire x1="121.92" y1="121.92" x2="139.7" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$13" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="11"/>
-<pinref part="BNO_NRST" gate="G$1" pin="PIN"/>
-<wire x1="124.46" y1="111.76" x2="121.92" y2="111.76" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$14" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="6"/>
@@ -5272,7 +5233,6 @@ On USB power, motor power is always killed</text>
 <pinref part="R504" gate="G$1" pin="1"/>
 <wire x1="121.92" y1="96.52" x2="132.08" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="96.52" x2="132.08" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="BNO_NBOOTLD" gate="G$1" pin="PIN"/>
 <junction x="132.08" y="88.9"/>
 <wire x1="132.08" y1="88.9" x2="132.08" y2="93.98" width="0.1524" layer="91"/>
 </segment>
@@ -5394,10 +5354,10 @@ On USB power, motor power is always killed</text>
 <instances>
 <instance part="FRAME7" gate="G$1" x="0" y="0"/>
 <instance part="FRAME7" gate="G$2" x="172.72" y="0"/>
-<instance part="U$1" gate="G$1" x="63.5" y="109.22"/>
+<instance part="J701" gate="G$1" x="63.5" y="109.22"/>
 <instance part="GND46" gate="1" x="76.2" y="101.6"/>
 <instance part="GND47" gate="1" x="190.5" y="66.04"/>
-<instance part="U$2" gate="G$1" x="190.5" y="83.82"/>
+<instance part="U701" gate="G$1" x="190.5" y="83.82"/>
 <instance part="R701" gate="G$1" x="172.72" y="78.74" rot="R90"/>
 <instance part="GND48" gate="1" x="172.72" y="71.12"/>
 <instance part="EN" gate="G$1" x="175.26" y="114.3"/>
@@ -5408,21 +5368,21 @@ On USB power, motor power is always killed</text>
 <nets>
 <net name="VBATT" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="PWR"/>
+<pinref part="J701" gate="G$1" pin="PWR"/>
 <wire x1="93.726" y1="111.76" x2="73.66" y2="111.76" width="0.1524" layer="91"/>
 <label x="93.98" y="111.76" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="GND"/>
+<pinref part="J701" gate="G$1" pin="GND"/>
 <pinref part="GND46" gate="1" pin="GND"/>
 <wire x1="73.66" y1="106.68" x2="76.2" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="106.68" x2="76.2" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND47" gate="1" pin="GND"/>
-<pinref part="U$2" gate="G$1" pin="S"/>
+<pinref part="U701" gate="G$1" pin="S"/>
 <wire x1="190.5" y1="68.58" x2="190.5" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -5432,7 +5392,7 @@ On USB power, motor power is always killed</text>
 </net>
 <net name="POWER_EN" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="G"/>
+<pinref part="U701" gate="G$1" pin="G"/>
 <wire x1="177.8" y1="83.82" x2="172.72" y2="83.82" width="0.1524" layer="91"/>
 <label x="144.78" y="83.82" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="R701" gate="G$1" pin="2"/>
@@ -5442,7 +5402,7 @@ On USB power, motor power is always killed</text>
 </net>
 <net name="KILL_GND" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="D"/>
+<pinref part="U701" gate="G$1" pin="D"/>
 <wire x1="190.5" y1="93.98" x2="190.5" y2="101.6" width="0.1524" layer="91"/>
 <label x="190.5" y="101.6" size="1.778" layer="95" rot="R90" xref="yes"/>
 <pinref part="R702" gate="G$1" pin="1"/>
