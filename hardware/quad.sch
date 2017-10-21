@@ -2051,16 +2051,16 @@ package type OT</description>
 <rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
 </package>
 <package name="XT60">
-<pad name="PWR" x="0" y="3.75" drill="4.5" diameter="6"/>
-<pad name="GND" x="0" y="-3.75" drill="4.5" diameter="6"/>
+<pad name="PWR" x="0" y="3.5306" drill="4.826" diameter="6.35"/>
+<pad name="GND" x="0" y="-3.5306" drill="4.826" diameter="6.35"/>
 <wire x1="-4.064" y1="7.86765" x2="4.064" y2="7.86765" width="0.127" layer="21"/>
 <wire x1="4.064" y1="7.86765" x2="4.064" y2="-6" width="0.127" layer="21"/>
 <wire x1="4.064" y1="-6" x2="2" y2="-7.86765" width="0.127" layer="21"/>
 <wire x1="2" y1="-7.86765" x2="-2" y2="-7.86765" width="0.127" layer="21"/>
 <wire x1="-2" y1="-7.86765" x2="-4.064" y2="-6" width="0.127" layer="21"/>
 <wire x1="-4.064" y1="-6" x2="-4.064" y2="7.86765" width="0.127" layer="21"/>
-<text x="6.35" y="3.81" size="1.27" layer="21" rot="R90">+</text>
-<text x="6.35" y="-6.35" size="1.27" layer="21" rot="R90">GND</text>
+<text x="0" y="8.89" size="1.27" layer="21" rot="R90">+</text>
+<text x="0" y="-8.89" size="1.27" layer="21" rot="R270">GND</text>
 </package>
 <package name="MFS201N-16-Z">
 <pad name="4" x="-4" y="1.25" drill="1.4"/>
@@ -2071,6 +2071,7 @@ package type OT</description>
 <pad name="1" x="-4" y="-1.25" drill="1.4"/>
 <pad name="P$7" x="-8.1" y="0" drill="1.8"/>
 <pad name="P$8" x="8.1" y="0" drill="1.8"/>
+<text x="-6.35" y="-3.81" size="1.27" layer="21">&gt;NAME</text>
 </package>
 <package name="SOT669">
 <smd name="MB" x="0" y="1.2" dx="4.6" dy="4.7" layer="1" rot="R90"/>
@@ -3558,8 +3559,8 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <part name="R401" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="GND29" library="quad" deviceset="GND" device=""/>
 <part name="R101" library="quad" deviceset="R-US_" device="R0603" value="10k"/>
-<part name="RXLED" library="quad" deviceset="LED" device=""/>
-<part name="TXLED" library="quad" deviceset="LED" device=""/>
+<part name="RX" library="quad" deviceset="LED" device=""/>
+<part name="TX" library="quad" deviceset="LED" device=""/>
 <part name="R402" library="quad" deviceset="R-US_" device="R0603" value="270"/>
 <part name="R403" library="quad" deviceset="R-US_" device="R0603" value="270"/>
 <part name="C402" library="quad" deviceset="C-EU" device="C0603" value="0.1uF"/>
@@ -3614,11 +3615,12 @@ Source: MaxStream, Inc. xbee_productmanual.pdf</description>
 <part name="ASSOC" library="quad" deviceset="LED" device=""/>
 <part name="GND16" library="quad" deviceset="GND" device=""/>
 <part name="PWR" library="quad" deviceset="LED" device=""/>
-<part name="R5" library="quad" deviceset="R-US_" device="R0603" value="270"/>
+<part name="R404" library="quad" deviceset="R-US_" device="R0603" value="270"/>
 <part name="GND17" library="quad" deviceset="GND" device=""/>
 <part name="GND18" library="quad" deviceset="GND" device=""/>
 <part name="EN" library="quad" deviceset="LED" device=""/>
 <part name="R702" library="quad" deviceset="R-US_" device="R0603" value="270"/>
+<part name="JP1" library="quad" deviceset="PINHD-1X2" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4274,9 +4276,9 @@ Place as close to VDD pins as possible</text>
 <text x="187.96" y="160.02" size="1.778" layer="94">Extra Decoupling Capacitor
 No Placement Requirements</text>
 <text x="73.66" y="167.64" size="1.778" layer="94">Pull high for bootloader</text>
-<wire x1="43.18" y1="210.82" x2="149.86" y2="210.82" width="0.1524" layer="94"/>
-<wire x1="149.86" y1="210.82" x2="149.86" y2="142.24" width="0.1524" layer="94"/>
-<wire x1="149.86" y1="142.24" x2="43.18" y2="142.24" width="0.1524" layer="94"/>
+<wire x1="43.18" y1="210.82" x2="182.88" y2="210.82" width="0.1524" layer="94"/>
+<wire x1="182.88" y1="210.82" x2="182.88" y2="142.24" width="0.1524" layer="94"/>
+<wire x1="182.88" y1="142.24" x2="43.18" y2="142.24" width="0.1524" layer="94"/>
 <wire x1="43.18" y1="142.24" x2="43.18" y2="210.82" width="0.1524" layer="94"/>
 <text x="48.26" y="203.2" size="1.778" layer="94">Bootloader Selection
 Will be selected by either the XBEE or FT232R</text>
@@ -4312,10 +4314,10 @@ Will be selected by either the XBEE or FT232R</text>
 <instance part="GND5" gate="1" x="223.52" y="73.66"/>
 <instance part="C211" gate="G$1" x="198.12" y="137.16"/>
 <instance part="GND24" gate="1" x="198.12" y="129.54"/>
-<instance part="U202" gate="G$1" x="111.76" y="187.96" rot="R180"/>
-<instance part="U203" gate="G$1" x="111.76" y="157.48" rot="R180"/>
-<instance part="GND35" gate="1" x="116.84" y="170.18" rot="R90"/>
-<instance part="GND36" gate="1" x="116.84" y="203.2" rot="R90"/>
+<instance part="U202" gate="G$1" x="137.16" y="187.96" rot="R180"/>
+<instance part="U203" gate="G$1" x="137.16" y="157.48" rot="R180"/>
+<instance part="GND35" gate="1" x="142.24" y="170.18" rot="R90"/>
+<instance part="GND36" gate="1" x="142.24" y="203.2" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -4378,14 +4380,14 @@ Will be selected by either the XBEE or FT232R</text>
 </segment>
 <segment>
 <pinref part="U203" gate="G$1" pin="GND"/>
-<wire x1="111.76" y1="170.18" x2="114.3" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="170.18" x2="139.7" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="GND35" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="GND36" gate="1" pin="GND"/>
 <pinref part="U202" gate="G$1" pin="GND"/>
-<wire x1="114.3" y1="203.2" x2="111.76" y2="203.2" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="203.2" x2="111.76" y2="200.66" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="203.2" x2="137.16" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="203.2" x2="137.16" y2="200.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="NRST" class="0">
@@ -4393,11 +4395,11 @@ Will be selected by either the XBEE or FT232R</text>
 <pinref part="U101" gate="RST" pin="NRST"/>
 <wire x1="71.12" y1="172.72" x2="78.74" y2="172.72" width="0.1524" layer="91"/>
 <pinref part="R201" gate="G$1" pin="1"/>
-<junction x="78.74" y="172.72"/>
 <pinref part="U202" gate="G$1" pin="Y"/>
-<wire x1="99.06" y1="187.96" x2="93.98" y2="187.96" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="187.96" x2="93.98" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="172.72" x2="78.74" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="187.96" x2="101.6" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="187.96" x2="101.6" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="172.72" x2="78.74" y2="172.72" width="0.1524" layer="91"/>
+<junction x="78.74" y="172.72"/>
 </segment>
 </net>
 <net name="VDD_3V3" class="0">
@@ -4469,13 +4471,13 @@ Will be selected by either the XBEE or FT232R</text>
 </segment>
 <segment>
 <pinref part="U202" gate="G$1" pin="VCC"/>
-<wire x1="111.76" y1="175.26" x2="114.3" y2="175.26" width="0.1524" layer="91"/>
-<label x="114.3" y="175.26" size="1.27" layer="95" xref="yes"/>
+<wire x1="137.16" y1="175.26" x2="139.7" y2="175.26" width="0.1524" layer="91"/>
+<label x="139.7" y="175.26" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="U203" gate="G$1" pin="VCC"/>
-<wire x1="111.76" y1="144.78" x2="114.3" y2="144.78" width="0.1524" layer="91"/>
-<label x="114.3" y="144.78" size="1.27" layer="95" xref="yes"/>
+<wire x1="137.16" y1="144.78" x2="139.7" y2="144.78" width="0.1524" layer="91"/>
+<label x="139.7" y="144.78" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VCAP2" class="0">
@@ -4497,39 +4499,39 @@ Will be selected by either the XBEE or FT232R</text>
 <pinref part="U101" gate="RST" pin="BOOT0"/>
 <wire x1="71.12" y1="167.64" x2="73.66" y2="167.64" width="0.1524" layer="91"/>
 <pinref part="R202" gate="G$1" pin="1"/>
-<wire x1="73.66" y1="167.64" x2="86.36" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="86.36" y1="167.64" x2="86.36" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="167.64" x2="114.3" y2="167.64" width="0.1524" layer="91"/>
 <junction x="73.66" y="167.64"/>
+<wire x1="114.3" y1="167.64" x2="114.3" y2="157.48" width="0.1524" layer="91"/>
 <pinref part="U203" gate="G$1" pin="Y"/>
-<wire x1="86.36" y1="157.48" x2="99.06" y2="157.48" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="157.48" x2="124.46" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="XBEE_DIO1" class="0">
 <segment>
 <pinref part="U203" gate="G$1" pin="A"/>
-<wire x1="124.46" y1="154.94" x2="132.08" y2="154.94" width="0.1524" layer="91"/>
-<label x="132.08" y="154.94" size="1.27" layer="95" xref="yes"/>
+<wire x1="149.86" y1="154.94" x2="157.48" y2="154.94" width="0.1524" layer="91"/>
+<label x="157.48" y="154.94" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="FT232_DTR" class="0">
 <segment>
 <pinref part="U203" gate="G$1" pin="B"/>
-<wire x1="124.46" y1="160.02" x2="132.08" y2="160.02" width="0.1524" layer="91"/>
-<label x="132.08" y="160.02" size="1.27" layer="95" xref="yes"/>
+<wire x1="149.86" y1="160.02" x2="157.48" y2="160.02" width="0.1524" layer="91"/>
+<label x="157.48" y="160.02" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="XBEE_DIO0" class="0">
 <segment>
 <pinref part="U202" gate="G$1" pin="A"/>
-<wire x1="124.46" y1="185.42" x2="132.08" y2="185.42" width="0.1524" layer="91"/>
-<label x="132.08" y="185.42" size="1.27" layer="95" xref="yes"/>
+<wire x1="149.86" y1="185.42" x2="157.48" y2="185.42" width="0.1524" layer="91"/>
+<label x="157.48" y="185.42" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="FT232_RTS" class="0">
 <segment>
 <pinref part="U202" gate="G$1" pin="B"/>
-<wire x1="124.46" y1="190.5" x2="132.08" y2="190.5" width="0.1524" layer="91"/>
-<label x="132.08" y="190.5" size="1.27" layer="95" xref="yes"/>
+<wire x1="149.86" y1="190.5" x2="157.48" y2="190.5" width="0.1524" layer="91"/>
+<label x="157.48" y="190.5" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -4765,8 +4767,8 @@ On USB power, motor power is always killed</text>
 <instance part="GND27" gate="1" x="116.84" y="114.3"/>
 <instance part="GND28" gate="1" x="38.1" y="147.32"/>
 <instance part="R401" gate="G$1" x="78.74" y="142.24" rot="R180"/>
-<instance part="RXLED" gate="G$1" x="185.42" y="160.02"/>
-<instance part="TXLED" gate="G$1" x="172.72" y="160.02"/>
+<instance part="RX" gate="G$1" x="185.42" y="160.02"/>
+<instance part="TX" gate="G$1" x="172.72" y="160.02"/>
 <instance part="R402" gate="G$1" x="185.42" y="149.86" rot="R90"/>
 <instance part="R403" gate="G$1" x="172.72" y="149.86" rot="R90"/>
 <instance part="C402" gate="G$1" x="50.8" y="172.72"/>
@@ -4781,9 +4783,10 @@ On USB power, motor power is always killed</text>
 <instance part="C406" gate="G$1" x="215.9" y="93.98"/>
 <instance part="U404" gate="G$1" x="119.38" y="88.9"/>
 <instance part="PWR" gate="G$1" x="256.54" y="93.98"/>
-<instance part="R5" gate="G$1" x="256.54" y="83.82" rot="R90"/>
+<instance part="R404" gate="G$1" x="256.54" y="83.82" rot="R90"/>
 <instance part="GND17" gate="1" x="256.54" y="76.2"/>
 <instance part="GND18" gate="1" x="40.64" y="177.8" rot="R180"/>
+<instance part="JP1" gate="G$1" x="137.16" y="167.64"/>
 </instances>
 <busses>
 </busses>
@@ -4888,7 +4891,7 @@ On USB power, motor power is always killed</text>
 <wire x1="215.9" y1="83.82" x2="215.9" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="R404" gate="G$1" pin="1"/>
 <pinref part="GND17" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -4913,12 +4916,12 @@ On USB power, motor power is always killed</text>
 <label x="81.28" y="172.72" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="TXLED" gate="G$1" pin="A"/>
+<pinref part="TX" gate="G$1" pin="A"/>
 <wire x1="172.72" y1="162.56" x2="172.72" y2="165.1" width="0.1524" layer="91"/>
 <label x="172.72" y="165.1" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
-<pinref part="RXLED" gate="G$1" pin="A"/>
+<pinref part="RX" gate="G$1" pin="A"/>
 <wire x1="185.42" y1="162.56" x2="185.42" y2="165.1" width="0.1524" layer="91"/>
 <label x="185.42" y="165.1" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
@@ -4939,26 +4942,32 @@ On USB power, motor power is always killed</text>
 <net name="USART1_RX" class="0">
 <segment>
 <pinref part="U401" gate="G$1" pin="TXD"/>
-<wire x1="127" y1="170.18" x2="132.08" y2="170.18" width="0.1524" layer="91"/>
-<label x="132.08" y="170.18" size="1.27" layer="95" xref="yes"/>
+<wire x1="127" y1="170.18" x2="134.62" y2="170.18" width="0.1524" layer="91"/>
+<label x="142.24" y="170.18" size="1.27" layer="95" xref="yes"/>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<wire x1="134.62" y1="170.18" x2="142.24" y2="170.18" width="0.1524" layer="91"/>
+<junction x="134.62" y="170.18"/>
 </segment>
 </net>
 <net name="USART1_TX" class="0">
 <segment>
 <pinref part="U401" gate="G$1" pin="RXD"/>
-<wire x1="127" y1="167.64" x2="132.08" y2="167.64" width="0.1524" layer="91"/>
-<label x="132.08" y="167.64" size="1.27" layer="95" xref="yes"/>
+<wire x1="127" y1="167.64" x2="134.62" y2="167.64" width="0.1524" layer="91"/>
+<label x="142.24" y="167.64" size="1.27" layer="95" xref="yes"/>
+<pinref part="JP1" gate="G$1" pin="2"/>
+<wire x1="134.62" y1="167.64" x2="142.24" y2="167.64" width="0.1524" layer="91"/>
+<junction x="134.62" y="167.64"/>
 </segment>
 </net>
 <net name="N$10" class="0">
 <segment>
-<pinref part="RXLED" gate="G$1" pin="C"/>
+<pinref part="RX" gate="G$1" pin="C"/>
 <pinref part="R402" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
-<pinref part="TXLED" gate="G$1" pin="C"/>
+<pinref part="TX" gate="G$1" pin="C"/>
 <pinref part="R403" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -5009,7 +5018,7 @@ On USB power, motor power is always killed</text>
 <net name="N$18" class="0">
 <segment>
 <pinref part="PWR" gate="G$1" pin="C"/>
-<pinref part="R5" gate="G$1" pin="2"/>
+<pinref part="R404" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="PWR" class="0">
