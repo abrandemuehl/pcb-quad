@@ -7,3 +7,8 @@
 eagle.epf
 
 *.lck
+
+*.o
+*.bin
+*.elf
+*.hex

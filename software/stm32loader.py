@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python2
 
 # -*- coding: utf-8 -*-
 # vim: sw=4:ts=4:si:et:enc=utf-8
@@ -72,7 +72,7 @@ class CommandInterface(object):
             parity=serial.PARITY_EVEN,
             stopbits=1,
             xonxoff=0,              # enable software flow control
-            rtscts=0,               # disable RTS/CTS flow control
+            rtscts=False,               # disable RTS/CTS flow control
             timeout=0.5             # set a timeout value, None for waiting forever
         )
 
@@ -102,14 +102,14 @@ class CommandInterface(object):
         raise CmdException("Unrecognised response 0x%x to %s" % (ask, info))
 
     def reset(self):
-        self.sp.setDTR(0)
+        # self.sp.setDTR(0)
         time.sleep(0.1)
-        self.sp.setDTR(1)
+        # self.sp.setDTR(1)
         time.sleep(0.5)
 
     def initChip(self):
         # Set boot
-        self.sp.setRTS(0)
+        # self.sp.setRTS(0)
         self.reset()
 
         # Be a bit more persistent when trying to initialise the chip
@@ -129,7 +129,7 @@ class CommandInterface(object):
         raise CmdException('No response while trying to sync')
 
     def releaseChip(self):
-        self.sp.setRTS(1)
+        # self.sp.setRTS(1)
         self.reset()
 
     def cmdGeneric(self, cmd):
