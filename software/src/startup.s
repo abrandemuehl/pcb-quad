@@ -22,4 +22,5 @@ infiniteloop:
 .section .int_vector_table, "a", %progbits
 int_vector_table:
 	.word _estack // Specify the end of the stack for the processor's initial SP
-	.word _reset
+	// Every interrupt vector here MUST have a LSB of 1 in order for the ARM CPU to execute it as thumb code
+	.word _reset+1 // Reset
