@@ -1,4 +1,5 @@
 CC=arm-none-eabi-gcc
+CXX=arm-none-eabi-g++
 LD=arm-none-eabi-ld
 AS=arm-none-eabi-as
 OBJCOPY=arm-none-eabi-objcopy
@@ -16,8 +17,10 @@ OBJS += $(CMSIS_DeviceSystem)
 INCLUDE=include/
 
 CFLAGS=-Wall -Werror -mcpu=cortex-m4 -mthumb $(DEFINES) -I$(INCLUDE) -I$(CMSIS_DeviceInclude)
+CXXFLAGS=$(CFLAGS)
 
-LDFLAGS=-mthumb -T$(LDSCRIPT) -L$(CMSIS_LIBS)
+LDFLAGS=-mthumb -T$(LDSCRIPT) -L$(CMSIS_LIBS) 
+LDFLAGS+=-specs=nosys.specs # Don't use system library
 ASFLAGS=-mthumb
 
 BINARY=main.bin
@@ -27,7 +30,7 @@ all: $(OBJS) $(BINARY)
 
 
 %elf: $(OBJS) $(LDSCRIPT)
-	$(CC) $(OBJS) $(LDFLAGS) $(LIBS) -o $@
+	$(CXX) $(OBJS) $(LDFLAGS) $(LIBS) -o $@
 
 %bin: %elf
 	$(OBJCOPY) -O binary -S $< $@
@@ -35,8 +38,11 @@ all: $(OBJS) $(BINARY)
 %hex: %elf
 	$(OBJCOPY) -O ihex $< $@
 
+%.o: %.cc
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CFLAGS) -c $< -o $@
 
 %.o: %.s
 	$(AS) $(ASFLAGS) -c $< -o $@
