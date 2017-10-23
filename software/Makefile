@@ -5,7 +5,7 @@ OBJCOPY=arm-none-eabi-objcopy
 
 
 OBJS=src/main.o src/startup.o
-LDSCRIPT=src/basic.ld
+LDSCRIPT=src/stm32f427.ld
 DEFINES=-DSTM32F427_437xx
 LIBS=
 CMSIS=CMSIS
@@ -26,7 +26,7 @@ BINARY=main.bin
 all: $(OBJS) $(BINARY)
 
 
-%elf: $(OBJS)
+%elf: $(OBJS) $(LDSCRIPT)
 	$(CC) $(OBJS) $(LDFLAGS) $(LIBS) -o $@
 
 %bin: %elf
