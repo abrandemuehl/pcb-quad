@@ -41,7 +41,7 @@ void usart1_init(baud_t baud) {
 
 
 
-void usart1_putchar(char c) {
+void usart1_putc(char c) {
   /* if(c == '\r') { */
   /*   while ((USART1->SR & USART_SR_TXE) == 0); */
   /*   USART1->DR = '\r'; */
@@ -52,7 +52,7 @@ void usart1_putchar(char c) {
 
 void usart1_puts(char *s) {
   while(*s != '\0') {
-    usart1_putchar(*s);
+    usart1_putc(*s);
     s++;
   }
 }

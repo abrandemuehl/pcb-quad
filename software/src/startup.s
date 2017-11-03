@@ -1,6 +1,6 @@
 .syntax unified
 .cpu cortex-m4
-.fpu softvfp
+.fpu vfp
 .thumb
 
 
@@ -12,12 +12,14 @@ _reset:
 	bl main // Jump to main
 	b infiniteloop // If main returns, infinite loop
 
+Default_Interrupt_Handler:
 .weak _exit
 _exit:
 .weak __end__
 __end__:
 infiniteloop:
 	b infiniteloop
+
 
 .section .int_vector_table, "a", %progbits
 int_vector_table:
@@ -72,7 +74,7 @@ int_vector_table:
 	.word Default_Interrupt_Handler // I2C2_ER
 	.word Default_Interrupt_Handler // SPI1
 	.word Default_Interrupt_Handler // SPI2
-	.word USART1_Interrupt_Handler+1 // USART1
+	.word Default_Interrupt_Handler // USART1
 	.word Default_Interrupt_Handler // USART2
 	.word Default_Interrupt_Handler // USART3
 	.word Default_Interrupt_Handler // EXTI15_10

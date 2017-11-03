@@ -5,9 +5,9 @@ AS=arm-none-eabi-as
 OBJCOPY=arm-none-eabi-objcopy
 
 
-OBJS=src/main.o src/startup.o src/uart.o # src/syscall.o
+OBJS=src/main.o src/startup.o src/uart.o src/util.o src/i2c.o src/handlers.o
 LDSCRIPT=src/stm32f427.ld
-DEFINES=-DSTM32F427_437xx
+DEFINES=-DSTM32F427_437xx -D__FPU_PRESENT=1 -D__FPU_USED
 LIBS=
 CMSIS=CMSIS
 CMSIS_DeviceInclude=$(CMSIS)/include
@@ -15,17 +15,15 @@ CMSIS_DeviceSystem=$(CMSIS)/src/system_stm32f4xx.o
 CMSIS_LIBS=$(CMSIS)/lib
 OBJS += $(CMSIS_DeviceSystem)
 
-# DRIVERS=StdPeriph_Driver
-# DRIVERS_INCLUDE=$(DRIVERS)/include
-# OBJS += $(DRIVERS)/src/stm32f4xx_usart.o $(DRIVERS)/src/misc.o 
-INCLUDE=include/
-
-CFLAGS=-Wall -Werror -mcpu=cortex-m4 -mthumb $(DEFINES) -I$(INCLUDE) -I$(CMSIS_DeviceInclude) #-I$(DRIVERS_INCLUDE)
+CFLAGS=-Wall -Werror -mlittle-endian -mcpu=cortex-m4 -mthumb -fsingle-precision-constant
+CFLAGS += -mfloat-abi=hard -mfpu=fpv4-sp-d16
 CFLAGS += -ffreestanding -nostdlib
+CFLAGS += -g
+CFLAGS += $(DEFINES) -I$(CMSIS_DeviceInclude)
 CXXFLAGS=$(CFLAGS)
 
 
-LDFLAGS=-mthumb -T$(LDSCRIPT) -L$(CMSIS_LIBS) 
+LDFLAGS=-mthumb -T$(LDSCRIPT) # -L$(CMSIS_LIBS) 
 LDFLAGS+=-specs=nosys.specs
 ASFLAGS=-mthumb
 
@@ -36,7 +34,7 @@ all: $(OBJS) $(BINARY)
 
 
 %elf: $(OBJS) $(LDSCRIPT)
-	$(CXX) $(OBJS) $(LDFLAGS) $(LIBS) -o $@
+	$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) $(LIBS) -o $@
 
 %bin: %elf
 	$(OBJCOPY) -O binary -S $< $@
@@ -57,6 +55,6 @@ flash: $(BINARY)
 	python2 stm32loader.py -p /dev/ttyUSB0 -evw $<
 
 clean:
-	rm -f $(OBJS) $(BINARY) *.o *.bin *.hex *.elf
+	rm -f $(CMSIS_DeviceSystem) $(OBJS) $(BINARY) *.o *.bin *.hex *.elf src/*.o
 
 .PHONY: clean

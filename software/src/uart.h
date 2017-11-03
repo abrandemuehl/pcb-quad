@@ -14,7 +14,7 @@ typedef enum {
 
 void usart1_init(baud_t baud);
 
-void usart1_putchar(char c);
+void usart1_putc(char c);
 void usart1_puts(char *s);
 char usart1_getchar();
 
