@@ -3,6 +3,7 @@
 #include "stm32f4xx.h"
 
 #include "clocks.h"
+#include "uart.h"
 
 enum I2C_read {
   WRITE=0,
@@ -22,6 +23,8 @@ void i2c_init() {
   // SCL = PB8
   // SDA = PB9
   
+  GPIOB->AFR[1] &= ~((uint32_t)7) << ((8 - 8) * 4);;
+  GPIOB->AFR[1] &= ~((uint32_t)7) << ((9 - 8) * 4);;
   GPIOB->AFR[1] |= ((uint32_t)4) << ((8 - 8) * 4);;
   GPIOB->AFR[1] |= ((uint32_t)4) << ((9 - 8) * 4);;
 
@@ -40,22 +43,27 @@ void i2c_init() {
   // Pull up both pins
   GPIOB->PUPDR &= ~GPIO_PUPDR_PUPDR8;
   GPIOB->PUPDR &= ~GPIO_PUPDR_PUPDR9;
-  GPIOB->PUPDR |= GPIO_PUPDR_PUPDR8_0;
-  GPIOB->PUPDR |= GPIO_PUPDR_PUPDR9_0;
+  /* GPIOB->PUPDR |= GPIO_PUPDR_PUPDR8_0; */
+  /* GPIOB->PUPDR |= GPIO_PUPDR_PUPDR9_0; */
 
 
   // Enable overall I2C clock
   RCC->APB1ENR |= RCC_APB1ENR_I2C1EN;
 
+  // Check if the bus is busy before starting
+  while((I2C1->SR2 & I2C_SR2_BUSY) == 1) {
+    usart1_puts("i2c_init bus busy\n");
+  }
+  if ((I2C1->SR1 & I2C_SR1_BERR) == 1) {
+    usart1_puts("i2c_init bus error\n");
+    I2C1->CR1 &= ~I2C_SR1_BERR;
+  }
 
   // Clear the I2C frequency
   I2C1->CR2 &= ~I2C_CR2_FREQ;
 
   // Set the I2C clock frequency to APB1 clock speed
   I2C1->CR2 |= I2C_CR2_FREQ & (APB1 / 1000000);
-
-  // Enable ACK bits
-  I2C1->CR1 |= I2C_CR1_ACK;
 
   // Disable the peripheral for configuration
   I2C1->CR1 &= ~I2C_CR1_PE;
@@ -92,8 +100,14 @@ void i2c_init() {
 }
 
 void __i2c_send_addr(uint8_t addr, enum I2C_read lsb) {
+  usart1_puts("__i2c_send_addr\n");
   // Send a START condition
   I2C1->CR1 |= I2C_CR1_START;
+
+  /* usart1_puts("__i2c_send_addr waiting for START generation\n"); */
+  while(!(I2C1->SR1 & I2C_SR1_SB)) {
+  }
+  usart1_puts("__i2c_send_addr START generation complete\n");
 
   // Set the address of the transmission
   // First read the SR1 register, then read the SR2 register to clear SR1 ADDR bit
@@ -106,17 +120,23 @@ void __i2c_send_addr(uint8_t addr, enum I2C_read lsb) {
   uint16_t dr = I2C1->DR;
   dr &= ~I2C_DR_DR;
   dr |= (((addr << 1) | lsb) & 0x00FF) & 0x00FF;
+  usart1_puts("__i2c_send_addr writing to DR\n");
   I2C1->DR = dr;
   // Wait for the address to be transmitted
-  while((I2C1->SR1 & I2C_SR1_ADDR) == 0);
-
+  usart1_puts("__i2c_send_addr waiting for address to be sent\n");
+  while((I2C1->SR1 & I2C_SR1_ADDR) == 0) {
+  }
   // Clear the ADDR bit to enter transmitter/receiver mode
   tmp = I2C1->SR1;
   tmp = I2C1->SR2;
+
+  usart1_puts("__i2c_send_addr address sent!\n");
 }
 
 void __i2c_write(uint8_t addr, uint8_t *bytes, uint8_t len) {
+  usart1_puts("__i2c_write\n");
   __i2c_send_addr(addr, WRITE);
+  usart1_puts("__i2c_send_addr done\n");
 
   uint16_t dr = I2C1->DR;
 
@@ -126,13 +146,24 @@ void __i2c_write(uint8_t addr, uint8_t *bytes, uint8_t len) {
     I2C1->DR = dr;
 
     // Wait for ACK
-    while((I2C1->SR1 & I2C_SR1_TXE) != 0);
+    usart1_puts("__i2c_write waiting for ack\n");
+    while(!(I2C1->SR1 & I2C_SR1_BTF)) {
+      if((I2C1->SR1 & I2C_SR1_AF)) {
+        usart1_puts("__i2c_write acknowledge failure\n");
+        while(1);
+      }
+    }
+    usart1_puts("__i2c_write ack received!\n");
   }
   // Send a STOP condition
   I2C1->CR1 |= I2C_CR1_STOP;
+
+  // Wait for line to no longer be busy anymore
+  while((I2C1->SR2 & I2C_SR2_BUSY)) {}
 }
 
 void __i2c_read(uint8_t addr, uint8_t *bytes, int len) {
+  usart1_puts("__i2c_read\n");
   __i2c_send_addr(addr, READ);
   // Enable ACK's
   I2C1->CR1 |= I2C_CR1_ACK;
@@ -160,8 +191,10 @@ void i2c_write(uint8_t addr, uint8_t reg, uint8_t data) {
 uint8_t i2c_read(uint8_t addr, uint8_t reg) {
   uint8_t result;
   __i2c_write(addr, &reg, 1);
+  usart1_puts("__i2c_write complete\n");
 
   __i2c_read(addr, &result, 1);
+  usart1_puts("__i2c_read complete\n");
 
   return result;
 }

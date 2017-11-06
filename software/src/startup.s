@@ -27,7 +27,7 @@ int_vector_table:
 	// Every interrupt vector here MUST have a LSB of 1 in order for the ARM CPU to execute it as thumb code
 	.word _reset+1 // Reset
 	.word Default_Interrupt_Handler // NMI
-	.word Default_Interrupt_Handler // HardFault
+	.word HardFault_Handler // HardFault
 	.word Default_Interrupt_Handler // MemManage
 	.word Default_Interrupt_Handler // BusFault
 	.word Default_Interrupt_Handler // UsageFault

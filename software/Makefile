@@ -1,3 +1,7 @@
+# PORT=/dev/ttyUSB1
+
+
+
 CC=arm-none-eabi-gcc
 CXX=arm-none-eabi-g++
 LD=arm-none-eabi-ld
@@ -52,7 +56,7 @@ all: $(OBJS) $(BINARY)
 	$(AS) $(ASFLAGS) -c $< -o $@
 
 flash: $(BINARY)
-	python2 stm32loader.py -p /dev/ttyUSB0 -evw $<
+	python2 stm32loader.py -p $(PORT) -evw $<
 
 clean:
 	rm -f $(CMSIS_DeviceSystem) $(OBJS) $(BINARY) *.o *.bin *.hex *.elf src/*.o

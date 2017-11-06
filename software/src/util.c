@@ -12,7 +12,7 @@ void print_hex(uint32_t num) {
     if(digit < 10) {
       display = '0' + digit;
     } else {
-      display = 'A' + digit;
+      display = 'A' + (digit - 10);
     }
     usart1_putc(display);
     num = num << 4;
