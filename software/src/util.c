@@ -22,12 +22,12 @@ void print_hex(uint32_t num) {
 void print_dec(uint32_t num) {
   uint8_t digit;
   char display;
-  while(num > 0) {
+  do {
     digit = num % 10;
     display = '0' + digit;
     usart1_putc(display);
     num = num / 10;
-  }
+  } while(num > 0);
 }
 
 void print_bin(uint32_t num) {
