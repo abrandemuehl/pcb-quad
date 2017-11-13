@@ -19,9 +19,13 @@ void print_hex(uint32_t num) {
   }
 }
 
-void print_dec(uint32_t num) {
+void print_dec(int32_t num) {
   uint8_t digit;
   char display;
+  if(num < 0) {
+    usart1_putc('-');
+    num *= -1;
+  }
   do {
     digit = num % 10;
     display = '0' + digit;
@@ -38,4 +42,21 @@ void print_bin(uint32_t num) {
     usart1_putc(bit);
     num = num << 1;
   }
+}
+
+
+void print_float(float num) {
+  if(num < 0) {
+    usart1_putc('-');
+    num *= -1;
+  }
+  print_dec((int32_t)num);
+
+  num -= (int32_t)num;
+
+  usart1_putc('.');
+
+  // Print with three decimal places of accuracy
+  num *= 1000;
+  print_dec((int32_t)num);
 }

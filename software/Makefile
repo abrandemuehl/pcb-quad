@@ -9,9 +9,9 @@ AS=arm-none-eabi-as
 OBJCOPY=arm-none-eabi-objcopy
 
 
-OBJS=src/main.o src/startup.o src/uart.o src/util.o src/i2c.o src/handlers.o src/bno055.o
+OBJS=src/main.o src/startup.o src/uart.o src/util.o src/i2c.o src/handlers.o src/bno055.o src/kalman.o
 LDSCRIPT=src/stm32f427.ld
-DEFINES=-DSTM32F427_437xx -D__FPU_PRESENT=1 -D__FPU_USED
+DEFINES=-DSTM32F427_437xx -D__FPU_PRESENT=1 -D__FPU_USED -DARM_MATH_CM4
 LIBS=
 CMSIS=CMSIS
 CMSIS_DeviceInclude=$(CMSIS)/include
@@ -27,8 +27,9 @@ CFLAGS += $(DEFINES) -I$(CMSIS_DeviceInclude)
 CXXFLAGS=$(CFLAGS)
 
 
-LDFLAGS=-mthumb -T$(LDSCRIPT) # -L$(CMSIS_LIBS) 
+LDFLAGS=-mthumb -T$(LDSCRIPT) -L$(CMSIS_LIBS)
 LDFLAGS+=-specs=nosys.specs
+LDFLAGS+=-larm_cortexM4lf_math -lm -lc -lnosys
 ASFLAGS=-mthumb
 
 BINARY=main.bin

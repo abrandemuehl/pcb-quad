@@ -4,20 +4,17 @@
 #include "i2c.h"
 #include "util.h"
 #include "bno055.h"
+#include "kalman.h"
+#include <arm_math.h>
 
 #define MS (6250)
 #define BNO055_ADDR ((uint8_t)0x28)
 #define BNO055_CHIP_ID ((uint8_t)0x00)
 #define BNO055_UNIT_SEL ((uint8_t)0x3B)
 
+
 int main() {
   SystemInit();
-
-  RCC->AHB1ENR |= RCC_AHB1ENR_GPIOBEN;
-
-  GPIOB->MODER |= GPIO_MODER_MODER7_0;
-  GPIOB->OTYPER &= ~GPIO_OTYPER_OT_7;
-  GPIOB->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR7;
 
   usart1_init(B115200);
 
@@ -28,15 +25,40 @@ int main() {
     while(1);
   }
   usart1_puts("bno055 initialized\n");
-  float rpy[3];
+
+  bno055_calibrate();
+
+  kalman_t kal_roll, kal_pitch, kal_yaw;
+
+  kalman_init(&kal_roll);
+  kalman_init(&kal_pitch);
+  kalman_init(&kal_yaw);
+
+  float acc[3];
+  float gyro[3];
+  float mag[3];
+  float kal_roll_angle;
+  float kal_pitch_angle;
+  float kal_yaw_angle;
   while(1) {
-    usart1_puts("Getting values\n");
-    bno055_get_rpy(rpy);
-    print_dec((uint32_t)rpy[0]);
+    bno055_get_acc(acc);
+    bno055_get_gyro(gyro);
+    bno055_get_mag(mag);
+
+    float acc_angle_x = atan2f(acc[1], acc[2]) * 180.0/3.14159265358979323;
+    float acc_angle_y = atan2f(acc[0], acc[2]) * 180.0/3.14159265358979323;
+    float acc_angle_z = atan2f(acc[0], acc[1]) * 180.0/3.14159265358979323;
+
+    float dt = 0.01;
+    kal_roll_angle = kalman_update(&kal_roll, acc_angle_x, gyro[0], dt);
+    kal_pitch_angle = kalman_update(&kal_pitch, acc_angle_y, gyro[1], dt);
+    kal_yaw_angle = kalman_update(&kal_yaw, acc_angle_z, gyro[2], dt);
+
+    print_float(kal_roll_angle);
     usart1_putc(' ');
-    print_dec((uint32_t)rpy[1]);
+    print_float(kal_pitch_angle);
     usart1_putc(' ');
-    print_dec((uint32_t)rpy[2]);
+    print_float(kal_yaw_angle);
     usart1_puts("\n");
     for(int i=0; i < MS*10; i++);
   }

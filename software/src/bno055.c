@@ -14,6 +14,11 @@
 #define BNO055_OPR_MODE ((uint8_t)0x3D)
 #define BNO055_PWR_MODE ((uint8_t)0x3E)
 #define BNO055_SYS_TRIGGER ((uint8_t)0x3F)
+#define BNO055_CALIB_STAT ((uint8_t)0x35)
+
+#define BNO055_ACC_DATA_X_LSB ((uint8_t)0x08)
+#define BNO055_MAG_DATA_X_LSB ((uint8_t)0x0E)
+#define BNO055_GYR_DATA_X_LSB ((uint8_t)0x14)
 
 #define BNO055_EUL_DATA_X_LSB ((uint8_t)0x1A)
 #define BNO055_EUL_DATA_X_MSB ((uint8_t)0x1B)
@@ -59,6 +64,7 @@
 #define EULER_UNIT UNIT_SEL_EULER_DEG
 
 static void bno055_set_mode(uint8_t mode);
+static void bno055_get_vec(float *vec, uint8_t start_addr);
 
 uint8_t bno055_init() {
   // Assumes i2c is already initialized
@@ -115,37 +121,106 @@ uint8_t bno055_init() {
   i2c_write(BNO055_ADDR, BNO055_SYS_TRIGGER, 0x00);
   for(int i=0; i < 10*MS; i++);
 
-  // Go to NDOF mode
+  // Go to IMU mode (use gyro and accelerometer, but not compass)
   usart1_puts("Setting mode\n");
   bno055_set_mode(OPR_MODE_FUSION_NDOF);
   return 0;
 }
 
+void bno055_get_acc(float *acc) {
+  bno055_get_vec(acc, BNO055_ACC_DATA_X_LSB);
+  acc[0] /= 100.0;
+  acc[1] /= 100.0;
+  acc[2] /= 100.0;
+}
+
+void bno055_get_gyro(float *gyro) {
+  bno055_get_vec(gyro, BNO055_GYR_DATA_X_LSB);
+  gyro[0] /= 16.0;
+  gyro[1] /= 16.0;
+  gyro[2] /= 16.0;
+}
+
+void bno055_get_mag(float *mag) {
+  bno055_get_vec(mag, BNO055_GYR_DATA_X_LSB);
+  mag[0] /= 16.0;
+  mag[1] /= 16.0;
+  mag[2] /= 16.0;
+}
+
 void bno055_get_rpy(float *rpy) {
+  float vec[3];
+  bno055_get_vec(vec, BNO055_EUL_DATA_X_LSB);
+  // x = yaw, y = roll, z = pitch
+  float x = vec[0];
+  float y = vec[1];
+  float z = vec[2];
+
+  // RPY in radians or degrees
+#if EULER_UNIT == UNIT_SEL_EULER_RAD
+  rpy[0] = y/900.0;
+  rpy[1] = z/900.0;
+  rpy[2] = x/900.0;
+#else
+  rpy[0] = y/16.0;
+  rpy[1] = z/16.0;
+  rpy[2] = x/16.0;
+#endif
+}
+
+void bno055_get_vec(float *vec, uint8_t start_addr) {
   uint8_t buf[2*3];
-  uint8_t reg = BNO055_EUL_DATA_X_LSB;
+  uint8_t reg = start_addr;
   for(int i=0; i < 6; i++) {
     buf[i] = i2c_read(BNO055_ADDR, reg+i);
   }
 
-  // x = yaw, y = roll, z = pitch
   int16_t x = ((int16_t)buf[0]) | ((int16_t)buf[1] << 8);
   int16_t y = ((int16_t)buf[2]) | ((int16_t)buf[3] << 8);
   int16_t z = ((int16_t)buf[4]) | ((int16_t)buf[5] << 8);
-
-  // RPY in radians or degrees
-#if EULER_UNIT == UNIT_SEL_EULER_RAD
-  rpy[0] = ((float)y)/900.0;
-  rpy[1] = ((float)z)/900.0;
-  rpy[2] = ((float)x)/900.0;
-#else
-  rpy[0] = ((float)y)/16.0;
-  rpy[1] = ((float)z)/16.0;
-  rpy[2] = ((float)x)/16.0;
-#endif
+  vec[0] = (float)x;
+  vec[1] = (float)y;
+  vec[2] = (float)z;
 }
 
+int8_t bno055_get_calib_status(uint8_t *sys, uint8_t *gyro, uint8_t *accel, uint8_t *mag) {
+  int16_t result = i2c_read(BNO055_ADDR, BNO055_CALIB_STAT);
+  if(result == -1) {
+    return -1;
+  }
+  *sys = (result & (0x3 << 6)) >> 6;
+  *gyro = (result & (0x3 << 4)) >> 6;
+  *accel = (result & (0x3 << 2)) >> 6;
+  *mag = (result & (0x3 << 0)) >> 0;
+  return 0;
+}
 
+void bno055_calibrate() {
+  uint8_t sys, gyro, accel, mag;
+  while(1) {
+    int8_t res = bno055_get_calib_status(&sys, &gyro, &accel, &mag);
+    if(res == -1) {
+      continue;
+    }
+    usart1_puts("Calibration results\n");
+    usart1_puts("SYS: ");
+    print_dec(sys);
+    usart1_puts("\n");
+    usart1_puts("GYRO: ");
+    print_dec(gyro);
+    usart1_puts("\n");
+    usart1_puts("ACCEL: ");
+    print_dec(accel);
+    usart1_puts("\n");
+    usart1_puts("MAG: ");
+    print_dec(mag);
+    usart1_puts("\n");
+    if(sys == 3) {
+      return;
+    }
+    for(int i=0; i < MS*10; i++);
+  }
+}
 
 void bno055_set_mode(uint8_t mode) {
   // Go to NDOF mode
