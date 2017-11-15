@@ -9,17 +9,23 @@ AS=arm-none-eabi-as
 OBJCOPY=arm-none-eabi-objcopy
 
 
-OBJS=src/main.o src/startup.o src/uart.o src/util.o src/i2c.o src/handlers.o src/bno055.o src/kalman.o
+OBJS=src/main.o src/startup.o src/uart.o src/util.o src/i2c.o src/handlers.o src/bno055.o src/kalman.o src/tim.o
 LDSCRIPT=src/stm32f427.ld
 DEFINES=-DSTM32F427_437xx -D__FPU_PRESENT=1 -D__FPU_USED -DARM_MATH_CM4
 LIBS=
 CMSIS=CMSIS
 CMSIS_DeviceInclude=$(CMSIS)/include
 CMSIS_DeviceSystem=$(CMSIS)/src/system_stm32f4xx.o
+CMSIS_DeviceTimer=$(CMSIS)/src/stm32f4xx_tim.o
+CMSIS_DeviceRCC=$(CMSIS)/src/stm32f4xx_rcc.o
+CMSIS_DeviceGPIO=$(CMSIS)/src/stm32f4xx_gpio.o
 CMSIS_LIBS=$(CMSIS)/lib
 OBJS += $(CMSIS_DeviceSystem)
+OBJS += $(CMSIS_DeviceTimer)
+OBJS += $(CMSIS_DeviceRCC)
+OBJS += $(CMSIS_DeviceGPIO)
 
-CFLAGS=-Wall -Werror -mlittle-endian -mcpu=cortex-m4 -mthumb -fsingle-precision-constant
+CFLAGS=-std=c11 -Wall -Werror -mlittle-endian -mcpu=cortex-m4 -mthumb -fsingle-precision-constant
 CFLAGS += -mfloat-abi=hard -mfpu=fpv4-sp-d16
 CFLAGS += -ffreestanding -nostdlib
 CFLAGS += -g

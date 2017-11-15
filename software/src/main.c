@@ -1,7 +1,11 @@
 #include "stm32f4xx.h"
+#include "stm32f4xx_rcc.h"
+#include "stm32f4xx_gpio.h"
+#include "stm32f4xx_tim.h"
 
 #include "uart.h"
 #include "i2c.h"
+#include "tim.h"
 #include "util.h"
 #include "bno055.h"
 #include "kalman.h"
@@ -15,6 +19,35 @@
 
 int main() {
   SystemInit();
+
+  RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+  RCC->AHB1ENR |= RCC_AHB1ENR_GPIOBEN;
+  RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
+
+  GPIO_InitTypeDef GPIO_InitStruct;
+  GPIO_PinAFConfig(GPIOA, GPIO_PinSource6, GPIO_AF_TIM3);
+  GPIO_PinAFConfig(GPIOA, GPIO_PinSource7, GPIO_AF_TIM3);
+  GPIO_PinAFConfig(GPIOB, GPIO_PinSource0, GPIO_AF_TIM3);
+  GPIO_PinAFConfig(GPIOC, GPIO_PinSource9, GPIO_AF_TIM3);
+  GPIO_InitStruct.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;
+  GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
+  GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
+  GPIO_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
+  GPIO_Init(GPIOA, &GPIO_InitStruct);
+  GPIO_InitStruct.GPIO_Pin = GPIO_Pin_0;
+  GPIO_Init(GPIOB, &GPIO_InitStruct);
+  GPIO_InitStruct.GPIO_Pin = GPIO_Pin_9;
+  GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+  tim_init();
+  pwm_init();
+
+  //test PWM
+  set_pwm(1, 20.0);
+  set_pwm(2, 40.0);
+  set_pwm(3, 60.0);
+  set_pwm(4, 80.0);
 
   usart1_init(B115200);
 
