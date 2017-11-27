@@ -3,10 +3,9 @@
 #include "uart.h"
 #include "i2c.h"
 #include "util.h"
+#include "tim.h"
 
-#define MS (6250)
 #define BNO055_ADDR ((uint8_t)0x28)
-
 
 #define BNO055_CHIP_ID ((uint8_t)0x00)
 #define BNO055_PAGE_ID ((uint8_t)0x07)
@@ -88,13 +87,13 @@ uint8_t bno055_init() {
   usart1_puts("Triggering reset\n");
   // Reset the system
   i2c_write(BNO055_ADDR, BNO055_SYS_TRIGGER, SYS_TRIGGER_RST_SYS);
-  for(int i=0; i < 100*MS; i++);
+  sleep_ms(30);
 
   // Give it some time to come back up
   usart1_puts("Checking Chip ID\n");
   while((chip_id = i2c_read(BNO055_ADDR, BNO055_CHIP_ID)) != CHIP_ID) {
     usart1_puts("Incorrect chip id\n");
-    for(int i=0; i < 100*MS; i++);
+    sleep_ms(30);
   }
 
   /* // Configure to use the external crystal */
@@ -105,7 +104,7 @@ uint8_t bno055_init() {
   usart1_puts("Setting power mode\n");
   i2c_write(BNO055_ADDR, BNO055_PWR_MODE, PWR_MODE_NORMAL);
   // Delay a bit
-  for(int i=0; i < 10*MS; i++);
+  sleep_ms(10);
 
 
 
@@ -119,7 +118,7 @@ uint8_t bno055_init() {
 
   usart1_puts("Triggering system\n");
   i2c_write(BNO055_ADDR, BNO055_SYS_TRIGGER, 0x00);
-  for(int i=0; i < 10*MS; i++);
+  sleep_ms(10);
 
   // Go to IMU mode (use gyro and accelerometer, but not compass)
   usart1_puts("Setting mode\n");
@@ -218,7 +217,7 @@ void bno055_calibrate() {
     if(sys == 3) {
       return;
     }
-    for(int i=0; i < MS*10; i++);
+    sleep_ms(10);
   }
 }
 
@@ -226,5 +225,5 @@ void bno055_set_mode(uint8_t mode) {
   // Go to NDOF mode
   i2c_write(BNO055_ADDR, BNO055_OPR_MODE, mode);
   // Need to delay for >20 ms
-  for(int i=0; i < 30*MS; i++);
+  sleep_ms(30);
 }
