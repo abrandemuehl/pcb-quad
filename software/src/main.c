@@ -61,23 +61,27 @@ int main() {
   GPIOB->OTYPER &= ~GPIO_OTYPER_OT_7;
   GPIOB->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR7;
   /* uint32_t next_time = gettime_us(); */
-  periodic_init(100);
+  periodic_init(10);
   while(1) {
     /* GPIOB->BSRRH |= 0x01 << 7; */
     /* periodic_sleep(); */
 
     /* GPIOB->BSRRL |= 0x01 << 7; */
     periodic_sleep();
-    /* bno055_get_acc(acc); */
+    /* bno055_get_acc(rpy); */
     /* bno055_get_gyro(gyro); */
     /* bno055_get_mag(mag); */
     bno055_get_rpy(rpy);
-    print_float(rpy[0]);
-    usart1_putc(' ');
-    print_float(rpy[1]);
-    usart1_putc(' ');
-    print_float(rpy[2]);
-    usart1_puts("\n");
+    for(int i=0; i < sizeof(rpy); i++) {
+      usart1_putc(((char *)rpy)[i]);
+    }
+    usart1_putc((char)0xff);
+    /* print_float(rpy[0]); */
+    /* usart1_putc(' '); */
+    /* print_float(rpy[1]); */
+    /* usart1_putc(' '); */
+    /* print_float(rpy[2]); */
+    /* usart1_puts("\n"); */
 
     /* float acc_angle_x = atan2f(acc[1], acc[2]) * 180.0/3.14159265358979323; */
     /* float acc_angle_y = atan2f(acc[0], acc[2]) * 180.0/3.14159265358979323; */

@@ -93,12 +93,10 @@ uint8_t bno055_init() {
   usart1_puts("Checking Chip ID\n");
   while((chip_id = i2c_read(BNO055_ADDR, BNO055_CHIP_ID)) != CHIP_ID) {
     usart1_puts("Incorrect chip id\n");
-    sleep_ms(30);
+    sleep_ms(10);
   }
 
-  /* // Configure to use the external crystal */
-  /* i2c_write(BNO055_ADDR, BNO055_SYS_TRIGGER, SYS_TRIGGER_CLK_SEL); */
-  /* for(int i=0; i < 10*MS; i++); */
+  sleep_ms(50);
 
 
   usart1_puts("Setting power mode\n");
@@ -108,13 +106,13 @@ uint8_t bno055_init() {
 
 
 
-  /* i2c_write(BNO055_ADDR, BNO055_PAGE_ID, 0x00); */
-  /* // Delay a bit */
-  /* for(int i=0; i < 10*MS; i++); */
+  i2c_write(BNO055_ADDR, BNO055_PAGE_ID, 0x00);
+  // Delay a bit
+  sleep_ms(10);
 
   /* // Make output euler angles be radians */
-  /* i2c_write(BNO055_ADDR, BNO055_UNIT_SEL, EULER_UNIT); */
-  /* for(int i=0; i < 10*MS; i++); */
+  i2c_write(BNO055_ADDR, BNO055_UNIT_SEL, EULER_UNIT);
+  sleep_ms(10);
 
   usart1_puts("Triggering system\n");
   i2c_write(BNO055_ADDR, BNO055_SYS_TRIGGER, 0x00);
@@ -123,6 +121,21 @@ uint8_t bno055_init() {
   // Go to IMU mode (use gyro and accelerometer, but not compass)
   usart1_puts("Setting mode\n");
   bno055_set_mode(OPR_MODE_FUSION_NDOF);
+  sleep_ms(20);
+
+  bno055_set_mode(OPR_MODE_CONFIG);
+  sleep_ms(25);
+
+  i2c_write(BNO055_ADDR, BNO055_PAGE_ID, 0x00);
+  sleep_ms(10);
+
+  // Configure to use the external crystal
+  i2c_write(BNO055_ADDR, BNO055_SYS_TRIGGER, SYS_TRIGGER_CLK_SEL);
+  sleep_ms(10);
+
+  bno055_set_mode(OPR_MODE_FUSION_NDOF);
+  sleep_ms(25);
+
   return 0;
 }
 
@@ -165,6 +178,10 @@ void bno055_get_rpy(float *rpy) {
   rpy[1] = z/16.0;
   rpy[2] = x/16.0;
 #endif
+
+  while(rpy[0] > 360.0) rpy[0] -= 360.0;
+  while(rpy[1] > 360.0) rpy[1] -= 360.0;
+  while(rpy[2] > 360.0) rpy[2] -= 360.0;
 }
 
 void bno055_get_vec(float *vec, uint8_t start_addr) {
@@ -222,7 +239,6 @@ void bno055_calibrate() {
 }
 
 void bno055_set_mode(uint8_t mode) {
-  // Go to NDOF mode
   i2c_write(BNO055_ADDR, BNO055_OPR_MODE, mode);
   // Need to delay for >20 ms
   sleep_ms(30);
