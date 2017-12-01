@@ -2,12 +2,14 @@
 #include "tim.h"
 #include <string.h>
 
-void pid_init(pid_t *pid, float Kp, float Ki, float Kd) {
+void pid_init(pid_t *pid, float Kp, float Ki, float Kd, float min, float max) {
   memset(pid, 0, sizeof(*pid));
   pid->Kp = Kp;
   pid->Ki = Ki;
   pid->Kd = Kd;
   pid->last_time = gettime_us();
+  pid->max = max;
+  pid->min = min;
 }
 
 void pid_setpoint(pid_t *pid, float setpoint) {
@@ -28,11 +30,11 @@ float pid_update(pid_t *pid, float pos, float derr) {
   pid->last_time = time;
 
   // TODO: Integrator windup handling
-  pid->sum += (pid->last + err)/2.0 * dt;
+  pid->sum += (pid->last + err)/2.0 * (dt / 1000000);
 
   float res = pid->Kp*err + pid->Kd*derr + pid->Ki*pid->sum;
-  res = res > 100.0 ? 100.0 : res;
-  res = res < 0.0 ? 0.0 : res;
+  res = res > pid->max ? pid->max : res;
+  res = res < pid->min ? pid->min : res;
 
   pid->last = err;
 

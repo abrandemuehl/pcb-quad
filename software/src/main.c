@@ -8,14 +8,14 @@
 #include "tim.h"
 #include "util.h"
 #include "bno055.h"
-#include "kalman.h"
-#include <arm_math.h>
+#include "pid.h"
 
-#define MS (6250)
-#define BNO055_ADDR ((uint8_t)0x28)
-#define BNO055_CHIP_ID ((uint8_t)0x00)
-#define BNO055_UNIT_SEL ((uint8_t)0x3B)
+#define N 1
+#define W 2
+#define S 3
+#define E 4
 
+#define CALIBRATE 0
 
 int main() {
   SystemInit();
@@ -23,11 +23,10 @@ int main() {
   tim_init();
   pwm_init();
 
-  //test PWM
-  set_pwm(1, 20.0);
-  set_pwm(2, 40.0);
-  set_pwm(3, 60.0);
-  set_pwm(4, 80.0);
+  set_pwm(N, 0.0);
+  set_pwm(W, 0.0);
+  set_pwm(S, 0.0);
+  set_pwm(E, 0.0);
 
   usart1_init(B115200);
 
@@ -39,66 +38,43 @@ int main() {
   }
   usart1_puts("bno055 initialized\n");
 
-  /* bno055_calibrate(); */
+#if CALIBRATE == 1
+  bno055_do_calibration();
+  while(1);
+#else
+  bno055_load_calibration();
+  usart1_puts("BNO055 calibration loaded\n");
+#endif
 
-  /* kalman_t kal_roll, kal_pitch, kal_yaw; */
+  pid_t pid_r, pid_p, pid_y;
+  pid_init(&pid_r, 1.0, 0.0, 0.0, -5.0, 5.0);
+  pid_init(&pid_p, 1.0, 0.0, 0.0, -5.0, 5.0);
+  pid_init(&pid_y, 0.0, 0.0, 0.0, -5.0, 5.0);
+  pid_setpoint(&pid_r, 0.0);
+  pid_setpoint(&pid_p, 0.0);
+  pid_setpoint(&pid_y, 0.0);
+  float throttle = 20.0;
 
-  /* kalman_init(&kal_roll); */
-  /* kalman_init(&kal_pitch); */
-  /* kalman_init(&kal_yaw); */
-
-  /* float acc[3]; */
-  /* float gyro[3]; */
-  /* float mag[3]; */
-  /* float kal_roll_angle; */
-  /* float kal_pitch_angle; */
-  /* float kal_yaw_angle; */
   float rpy[3];
-
-  RCC->AHB1ENR |= RCC_AHB1ENR_GPIOBEN;
-
-  GPIOB->MODER |= GPIO_MODER_MODER7_0;
-  GPIOB->OTYPER &= ~GPIO_OTYPER_OT_7;
-  GPIOB->OSPEEDR |= GPIO_OSPEEDER_OSPEEDR7;
-  /* uint32_t next_time = gettime_us(); */
-  periodic_init(10);
+  float gyro[3];
+  periodic_init(100);
   while(1) {
-    /* GPIOB->BSRRH |= 0x01 << 7; */
-    /* periodic_sleep(); */
-
-    /* GPIOB->BSRRL |= 0x01 << 7; */
     periodic_sleep();
-    /* bno055_get_acc(rpy); */
-    /* bno055_get_gyro(gyro); */
-    /* bno055_get_mag(mag); */
     bno055_get_rpy(rpy);
+    bno055_get_gyro(gyro);
     for(int i=0; i < sizeof(rpy); i++) {
       usart1_putc(((char *)rpy)[i]);
     }
     usart1_putc((char)0xff);
-    /* print_float(rpy[0]); */
-    /* usart1_putc(' '); */
-    /* print_float(rpy[1]); */
-    /* usart1_putc(' '); */
-    /* print_float(rpy[2]); */
-    /* usart1_puts("\n"); */
 
-    /* float acc_angle_x = atan2f(acc[1], acc[2]) * 180.0/3.14159265358979323; */
-    /* float acc_angle_y = atan2f(acc[0], acc[2]) * 180.0/3.14159265358979323; */
-    /* float acc_angle_z = atan2f(acc[0], acc[1]) * 180.0/3.14159265358979323; */
+    float roll = pid_update(&pid_r, rpy[0], gyro[0]);
+    float pitch = pid_update(&pid_p, rpy[1], gyro[1]);
+    float yaw = pid_update(&pid_y, rpy[2], gyro[2]);
 
-    /* float dt = 0.01; */
-    /* kal_roll_angle = kalman_update(&kal_roll, acc_angle_x, gyro[0], dt); */
-    /* kal_pitch_angle = kalman_update(&kal_pitch, acc_angle_y, gyro[1], dt); */
-    /* kal_yaw_angle = kalman_update(&kal_yaw, acc_angle_z, gyro[2], dt); */
-
-    /* print_float(rpy[0]); */
-    /* usart1_putc(' '); */
-    /* print_float(rpy[1]); */
-    /* usart1_putc(' '); */
-    /* print_float(rpy[2]); */
-    /* usart1_puts("\n"); */
-    /* for(int i=0; i < MS*10; i++); */
+    set_pwm(N, throttle + pitch - yaw);
+    set_pwm(S, throttle - pitch - yaw);
+    set_pwm(W, throttle + roll + yaw);
+    set_pwm(E, throttle - roll + yaw);
   }
   return 0;
 }

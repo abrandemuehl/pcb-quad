@@ -26,6 +26,33 @@
 #define BNO055_EUL_DATA_Z_LSB ((uint8_t)0x1E)
 #define BNO055_EUL_DATA_Z_MSB ((uint8_t)0x1F)
 
+#define BNO055_ACC_OFFSET_X_LSB ((uint8_t)0x55)
+#define BNO055_ACC_OFFSET_X_MSB ((uint8_t)0x56)
+#define BNO055_ACC_OFFSET_Y_LSB ((uint8_t)0x57)
+#define BNO055_ACC_OFFSET_Y_MSB ((uint8_t)0x58)
+#define BNO055_ACC_OFFSET_Z_LSB ((uint8_t)0x59)
+#define BNO055_ACC_OFFSET_Z_MSB ((uint8_t)0x5a)
+
+#define BNO055_MAG_OFFSET_X_LSB ((uint8_t)0x5b)
+#define BNO055_MAG_OFFSET_X_MSB ((uint8_t)0x5c)
+#define BNO055_MAG_OFFSET_Y_LSB ((uint8_t)0x5d)
+#define BNO055_MAG_OFFSET_Y_MSB ((uint8_t)0x5e)
+#define BNO055_MAG_OFFSET_Z_LSB ((uint8_t)0x5f)
+#define BNO055_MAG_OFFSET_Z_MSB ((uint8_t)0x60)
+
+#define BNO055_GYRO_OFFSET_X_LSB ((uint8_t)0x61)
+#define BNO055_GYRO_OFFSET_X_MSB ((uint8_t)0x62)
+#define BNO055_GYRO_OFFSET_Y_LSB ((uint8_t)0x63)
+#define BNO055_GYRO_OFFSET_Y_MSB ((uint8_t)0x64)
+#define BNO055_GYRO_OFFSET_Z_LSB ((uint8_t)0x65)
+#define BNO055_GYRO_OFFSET_Z_MSB ((uint8_t)0x66)
+
+#define BNO055_ACC_RADIUS_LSB ((uint8_t)0x67)
+#define BNO055_ACC_RADIUS_MSB ((uint8_t)0x68)
+#define BNO055_MAG_RADIUS_LSB ((uint8_t)0x69)
+#define BNO055_MAG_RADIUS_MSB ((uint8_t)0x6a)
+
+
 #define CHIP_ID ((uint8_t)0xA0)
 
 #define OPR_MODE_CONFIG               ((uint8_t)0x00)
@@ -62,8 +89,35 @@
 
 #define EULER_UNIT UNIT_SEL_EULER_DEG
 
+const uint8_t acc_offset_calib[] = {
+  0x00, 0x00,
+  0x00, 0x09, 
+  0x00, 0x0C,
+};
+
+const uint8_t acc_radius_calib[] = {
+  0x03, 0xE8,
+};
+
+const uint8_t gyro_offset_calib[] = {
+  0x00, 0x00,
+  0x00, 0x00, 
+  0x00, 0x00,
+};
+
+const uint8_t mag_offset_calib[] = {
+  0x06, 0xCC, 
+  0x04, 0x59, 
+  0x00, 0x00, 
+};
+
+const uint8_t mag_radius_calib[] = {
+  0x04, 0x10,
+};
+
 static void bno055_set_mode(uint8_t mode);
 static void bno055_get_vec(float *vec, uint8_t start_addr);
+static uint8_t bno055_is_fully_calibrated();
 
 uint8_t bno055_init() {
   // Assumes i2c is already initialized
@@ -79,10 +133,6 @@ uint8_t bno055_init() {
   // Go to config mode
   bno055_set_mode(OPR_MODE_CONFIG);
 
-
-  /* i2c_write(BNO055_ADDR, BNO055_PAGE_ID, 0x00); */
-  /* // Delay a bit */
-  /* for(int i=0; i < 10*MS; i++); */
 
   usart1_puts("Triggering reset\n");
   // Reset the system
@@ -136,7 +186,42 @@ uint8_t bno055_init() {
   bno055_set_mode(OPR_MODE_FUSION_NDOF);
   sleep_ms(25);
 
+  bno055_load_calibration();
   return 0;
+}
+
+void bno055_load_calibration() {
+  bno055_set_mode(OPR_MODE_CONFIG);
+  sleep_ms(30);
+
+  uint8_t base = BNO055_ACC_OFFSET_X_LSB;
+  for(int i = 0; i < sizeof(acc_offset_calib); i++) {
+    i2c_write(BNO055_ADDR, base+i, acc_offset_calib[i]);
+  }
+
+  base = BNO055_ACC_RADIUS_LSB;
+  for(int i = 0; i < sizeof(acc_radius_calib); i++) {
+    i2c_write(BNO055_ADDR, base+i, acc_radius_calib[i]);
+  }
+
+
+  base = BNO055_GYRO_OFFSET_X_LSB;
+  for(int i = 0; i < sizeof(gyro_offset_calib); i++) {
+    i2c_write(BNO055_ADDR, base+i, gyro_offset_calib[i]);
+  }
+
+  base = BNO055_MAG_OFFSET_X_LSB;
+  for(int i = 0; i < sizeof(mag_offset_calib); i++) {
+    i2c_write(BNO055_ADDR, base+i, mag_offset_calib[i]);
+  }
+
+  base = BNO055_MAG_RADIUS_LSB;
+  for(int i = 0; i < sizeof(mag_radius_calib); i++) {
+    i2c_write(BNO055_ADDR, base+i, mag_radius_calib[i]);
+  }
+
+  bno055_set_mode(OPR_MODE_FUSION_NDOF);
+  sleep_ms(30);
 }
 
 void bno055_get_acc(float *acc) {
@@ -205,37 +290,151 @@ int8_t bno055_get_calib_status(uint8_t *sys, uint8_t *gyro, uint8_t *accel, uint
     return -1;
   }
   *sys = (result & (0x3 << 6)) >> 6;
-  *gyro = (result & (0x3 << 4)) >> 6;
-  *accel = (result & (0x3 << 2)) >> 6;
+  *gyro = (result & (0x3 << 4)) >> 4;
+  *accel = (result & (0x3 << 2)) >> 2;
   *mag = (result & (0x3 << 0)) >> 0;
   return 0;
 }
 
-void bno055_calibrate() {
+uint8_t bno055_is_fully_calibrated() {
   uint8_t sys, gyro, accel, mag;
-  while(1) {
-    int8_t res = bno055_get_calib_status(&sys, &gyro, &accel, &mag);
-    if(res == -1) {
-      continue;
-    }
-    usart1_puts("Calibration results\n");
-    usart1_puts("SYS: ");
-    print_dec(sys);
-    usart1_puts("\n");
-    usart1_puts("GYRO: ");
-    print_dec(gyro);
-    usart1_puts("\n");
-    usart1_puts("ACCEL: ");
-    print_dec(accel);
-    usart1_puts("\n");
-    usart1_puts("MAG: ");
-    print_dec(mag);
-    usart1_puts("\n");
-    if(sys == 3) {
-      return;
-    }
-    sleep_ms(10);
+  bno055_get_calib_status(&sys, &gyro, &accel, &mag);
+  if (sys < 3 || gyro < 3 || accel < 3 || mag < 3) {
+    return 0;
   }
+  return 1;
+}
+
+void bno055_do_calibration() {
+  uint8_t sys;
+  uint8_t gyro;
+  uint8_t accel;
+  uint8_t mag;
+  if(bno055_get_calib_status(&sys, &gyro, &accel, &mag) == -1) {
+    usart1_puts("Failed to get calibration status\n");
+    while(1);
+  }
+
+  if(accel != 3) {
+    usart1_puts("Please place the BNO055 in 6 different stable configurations. The 6 stable positions could be in any direction, but make sure that the device is lying at least once perpendicular to the x, y and z axis.\n");
+    uint8_t old_accel = accel;
+    print_dec(accel);
+    usart1_putc('\n');
+    while(accel != 3) {
+      bno055_get_calib_status(&sys, &gyro, &accel, &mag);
+      if(old_accel != accel) {
+        print_dec(accel);
+        usart1_putc('\n');
+      }
+      old_accel = accel;
+    }
+  }
+  usart1_puts("Accelerometer Calibrated Successfully\n");
+
+  i2c_write(BNO055_ADDR, BNO055_PAGE_ID, 0x00);
+  // Delay a bit
+  sleep_ms(10);
+
+  bno055_set_mode(OPR_MODE_FUSION_NDOF);
+  if(gyro != 3) {
+    usart1_puts("Place the device in a stable position for a few seconds\n");
+    uint8_t old_gyro;
+    print_dec(gyro);
+    usart1_putc('\n');
+    while(gyro != 3) {
+      int16_t res = bno055_get_calib_status(&sys, &gyro, &accel, &mag);
+      if(res == -1) {
+        usart1_puts("Failed to read CALIB_STAT\n");
+        while(1);
+      }
+      print_dec(gyro);
+      usart1_putc('\n');
+      if(old_gyro != gyro) {
+        print_dec(gyro);
+        usart1_putc('\n');
+      }
+      old_gyro = gyro;
+    }
+  }
+  usart1_puts("Gyroscope Calibrated Successfully\n");
+
+
+  bno055_set_mode(OPR_MODE_FUSION_NDOF);
+  if(mag != 3) {
+    usart1_puts("Make some random movements\n");
+    uint8_t old_mag;
+    print_dec(mag);
+    usart1_putc('\n');
+    old_mag = mag;
+    while(mag != 3) {
+      bno055_get_calib_status(&sys, &gyro, &accel, &mag);
+      if(old_mag != mag) {
+        print_dec(mag);
+        usart1_putc('\n');
+      }
+      old_mag = mag;
+    }
+  }
+  usart1_puts("Magnetometer Calibrated Successfully\n");
+
+  if(!bno055_is_fully_calibrated()) {
+    usart1_puts("BNO055 not fully calibrated for some reason\n");
+    while(1);
+  }
+
+  bno055_set_mode(OPR_MODE_CONFIG);
+  sleep_ms(30);
+
+  // Print accelerometer calibration values
+  float acc_offset[3];
+  bno055_get_vec(acc_offset, BNO055_ACC_OFFSET_X_LSB);
+  usart1_puts("Accelerometer offsets: ");
+  print_hex(acc_offset[0]);
+  usart1_putc(' ');
+  print_hex(acc_offset[1]);
+  usart1_putc(' ');
+  print_hex(acc_offset[2]);
+  usart1_putc(' ');
+  usart1_putc('\n');
+  int16_t acc_lsb = i2c_read(BNO055_ADDR, BNO055_ACC_RADIUS_LSB);
+  int16_t acc_msb = i2c_read(BNO055_ADDR, BNO055_ACC_RADIUS_MSB);
+  usart1_puts("Accelerometer radius: ");
+  print_hex(acc_lsb | (acc_msb << 8));
+  usart1_putc('\n');
+
+
+  // Print the gyroscope calibration values 
+  float gyro_offset[3];
+  bno055_get_vec(gyro_offset, BNO055_GYRO_OFFSET_X_LSB);
+  usart1_puts("Gyroscope offsets: ");
+  print_hex(gyro_offset[0]);
+  usart1_putc(' ');
+  print_hex(gyro_offset[1]);
+  usart1_putc(' ');
+  print_hex(gyro_offset[2]);
+  usart1_putc(' ');
+  usart1_putc('\n');
+
+
+  // Print magnetometer calibration values
+  float mag_offset[3];
+  bno055_get_vec(mag_offset, BNO055_MAG_OFFSET_X_LSB);
+  usart1_puts("Magnetometer offsets: ");
+  print_hex(mag_offset[0]);
+  usart1_putc(' ');
+  print_hex(mag_offset[1]);
+  usart1_putc(' ');
+  print_hex(mag_offset[2]);
+  usart1_putc(' ');
+  usart1_putc('\n');
+  int16_t mag_lsb = i2c_read(BNO055_ADDR, BNO055_MAG_RADIUS_LSB);
+  int16_t mag_msb = i2c_read(BNO055_ADDR, BNO055_MAG_RADIUS_MSB);
+  usart1_puts("Magnetometer radius: ");
+  print_hex(mag_lsb | (mag_msb << 8));
+  usart1_putc('\n');
+
+  usart1_puts("BNO055 Fully Calibrated!");
+  bno055_set_mode(OPR_MODE_FUSION_NDOF);
 }
 
 void bno055_set_mode(uint8_t mode) {

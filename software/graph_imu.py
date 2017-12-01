@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import struct
 from datetime import datetime
+import math
 
 ser = Serial(sys.argv[1], 115200)
 
@@ -31,44 +32,47 @@ while(b != b'\xff'):
     b = ser.read(1)
 
 
-# ax1.set_ylim((0,360))
-# ax2.set_ylim((0,360))
-# ax3.set_ylim((0,360))
+ax1.set_ylim((-180,180))
+ax2.set_ylim((-180,180))
+ax3.set_ylim((0,360))
+
+ax1.set_xlim((0,n_points))
+ax2.set_xlim((0,n_points))
+ax3.set_xlim((0,n_points))
 
 ln1.set_xdata(range(n_points))
 ln2.set_xdata(range(n_points))
 ln3.set_xdata(range(n_points))
 
 while(True):
-    t = datetime.now()
-    line = ser.read(13)
-    # ser.reset_input_buffer()
-    print(line)
-    # print(len(line))
-    # line = line.decode('ascii')
-    # print(line)
-    # res = parse("{} {} {}", line)
-    r,p,y = struct.unpack('fff', bytes(line[:-1]))
-    data = np.roll(data, 1, 1)
-    data[0,-1] = r
-    data[1,-1] = p
-    data[2,-1] = y
+    for i in range(10):
+        t = datetime.now()
+        line = ser.read(13)
+        # ser.reset_input_buffer()
+        # print(line)
+        # print(len(line))
+        # line = line.decode('ascii')
+        # print(line)
+        # res = parse("{} {} {}", line)
+        r,p,y = struct.unpack('fff', bytes(line[:-1]))
+        data = np.roll(data, 1, 1)
+        data[0,-1] = r
+        data[1,-1] = p
+        data[2,-1] = math.fmod(y, 360.0)
+        print(r,p,y)
+        now = datetime.now()
+        print(now-t)
+        t = now
 
 
     ln1.set_ydata(data[0])
     ln2.set_ydata(data[1])
     ln3.set_ydata(data[2])
-    ax1.relim()
-    ax2.relim()
-    ax3.relim()
+    # ax1.relim()
+    # ax2.relim()
+    # ax3.relim()
     ax1.autoscale_view()
     ax2.autoscale_view()
     ax3.autoscale_view()
     plt.draw()
-    plt.pause(0.0001)
-    now = datetime.now()
-    print(now-t)
-    t = now
-
-
-
+    plt.pause(0.000001)
