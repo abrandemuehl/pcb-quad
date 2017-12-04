@@ -103,9 +103,10 @@ class CommandInterface(object):
 
     def reset(self):
         # self.sp.setDTR(0)
-        time.sleep(0.1)
+        # time.sleep(0.1)
         # self.sp.setDTR(1)
-        time.sleep(0.5)
+        # time.sleep(0.5)
+        pass
 
     def initChip(self):
         # Set boot
