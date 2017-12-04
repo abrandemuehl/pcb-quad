@@ -9,7 +9,7 @@ AS=arm-none-eabi-as
 OBJCOPY=arm-none-eabi-objcopy
 
 
-OBJS=src/main.o src/startup.o src/uart.o src/util.o src/i2c.o src/handlers.o src/bno055.o src/kalman.o src/tim.o src/pid.o
+OBJS=src/main.o src/startup.o src/uart.o src/util.o src/i2c.o src/handlers.o src/bno055.o src/tim.o src/pid.o
 LDSCRIPT=src/stm32f427.ld
 DEFINES=-DSTM32F427_437xx -D__FPU_PRESENT=1 -D__FPU_USED -DARM_MATH_CM4
 LIBS=
