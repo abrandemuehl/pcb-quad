@@ -47,13 +47,13 @@ int main() {
 #endif
 
   pid_t pid_r, pid_p, pid_y;
-  pid_init(&pid_r, 1.0, 0.0, 0.0, -5.0, 5.0);
-  pid_init(&pid_p, 1.0, 0.0, 0.0, -5.0, 5.0);
-  pid_init(&pid_y, 0.0, 0.0, 0.0, -5.0, 5.0);
+  pid_init(&pid_r, 1.0, 0.0, 0.0, -10.0, 10.0);
+  pid_init(&pid_p, 1.0, 0.0, 0.0, -10.0, 10.0);
+  pid_init(&pid_y, 0.0, 0.0, 0.0, -10.0, 10.0);
   pid_setpoint(&pid_r, 0.0);
   pid_setpoint(&pid_p, 0.0);
   pid_setpoint(&pid_y, 0.0);
-  float throttle = 20.0;
+  float throttle = 50.0;
 
   float rpy[3];
   float gyro[3];

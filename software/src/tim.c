@@ -10,8 +10,8 @@ void tim_init()
   TIM_TimeBaseInitTypeDef TIM3_BaseStruct;
 
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
-  // Prescale from APB1 Timer Clock (APB1*2) to 500kHz
-  TIM3_BaseStruct.TIM_Prescaler = 180 - 1;
+  // Prescale from APB1 Timer Clock (APB1*2) to 100Hz
+  TIM3_BaseStruct.TIM_Prescaler = 900 - 1;
   TIM3_BaseStruct.TIM_CounterMode = TIM_CounterMode_Up;
   TIM3_BaseStruct.TIM_Period = 1000 - 1;
   TIM3_BaseStruct.TIM_ClockDivision = TIM_CKD_DIV1;
@@ -129,7 +129,7 @@ void set_pwm(int channelNumber, float pulsePercent)
   TIM_OCStruct.TIM_OCMode = TIM_OCMode_PWM1;
   TIM_OCStruct.TIM_OutputState = TIM_OutputState_Enable;
   TIM_OCStruct.TIM_OCPolarity = TIM_OCPolarity_High;
-  TIM_OCStruct.TIM_Pulse = (pulsePercent / 100.0f)*(1000.0f - 1.0f) - 1;
+  TIM_OCStruct.TIM_Pulse = (100.0f + (pulsePercent / 100.0f)*(100.0f));
 
   switch (channelNumber)
   {
