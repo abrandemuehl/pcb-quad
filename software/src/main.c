@@ -10,10 +10,15 @@
 #include "bno055.h"
 #include "pid.h"
 
-#define N 1
-#define W 2
-#define S 3
-#define E 4
+
+#define MOTOR1 4
+#define MOTOR2 1
+#define MOTOR3 2
+#define MOTOR4 3
+#define N MOTOR2
+#define W MOTOR3
+#define S MOTOR4
+#define E MOTOR1
 
 #define CALIBRATE 0
 
@@ -53,7 +58,7 @@ int main() {
   pid_setpoint(&pid_r, 0.0);
   pid_setpoint(&pid_p, 0.0);
   pid_setpoint(&pid_y, 0.0);
-  float throttle = 50.0;
+  float throttle = 30.0;
 
   float rpy[3];
   float gyro[3];
@@ -62,6 +67,14 @@ int main() {
     periodic_sleep();
     bno055_get_rpy(rpy);
     bno055_get_gyro(gyro);
+    /* usart1_puts("Orientation: "); */
+    /* print_float(rpy[0]); */
+    /* usart1_putc(' '); */
+    /* print_float(rpy[1]); */
+    /* usart1_putc(' '); */
+    /* print_float(rpy[2]); */
+    /* usart1_putc('\n'); */
+
     for(int i=0; i < sizeof(rpy); i++) {
       usart1_putc(((char *)rpy)[i]);
     }

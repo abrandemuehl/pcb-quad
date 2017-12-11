@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 # -*- coding: utf-8 -*-
 # vim: sw=4:ts=4:si:et:enc=utf-8
@@ -60,17 +60,30 @@ class CmdException(Exception):
 class CommandInterface:
     extended_erase = 0
 
-    def open(self, aport='/dev/tty.usbserial-ftCYPMYJ', abaudrate=115200) :
-        self.sp = serial.Serial(
-            port=aport,
-            baudrate=abaudrate,     # baudrate
-            bytesize=8,             # number of databits
-            parity=serial.PARITY_EVEN,
-            stopbits=1,
-            xonxoff=0,              # don't enable software flow control
-            rtscts=0,               # don't enable RTS/CTS flow control
-            timeout=5               # set a timeout value, None for waiting forever
-        )
+    def open(self, aport='/dev/ttyUSB0', abaudrate=115200) :
+        # self.sp = serial.Serial(
+        #     port=aport,
+        #     baudrate=abaudrate,
+        #     bytesize=8,
+        #     parity=serial.PARITY_EVEN,
+        #     stopbits=1,
+        #     xonxoff=0,
+        #     rtscts=0,
+        #     timeout=5,
+        # )
+        self.sp = serial.Serial()
+        self.sp.port = aport
+        self.sp.baudrate = abaudrate     # baudrate
+        self.sp.bytesize = 8             # number of databits
+        self.sp.parity = serial.PARITY_EVEN
+        self.sp.stopbits = 1
+        self.sp.xonxoff = 0              # don't enable software flow control
+        self.sp.rtscts = 0               # don't enable RTS/CTS flow control
+        self.sp.dsrdtr = False
+        self.sp.timeout = 5              # set a timeout value, None for waiting forever
+        self.sp.rts = False
+        self.sp.dtr = False
+        self.sp.open()
 
 
     def _wait_for_ask(self, info = ""):
@@ -104,11 +117,15 @@ class CommandInterface:
         self.reset()
 
         self.sp.write("\x7F")       # Syncro
+        self.sp.setDTR(1)
         return self._wait_for_ask("Syncro")
 
     def releaseChip(self):
-        self.sp.setDTR(1)
+        # self.sp.setDTR(1)
+        # time.sleep(0.1)
         self.reset()
+
+        # self.sp.setDTR(0)
 
     def cmdGeneric(self, cmd):
         self.sp.write(chr(cmd))
@@ -239,7 +256,7 @@ class CommandInterface:
             self.sp.write(chr(0x00))
             tmp = self.sp.timeout
             self.sp.timeout = 30
-            print "Extended erase (0x44), this can take ten seconds or more"
+            print("Extended erase (0x44), this can take ten seconds or more")
             self._wait_for_ask("0x44 erasing failed")
             self.sp.timeout = tmp
             mdebug(10, "    Extended Erase memory done")
@@ -338,12 +355,12 @@ class CommandInterface:
 
 
 
-	def __init__(self) :
+    def __init__(self) :
         pass
 
 
 def usage():
-    print """Usage: %s [-hqVewvr] [-l length] [-p port] [-b baud] [-a addr] [-g addr] [file.bin]
+    print("""Usage: %s [-hqVewvr] [-l length] [-p port] [-b baud] [-a addr] [-g addr] [file.bin]
     -h          This help
     -q          Quiet
     -V          Verbose
@@ -352,14 +369,14 @@ def usage():
     -v          Verify
     -r          Read
     -l length   Length of read
-    -p port     Serial port (default: /dev/tty.usbserial-ftCYPMYJ)
+    -p port     Serial port (default: /dev/ttyUSB0)
     -b baud     Baud speed (default: 115200)
     -a addr     Target address
     -g addr     Address to start running at (0x08000000, usually)
 
     ./stm32loader.py -e -w -v example/main.bin
 
-    """ % sys.argv[0]
+    """ % sys.argv[0])
 
 
 if __name__ == "__main__":
@@ -368,7 +385,7 @@ if __name__ == "__main__":
     try:
         import psyco
         psyco.full()
-        print "Using Psyco..."
+        print("Using Psyco...")
     except ImportError:
         pass
 
@@ -387,9 +404,9 @@ if __name__ == "__main__":
 
     try:
         opts, args = getopt.getopt(sys.argv[1:], "hqVewvrp:b:a:l:g:")
-    except getopt.GetoptError, err:
+    except getopt.GetoptError as err:
         # print help information and exit:
-        print str(err) # will print something like "option -a not recognized"
+        print(str(err)) # will print something like "option -a not recognized"
         usage()
         sys.exit(2)
 
@@ -431,7 +448,7 @@ if __name__ == "__main__":
         try:
             cmd.initChip()
         except:
-            print "Can't init. Ensure that BOOT0 is enabled and reset device"
+            print("Can't init. Ensure that BOOT0 is enabled and reset device")
 
 
         bootversion = cmd.cmdGet()
@@ -456,13 +473,13 @@ if __name__ == "__main__":
         if conf['verify']:
             verify = cmd.readMemory(conf['address'], len(data))
             if(data == verify):
-                print "Verification OK"
+                print("Verification OK")
             else:
-                print "Verification FAILED"
-                print str(len(data)) + ' vs ' + str(len(verify))
+                print("Verification FAILED")
+                print(str(len(data)) + ' vs ' + str(len(verify)))
                 for i in xrange(0, len(data)):
                     if data[i] != verify[i]:
-                        print hex(i) + ': ' + hex(data[i]) + ' vs ' + hex(verify[i])
+                        print(hex(i) + ': ' + hex(data[i]) + ' vs ' + hex(verify[i]))
 
         if not conf['write'] and conf['read']:
             rdata = cmd.readMemory(conf['address'], conf['len'])

@@ -63,7 +63,7 @@ all: $(OBJS) $(BINARY)
 	$(AS) $(ASFLAGS) -c $< -o $@
 
 flash: $(BINARY)
-	python2 stm32loader.py -p $(PORT) -evw $<
+	./stm32loader.py -p $(PORT) -evw $<
 
 clean:
 	rm -f $(CMSIS_DeviceSystem) $(OBJS) $(BINARY) *.o *.bin *.hex *.elf src/*.o
