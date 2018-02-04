@@ -4,6 +4,7 @@
 #include "tim.h"
 #include "clocks.h"
 #include "uart.h"
+#include "util.h"
 
 void tim_init()
 {
@@ -171,12 +172,5 @@ void sleep_ms(uint32_t ms) {
 
 void sleep_us(uint32_t us) {
   TIM4->CNT = 0;
-  while(TIM4->CNT < us);
-}
-
-void sleep_til_ms(uint32_t ms) {
-  return sleep_til_us(ms * 1000);
-}
-
-void sleep_til_us(uint32_t end) {
+  while(TIM4->CNT < us) {}
 }

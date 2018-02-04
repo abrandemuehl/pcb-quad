@@ -13,9 +13,6 @@ uint32_t gettime_us();
 void sleep_ms(uint32_t ms);
 void sleep_us(uint32_t us);
 
-void sleep_til_us(uint32_t us);
-void sleep_til_ms(uint32_t ms);
-
 void periodic_init(int hz);
 void periodic_sleep();
 
